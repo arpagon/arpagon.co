@@ -13,7 +13,7 @@ module.exports = {
     siteUrl: `https://arpagon.co`,
     siteDescription: `My Playful and Colorful One-Page portfolio`,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
+    siteImage: `/me_2019_Banner.webp`,
     author: `@arpagon`,
   },
   plugins: [
