@@ -8,8 +8,8 @@ module.exports = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.js
     siteTitle: `arpagon.co`,
-    siteTitleAlt: `arpagon.co Playful and Colorful One-Page portfolio.`,
-    siteHeadline: `arpagon.co Playful and Colorful One-Page portfolio. from @arpagon`,
+    siteTitleAlt: `arpagon.co Playful and colorful portfolio.`,
+    siteHeadline: `arpagon.co Playful and colorful portfolio. from @arpagon`,
     siteUrl: `https://arpagon.co`,
     siteDescription: `My Playful and Colorful One-Page portfolio`,
     siteLanguage: `en`,
