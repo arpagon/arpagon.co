@@ -67,3 +67,5 @@ public
 .idea
 .vscode
 .DS_Store
+# Disposable experiments (see .agents/skills/experiment-mode)
+runs/
