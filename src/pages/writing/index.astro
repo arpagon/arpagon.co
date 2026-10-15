@@ -2,21 +2,38 @@
 import { getCollection } from 'astro:content';
 import Post from '../../layouts/Post.astro';
 import { archive } from '../../data/profile';
-const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date || a.id.localeCompare(b.id));
+const groups = [
+  { id: 'notes', title: 'Notes', period: '2022', posts: posts.filter((p) => !p.data.series), originalUrl: undefined },
+  ...archive.map((a) => ({ ...a, posts: posts.filter((p) => p.data.series === a.id) })),
+];
 ---
-<Post title="Writing" lang="en" description="Notes and essays by Sebastián Rojo, plus an archive of writing since 2008.">
-  <ul class="list">
-    {posts.map((p) => <li><a href={`/writing/${p.id}/`} lang={p.data.lang}>{p.data.title}</a><span>{p.data.date.toISOString().slice(0, 10)} · {p.data.lang.toUpperCase()}</span></li>)}
-  </ul>
-  <h2>Archive</h2>
-  <p>Earlier writing, still online at its original home. Being imported here.</p>
-  <ul class="list">
-    {archive.map((a) => <li><a href={a.url}>{a.title}</a><span>{a.period} · {a.count} posts · {a.lang}</span></li>)}
-  </ul>
+<Post title="Writing" lang="en" description="Forty pages of notes and essays by Sebastián Rojo, from Asterisk in 2008 to data analysis, Kubernetes and voice AI.">
+  <p>{posts.length} pages, in their original languages. These include the recovered Blogger, Tumblr and ArtisanLabs archives. Original dates and source links are preserved; historical tutorials may no longer work with current software.</p>
+  <nav class="series-nav" aria-label="Writing series">
+    {groups.map((g) => <a href={`#${g.id}`}>{g.title} <span>{g.posts.length}</span></a>)}
+  </nav>
+  {groups.map((g) => (
+    <section class="series" id={g.id} aria-labelledby={`heading-${g.id}`}>
+      <h2 id={`heading-${g.id}`}>{g.title}</h2>
+      <p class="series-meta">{g.period} · {g.posts.length} {g.posts.length === 1 ? 'page' : 'pages'}{g.originalUrl && <> · <a href={g.originalUrl}>Original site ↗</a></>}</p>
+      <ul class="list">
+        {g.posts.map((p) => <li><a href={`/writing/${p.id}/`} lang={p.data.lang}>{p.data.title}</a><span><time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0, 10)}</time> · {p.data.lang.toUpperCase()}</span></li>)}
+      </ul>
+    </section>
+  ))}
 </Post>
 <style>
+  .series-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 40px; }
+  .series-nav a { border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; text-decoration: none; font-size: 14px; }
+  .series-nav span { color: var(--muted); margin-left: 6px; }
+  .series { scroll-margin-top: 24px; margin-top: 48px; }
+  .series h2 { margin-bottom: 4px; }
+  .series-meta { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
   .list { list-style: none; padding: 0; }
-  .list li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); }
-  .list a { text-decoration: none; color: #ddd; }
-  .list span { color: var(--muted); white-space: nowrap; font-size: 14px; }
+  .list li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+  .list a { text-decoration: none; color: #ddd; overflow-wrap: anywhere; }
+  .list a:hover { color: var(--gold); }
+  .list span { color: var(--muted); white-space: nowrap; font-size: 13px; }
+  @media (max-width: 600px) { .list li { flex-direction: column; gap: 4px; } }
 </style>

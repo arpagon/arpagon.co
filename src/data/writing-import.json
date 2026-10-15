@@ -1,0 +1,883 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "url": "https://medellinasterisk.blogspot.com/feeds/posts/default?alt=json&max-results=200",
+      "sha256": "c0aee27ee7446f01a95c00ae822e05dda182caa49d16c0570befe13077e66c94"
+    },
+    {
+      "url": "https://arpagondata.tumblr.com/api/read/json?num=50&start=0",
+      "sha256": "2d55eb06770f60edd32c7d0b340cd31e63cb8e763fac9f330b5e7f41bb903208"
+    },
+    {
+      "url": "https://github.com/ArtisanLabs/blog/blob/7d4f3eab6e6609b68a4f79f0f66121ef1eb06edd/_posts/vocal-resonance.md",
+      "sha256": "dc855f020e4d3b96dbf63525aafb7acef6197430dcf07a5c04456de0fee48dfa"
+    },
+    {
+      "url": "https://github.com/ArtisanLabs/blog/blob/7d4f3eab6e6609b68a4f79f0f66121ef1eb06edd/_posts/supabase-pgvector.md",
+      "sha256": "b761b59cd38567211a3a4039f43cc7b946d9c7ead5fa7919b11fc2666fed1cd5"
+    },
+    {
+      "url": "https://github.com/ArtisanLabs/blog/blob/7d4f3eab6e6609b68a4f79f0f66121ef1eb06edd/_posts/arouse.md",
+      "sha256": "a9c7aaa8e8f1549b71f262d7c66ba1acdd983f4eb389292d983f75f9e987b294"
+    },
+    {
+      "url": "https://github.com/ArtisanLabs/blog/blob/7d4f3eab6e6609b68a4f79f0f66121ef1eb06edd/_posts/arouse_en.md",
+      "sha256": "875083171bd0c27f79bde858ffb9d09ce73034b8a5aa2b83d1a83eb1dd832e33"
+    },
+    {
+      "url": "https://github.com/ArtisanLabs/blog/blob/7d4f3eab6e6609b68a4f79f0f66121ef1eb06edd/_posts/GPTs.md",
+      "sha256": "af9b1f08d72406e3ca56fb06cc92ddc1586a4667e77c6b6900bdb68eeb820f23"
+    }
+  ],
+  "posts": [
+    {
+      "id": "artisanlabs-arouse",
+      "originalId": "_posts/arouse.md",
+      "title": "De RisePal a ArtisanLabs: Innovación en la Era de la IA de Consumo",
+      "date": "2023-11-11",
+      "lang": "es",
+      "description": "Exploramos el viaje de Risepal a ArtisanLabs y cómo la innovación en la era de la IA de consumo está redefiniendo el desarrollo tecnológico. Desde la creación de Arouse con tecnologías avanzadas hasta la reflexión…",
+      "series": "artisanlabs",
+      "originalUrl": "https://blog.artisanlabs.io/posts/arouse",
+      "cover": "/media/writing/d28bc85fee2a00a1.webp",
+      "translationKey": "artisanlabs-arouse",
+      "sha256": "a1d823d4e8aa83de3cd1ad0cc2b7f3b4790aabbf4ec7ac62e6c353ee71c19831"
+    },
+    {
+      "id": "artisanlabs-arouse-en",
+      "originalId": "_posts/arouse_en.md",
+      "title": "From RisePal to ArtisanLabs: Innovation in the Era of Consumer AI",
+      "date": "2023-11-11",
+      "lang": "en",
+      "description": "We explore the journey from Risepal to ArtisanLabs and how innovation in the era of consumer AI is redefining technological development. From the creation of Arouse with advanced technologies to reflecting on the…",
+      "series": "artisanlabs",
+      "originalUrl": "https://blog.artisanlabs.io/posts/arouse_en",
+      "cover": "/media/writing/d28bc85fee2a00a1.webp",
+      "translationKey": "artisanlabs-arouse",
+      "sha256": "c43fd2414ef47f51136da290b64c00300e04671b2b14f1d6931a49b6f201df0b"
+    },
+    {
+      "id": "artisanlabs-gpts",
+      "originalId": "_posts/GPTs.md",
+      "title": "¿Estás buscando una nueva oportunidad de trabajo? Liberamos nuestra base de conocimiento de mejores prácticas para talento tech de LATAM",
+      "date": "2023-11-12",
+      "lang": "es",
+      "description": "Descubre cómo la liberación de la base de conocimiento de Risepal puede impulsar tu carrera en el sector tecnológico de Latinoamérica.",
+      "series": "artisanlabs",
+      "originalUrl": "https://blog.artisanlabs.io/posts/GPTs",
+      "cover": "/media/writing/23c2b38da2f46916.webp",
+      "sha256": "3864e34f042842a88fb3ff4a7e9b5745def0bbdc52223c691d01d1ae2c5f9d8c"
+    },
+    {
+      "id": "artisanlabs-supabase-pgvector",
+      "originalId": "_posts/supabase-pgvector.md",
+      "title": "Extending Workshop Learnings: From Supabase and PGvector to LangChain",
+      "date": "2023-10-10",
+      "lang": "en",
+      "description": "In this post, we explore the key learnings from the \"Pgvector to Prod in 2 hours workshop\", led by Greg Richardson, an expert on Supabase and PGvector. We delve into the world of Supabase and PGvector, comparing them…",
+      "series": "artisanlabs",
+      "originalUrl": "https://blog.artisanlabs.io/posts/supabase-pgvector",
+      "cover": "/media/writing/9234587eaab2697e.webp",
+      "sha256": "e468b04acdda7fce5674be8143840807ea83eca9f7470759152862b41f35c21d"
+    },
+    {
+      "id": "artisanlabs-vocal-resonance",
+      "originalId": "_posts/vocal-resonance.md",
+      "title": "Vocal Resonance",
+      "date": "2023-07-10",
+      "lang": "en",
+      "description": "Vocal Resonance: Setting the Tone for Voice-Based Innovations at Artisan Labs",
+      "series": "artisanlabs",
+      "originalUrl": "https://blog.artisanlabs.io/posts/vocal-resonance",
+      "cover": "/media/writing/0801e2ec9f81e14f.webp",
+      "sha256": "fd564b038b99079e6c4ea7876d14405e34943876738cac3fb4a9dfc0ab7fc87e"
+    },
+    {
+      "id": "asterisk-audacity-problema-linea-analogas",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-1896720140443913038",
+      "title": "Audacity, problema linea analogas",
+      "date": "2009-02-12",
+      "lang": "es",
+      "description": "Hace días, no publicaba nada (ocupado con un proyecto bastante interesante, como era de esperar involucrado con asterisk). Este post se los debo hace varías semanas como solucionar problemas de colgado con en lineas…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2009/02/audacity-problema-linea-analogas.html",
+      "sha256": "d3115e3e53db7cebe8b267b6064d1c0dfc1904b3612562639c581598d8edb1e2"
+    },
+    {
+      "id": "asterisk-b410t-digium",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-8394950421989521126",
+      "title": "B410T digium",
+      "date": "2008-09-29",
+      "lang": "es",
+      "description": "Hace días o mas bien meses tenia ganas de probar la tarjeta de digium b410p, es una excelente tarjeta que permiten conectar hasta 4 líneas RDSI BRI con un cancelador de eco muy bueno ( incluye un cancelador de eco de…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/09/b410t-digium.html",
+      "sha256": "672683058829a479a44ff44fe389bf011dce00d74eda4b0db74aa33c011fe06a"
+    },
+    {
+      "id": "asterisk-como-instalar-asterisk-1-4-con-dahdi-freepbx-avantfax-en-debian-lenny",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-2834321620897498904",
+      "title": "COMO instalar Asterisk 1.4 con Dahdi, FreePBX, avantfax en debian lenny",
+      "date": "2009-07-22",
+      "lang": "es",
+      "description": "Hola mi amigo, Juan Miguel Alcarria Herrera, escribio este exelente HOWTO, para instalar asterisk 1.4 con, soporte para Dahdi con FreePBX, HylaFax, Iaxmodem, AvantFax todo ello en Debian Lenny:…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2009/07/como-asterisk-14-dahdi-freepbx-debian.html",
+      "sha256": "3af8439c64f8dcde32ad39b3eab8eb039290960f0ed9b15a15d481ae4f753ed8"
+    },
+    {
+      "id": "asterisk-como-instalar-el-queue-stats-de-asteriskguru",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-7240373377012188729",
+      "title": "como instalar el queue stats de asteriskguru",
+      "date": "2008-07-28",
+      "lang": "es",
+      "description": "Esta herramienta le ayudará a tener una mejor visión de las llamadas entrantes y salientes que pasan a través de su servidor Asterisk. Supongo que usted tiene algunos conocimientos básicos en Asterisk, PHP y bases de…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/07/estadisticas-colas-queue-stats.html",
+      "sha256": "3a5be44c52f3729dd31750ada39393e521ff4ada7ea9d4cc7982bbceb5c5f343"
+    },
+    {
+      "id": "asterisk-desarrollo-de-administrador-de-plantas-telefonica-por-un-amigo",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-7309429803907407622",
+      "title": "Desarrollo de Administrador de Plantas telefonica por un amigo.",
+      "date": "2008-05-29",
+      "lang": "es",
+      "description": "Hace unos minutos recibí un correo de un viejo amigo venezolano, que presento el examen de DCAP conmigo. me escribe lo siguiente: Buen día Amigos de Asterisk Guru Latinoamerica Espero que estén bien Les escribo porque…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/05/desarrollo-administrador-planta.html",
+      "sha256": "bbeabfbf8622fc7c3dd2535e9c17ab8e9e41b69512133dc0d8a197b8b8a73267"
+    },
+    {
+      "id": "asterisk-diferentes-equipos-utilizando-soporte-sip-en-udp-tcp-tls",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-8582219013225494121",
+      "title": "Diferentes equipos utilizando soporte sip en UDP TCP TLS",
+      "date": "2008-05-28",
+      "lang": "es",
+      "description": "Encontré un articulo muy interesante de alex lewis. En donde se comparan las configuraciones de sip de varios vendors, utilizando UDP, TCP, TLS. tener en cuenta que asterisk, en la versión 1.6 se esa trabajando…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/05/configuraciones-udp-tcp-tls.html",
+      "sha256": "83c6a0f4f5b8b5da41e52cd7f4cd984accb571feeebb444c1af254a4cd82a404"
+    },
+    {
+      "id": "asterisk-el-freepbx-parte-1",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-4393849240221743356",
+      "title": "El Freepbx (parte 1)",
+      "date": "2008-05-28",
+      "lang": "es",
+      "description": "El Freepbx es un proyecto Open source, que facilita la administración de un sistema asterisk, es un GUI web, con la características que con un par de cliks, ya tendremos extensión creadas y listas para ser…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/05/el-freepbx.html",
+      "sha256": "34964a5c9f5aeb228ac669f691427d3df07209176f322595eb857aed5debc66e"
+    },
+    {
+      "id": "asterisk-entrevista-mark-spencer",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-6682233694305142624",
+      "title": "Entrevista Mark Spencer",
+      "date": "2008-05-29",
+      "lang": "es",
+      "description": "Es increíble, yo no se donde había escuchado esto antes... pero lo cierto es que cuando trato de explicarle a alguien, las ventajas que tiene el asterisk sobre otras plataformas, siempre utilizo el ejemplo de la planta…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/05/es-increble-yo-no-se-donde-haba.html",
+      "sha256": "7d7f328426423c21a5e4ce552533445f094cc9eb4eae6e6a29c6a62fd23b9cfc"
+    },
+    {
+      "id": "asterisk-how-to-instalacion-de-b410-en-trixbox-y-posibles-problemas",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-136431045830393463",
+      "title": "(HOW-TO)Instalacion de B410 en trixbox y posibles problemas",
+      "date": "2008-09-29",
+      "lang": "es",
+      "description": "Hace algunos dias me pidieron instalar una tarjeta b410t de digium en un trixbox. en lo personal no me gusta trabajar con esta distribuccion, pero bueno, para quien lo necesite aqui les hago un pequeño HOW-TO ( como…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/09/b410-trixbox-posibles-problemas.html",
+      "sha256": "1db3a134a57b11901295ec7d5d05a1568677229d37678fbb6f0535f8a5532b5b"
+    },
+    {
+      "id": "asterisk-instalacion-y-configuracion-del-flash-panel-operator",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-1919948316363836412",
+      "title": "Instalacion y configuracion del flash panel operator",
+      "date": "2008-06-18",
+      "lang": "es",
+      "description": "Hoy les mostrare como instalar y configurar una de las mejores aplicaciones y mas distribuidas escritas especialmente para asterisk, es el Flash Panel Operator , de asternic o Nicolás Gudiño. El Flash Panel Operator es…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/06/instalacion-configuracion-fop-flash.html",
+      "sha256": "cdd645bbee68b871902eac317369228c87484759407bef38b3612bef5948ebe0"
+    },
+    {
+      "id": "asterisk-mil-y-una-mas-ventajas-de-linux",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-7720676936347882136",
+      "title": "mil, y una mas, ventajas de linux",
+      "date": "2008-06-27",
+      "lang": "es",
+      "description": "En estos días me dice un amigo, -¿como me conecto via RS232 a un equipo X(ej router cisco). desde Tintous Vista? le conteste intuitivamente, -con hyperterminal. pero ha sorpresa... resulta que en la versión Vista…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/06/mil-y-una-mas-ventajas-linux.html",
+      "sha256": "3aa91dff62530fced327fc7ee98fc545cdcf9e0d3c7656cd01342d0960babe20"
+    },
+    {
+      "id": "asterisk-nuevo-blog-de-asterisk-en-medellin",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-4299479169653559451",
+      "title": "Nuevo Blog de asterisk en medellin",
+      "date": "2008-05-27",
+      "lang": "es",
+      "description": "Nuevo Blog de asterisk en medellin",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/05/nuevo-blog-de-asterisk-en-medellin.html",
+      "sha256": "c67120f21d4b217daab0f23d1011c2f733b9abef32fddecd316a4ef52e86bbf9"
+    },
+    {
+      "id": "asterisk-nuevo-firmware-gxw410x",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-3566915747347085169",
+      "title": "Nuevo firmware gxw410x",
+      "date": "2008-10-28",
+      "lang": "es",
+      "description": "Por fin. llevamos esperando este firmware, aproximadamente 6 meses. En concreto es el Firmware 1.0.1.10 para el GXW4104 y para el GXW4108. Correcciones de errores (BUGS) • (LISTO) inundación (flooding) de consultas DNS…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/10/nuevo-firmware-gxw410x.html",
+      "sha256": "2338861e10ac282767eeb2e49ca0cec4192e440ba020f4aadf9e371365538e61"
+    },
+    {
+      "id": "asterisk-olpc-en-colombia",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-8067316909056416133",
+      "title": "OLPC en colombia",
+      "date": "2009-12-16",
+      "lang": "es",
+      "description": "http://www.ted.com/talks/lang/spa/nicholas_negroponte_takes_olpc_to_colombia.html",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2009/12/httpwwwtedcomtalkslangspanicholasnegrop.html",
+      "sha256": "c78a9a8c2d562981c6c1fc05b527cee5497d6097c9879324d114020991789479"
+    },
+    {
+      "id": "asterisk-problemas-con-el-dtmf",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-4495801182423599614",
+      "title": "Problemas con el DTMF",
+      "date": "2008-05-29",
+      "lang": "es",
+      "description": "Hace algunos días vengo trabajando con una planta celular tecom, pero he tenido múltiples inconvenientes, El que mas me preocupa es el DTMF. Hize varias pruebas (hasta utilicé una de las opciones nuevas del chan_sip el…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/05/problemas-dtmf.html",
+      "sha256": "085533e9212f89ee9591803a9afa37e67fa80c82348370cb6bf9cfabc7d8f3fa"
+    },
+    {
+      "id": "asterisk-problemas-con-gateway-gxw4108",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-1870496348147961758",
+      "title": "Problemas con Gateway gxw4108",
+      "date": "2008-06-04",
+      "lang": "es",
+      "description": "La mayoría de las veces que doy soporte con respecto a un Gateway Grandstream ya sea el GXW 4108 o GXW 4104, lo doy sobre el colgado de las lineas, el principal problema que tengo es que en Colombia pocas telcos, sigen…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2008/06/problema-gateway-gxw4108-gxw4104.html",
+      "sha256": "5d2b3fd3b19fc5e3977cd189eeee82547b05842b32e5576ad916c5071a98e256"
+    },
+    {
+      "id": "asterisk-ucell",
+      "originalId": "tag:blogger.com,1999:blog-725725434039146228.post-7947691797548254653",
+      "title": "UCell",
+      "date": "2009-03-12",
+      "lang": "es",
+      "description": "Como le contaba en el post anterior, este es el proyecto que vengo desarrollando. Próximamente en nuestra Hermosa ciudad, se empezaran a ver en las universidades este logo. Ucell Un proyecto Bastante interesantante,…",
+      "series": "medellin-asterisk",
+      "originalUrl": "https://medellinasterisk.blogspot.com/2009/03/ucell.html",
+      "sha256": "26a53ec42a1d9db5cb656252f376cf8bd5fbd2caae51bd6832f2a79215355d60"
+    },
+    {
+      "id": "data-about-gapminder-dataset",
+      "originalId": "137181151477",
+      "title": "About Gapminder Dataset",
+      "date": "2016-01-12",
+      "lang": "en",
+      "description": "Description about gapminder: Gapminder is a non-profit venture promoting sustainable global development and achievement of the United Nations Millennium Development Goals by increased use and understanding of…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/137181151477/about-gapminder-dataset",
+      "sha256": "4870b1520d3dfcbaf53b37bfeb71e62bd75273a7196c079909d882a0792b91a0"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society",
+      "originalId": "132371528972",
+      "title": "Can the Internet use democratizes society?",
+      "date": "2015-11-02",
+      "lang": "en",
+      "description": "I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book Why Nations Fail. Suggested the deep relationship between poverty…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/132371528972/can-the-internet-use-democratizes-society",
+      "sha256": "da43a201f53d06c510ab5aa9614c0a0a53acdd6c1c43ccccc1c2bc5eafc4e316"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-analysis-in-graphs",
+      "originalId": "133776302497",
+      "title": "Can the Internet use democratizes society? Analysis in graphs",
+      "date": "2015-11-23",
+      "lang": "en",
+      "description": "￼ Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/133776302497/can-the-internet-use-democratizes",
+      "sha256": "38a4c7fd26cdafb970c930c4d55d07135897716743ad7200b6a5f846f97e045f"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-analysis-of-variance",
+      "originalId": "134708527487",
+      "title": "Can the Internet use democratizes society? Analysis of Variance",
+      "date": "2015-12-07",
+      "lang": "en",
+      "description": "Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/134708527487/can-the-internet-use-democratizes-society",
+      "sha256": "f3717a9de7a54164022b28c0404820020742c10fe01518dd1909b5688b662471"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-chi-square-test-of-independence",
+      "originalId": "135169171602",
+      "title": "Can the Internet use democratizes society? Chi-Square Test of Independence",
+      "date": "2015-12-14",
+      "lang": "en",
+      "description": "Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/135169171602/can-the-internet-use-democratizes-society",
+      "sha256": "678618a930083a7eba385ca4c485b91f585bd63e395484dc5e4d7568463ec531"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-correlation-coefficient",
+      "originalId": "135681979137",
+      "title": "Can the Internet use democratizes society? Correlation Coefficient",
+      "date": "2015-12-22",
+      "lang": "en",
+      "description": "3Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/135681979137/can-the-internet-use-democratizes-society",
+      "sha256": "4b55e9043f1d051167adca09dac9c459088ede37fd4fd3d766ae8e2614a8b8b2"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-test-a-basic-linear-regression-model",
+      "originalId": "137523884277",
+      "title": "Can the Internet use democratizes society? Test a Basic Linear Regression Model",
+      "date": "2016-01-18",
+      "lang": "en",
+      "description": "Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/137523884277/can-the-internet-use-democratizes-society-test-a",
+      "sha256": "258839774123d44b643c8ef9fe1b2e13d9f2c34a3469ae92089b497653caaad7"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-test-a-logistic-regression-model",
+      "originalId": "138648271737",
+      "title": "Can the Internet use democratizes society? Test a Logistic Regression Model",
+      "date": "2016-02-04",
+      "lang": "en",
+      "description": "Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/138648271737/can-the-internet-use-democratizes-society-test-a",
+      "sha256": "ec8c24995e0d1ff0c6ab9a631d898d64eb6b9b90227b35769b8835210161c574"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-test-a-multiple-regression-model",
+      "originalId": "138065030462",
+      "title": "Can the Internet use democratizes society? Test a Multiple Regression Model",
+      "date": "2016-01-26",
+      "lang": "en",
+      "description": "Question: Can the Internet use democratizes society? hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while reading the book…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/138065030462/can-the-internet-use-democratizes-society-test-a",
+      "sha256": "a3568f000733a1cd0ed75d294dce4a405e686a73884cb457422438d02a8ae27f"
+    },
+    {
+      "id": "data-can-the-internet-use-democratizes-society-testing-income-per-person-as-potential-moderate-variable",
+      "originalId": "136086466027",
+      "title": "Can the Internet use democratizes society? Testing Income per person as Potential Moderate variable.",
+      "date": "2015-12-28",
+      "lang": "en",
+      "description": "Original Question: Can the Internet use democratizes society? Original hypothesis: I am convinced, a deep democracy promotes the welfare of all people actively involved in the democratic process. Some years ago while…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/136086466027/can-the-internet-use-democratizes",
+      "sha256": "edf237e90825d43cdc19e54f1e9b132d760cfefc659b441090af876546db0cba"
+    },
+    {
+      "id": "data-classificationtree-for-binary-polityscore",
+      "originalId": "142775987452",
+      "title": "ClassificationTree for binary polityscore",
+      "date": "2016-04-14",
+      "lang": "en",
+      "description": "Decision tree analysis was performed to test nonlinear relationships among a series of explanatory variables and a binary, categorical response variable. All possible separations (categorical) or cut points…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/142775987452/classificationtree-for-binary-polityscore",
+      "sha256": "8c4698e1924098af2a7a7395f1b4e037503ddf7a3480ea5659047119dca62434"
+    },
+    {
+      "id": "data-data-manage",
+      "originalId": "133320870922",
+      "title": "Data Manage",
+      "date": "2015-11-16",
+      "lang": "en",
+      "description": "Ok… for this leasson from data analisys use the data manage Code: #!/usr/bin/env python2.6 # vim: set fileencoding=utf-8 : # -*- coding: utf-8 -*- # # week2.py # Copyright 2015 arpagon # # This program is free…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/133320870922/data-manage",
+      "sha256": "59ee155bb5e2ead7749ac2a8de248f9b08d3f56fa6aaf00ee3e105e469eef4f1"
+    },
+    {
+      "id": "data-el-uso-de-internet-democratiza-una-sociedad",
+      "originalId": "132347512252",
+      "title": "El uso de internet democratiza una sociedad?",
+      "date": "2015-11-01",
+      "lang": "es",
+      "description": "Estoy convencido que una profunda democracia favorece el bienestar de todas las personas que intervienen activamente en el proceso democrático. Hace algunos años al leer el libro Por Qué Fracasan los Países. Sugería la…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/132347512252/el-uso-de-internet-democratiza-una-sociedad",
+      "sha256": "83f80b6a489de8bb8729c564b71b46c47f369a54acb6f79cf9a36cc03ad3d258"
+    },
+    {
+      "id": "data-examine-frequency-distributions",
+      "originalId": "132843596007",
+      "title": "Examine frequency distributions",
+      "date": "2015-11-09",
+      "lang": "en",
+      "description": "Examine frequency distributions, for variables internetuserate, polityscore urbanrate, incomeperperson. Code:#!/usr/bin/env python2.6 # vim: set fileencoding=utf-8 : # -*- coding: utf-8 -*- # # week2.py # Copyright…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/132843596007/examine-frequency-distributions",
+      "sha256": "e459ccca46948acebd356bf0436d7d51e54927632dc1d8a888159bfd999d8ec2"
+    },
+    {
+      "id": "data-running-a-k-means-cluster-analysis",
+      "originalId": "143906934462",
+      "title": "Running a k-means Cluster Analysis",
+      "date": "2016-05-05",
+      "lang": "en",
+      "description": "A k-means cluster analysis was conducted to identify underlying subgroups of Countries based on their similarity of on 11 macro-economic variables that represent characteristics that could have an impact on…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/143906934462/running-a-k-means-cluster-analysis",
+      "sha256": "3f59d4c318bdb2c30b184956879613d6559ad6550d1916003a14d8837f3a1437"
+    },
+    {
+      "id": "data-running-a-lasso-regression-analysis-for-polityscore",
+      "originalId": "143487418772",
+      "title": "Running a Lasso Regression Analysis for polityscore",
+      "date": "2016-04-27",
+      "lang": "en",
+      "description": "A lasso regression analysis was conducted to identify a subset of variables from a pool of 13 quantitative predictor variables that best predicted a quantitative response variable measuring Polityscore in 213…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/143487418772/running-a-lasso-regression-analysis",
+      "sha256": "da6cad7954ceca2724a665dfd4485e752f5d2a22533798fcfea10ae4f246516c"
+    },
+    {
+      "id": "data-running-a-random-forest-for-binary-polityscore",
+      "originalId": "140645590697",
+      "title": "Running a Random Forest for binary polityscore",
+      "date": "2016-03-07",
+      "lang": "en",
+      "description": "Random forest analysis was performed to evaluate the importance of a series of explanatory variables in predicting a binary, categorical response variable. The following explanatory variables were included as possible…",
+      "series": "data-analysis",
+      "originalUrl": "https://arpagondata.tumblr.com/post/140645590697/running-a-random-forest-for-binary-polityscore",
+      "sha256": "fed6cbca1ae20dfb40d36995d38cb516b0356862195565a2057b2de3eb413394"
+    }
+  ],
+  "media": [
+    {
+      "source": "http://audacity.sourceforge.net/images/Audacity-logo-r_50pct.jpg",
+      "sha256": "f53fbb89bc70f067cecf9e3160171a26aeae2a260bcbd32e54b5471bdd3205e2",
+      "status": "unavailable"
+    },
+    {
+      "source": "http://www.digium.com/images/products/b410p-lrg.jpg",
+      "sha256": "7f3692d5df925d23d71f496e39d7182449cf00cfefd90f117d353cb9104f39e4",
+      "status": "unavailable"
+    },
+    {
+      "source": "https://64.media.tumblr.com/0000d09295426b4dbc7652f5af535b24/tumblr_inline_o14obvzU9Y1sx9rfn_540.png",
+      "sha256": "1e5d51fd30af31c987a62fa122ee305055c0bc581e30bcb72845ad2d0ec7c218",
+      "status": "local",
+      "local": "/media/writing/abbba15df9ef4a86.webp",
+      "bytes": 14034,
+      "localSha256": "f829d111dbce00838a8dde8ddce814d2d8bb6bab4dc5daaf815e3531bc959561"
+    },
+    {
+      "source": "https://64.media.tumblr.com/128bef9958e9d3065c5061a91228f7ea/tumblr_inline_o01u8y1SOi1sx9rfn_540.png",
+      "sha256": "e8fe394367f7e70ff4eee5c23d70b24765699599e649e4c9d0fb986acb58ce4a",
+      "status": "local",
+      "local": "/media/writing/0d310bb433131701.webp",
+      "bytes": 8890,
+      "localSha256": "d32a1de3ea53b0de1cc422a0f4e7178f3a67bc529cce27fa1c7ce44d3e85c227"
+    },
+    {
+      "source": "https://64.media.tumblr.com/207a327294f4d37ffacd76b9823a8aa3/tumblr_inline_o5lvniYNSU1sx9rfn_540.png",
+      "sha256": "c70b3f59b3e37ddd350226fbf070f726aa208d141d2baa221021a0f85fac254e",
+      "status": "local",
+      "local": "/media/writing/8adec42534947808.webp",
+      "bytes": 30206,
+      "localSha256": "e61935aaebf87aa8178b8b84ba9e406b3fe55051fbb13f205219999b839c3149"
+    },
+    {
+      "source": "https://64.media.tumblr.com/20eba630cf9fba273eb4fdc122cea028/tumblr_inline_ny94jqpYFp1sx9rfn_540.png",
+      "sha256": "684119e6c84f504a6ea383a5e03fa3b0426971e74401adacd37e52153a455a3b",
+      "status": "local",
+      "local": "/media/writing/e4411d28b12da726.webp",
+      "bytes": 14294,
+      "localSha256": "bd021b8d43a4d00dce75ed71652c9045e83bb96f0f42f7b20d4ad195127a1a87"
+    },
+    {
+      "source": "https://64.media.tumblr.com/293922793e95d423b98c5a20b613c67c/tumblr_inline_ny94c9Qi6o1sx9rfn_540.png",
+      "sha256": "de163388ba04f0a216a0deb9000ba0e4c7266adef903cbc8d3d1e1d362d1f369",
+      "status": "local",
+      "local": "/media/writing/aaa1951c541fe6f1.webp",
+      "bytes": 5322,
+      "localSha256": "dd7006d78177dc5ec19c8aa00028e9cc8b2352c77c66f6599de6bdf7e946814c"
+    },
+    {
+      "source": "https://64.media.tumblr.com/2bebf3b8fe29d5a2d18353df77715f29/tumblr_inline_o01u69QsIP1sx9rfn_540.png",
+      "sha256": "b320ccc006cd26ffea6b91d4aafc9e98a95a0a61e2e9a0eff9f6ed45b46029ed",
+      "status": "local",
+      "local": "/media/writing/52c2bd1459ef7ea5.webp",
+      "bytes": 13720,
+      "localSha256": "721e2e1eece246cab80886ef62c1728ebed8d1e5188a577d8101b806eca66b49"
+    },
+    {
+      "source": "https://64.media.tumblr.com/2ea412c38dcedc392637e0bd5fbdd127/tumblr_inline_nzc383g7cY1sx9rfn_540.png",
+      "sha256": "4741b42c1eb5a4ea8a7124c0798252b69e075b23643be690ea6a799052e5a3db",
+      "status": "local",
+      "local": "/media/writing/a399fc3ca32f2261.webp",
+      "bytes": 6232,
+      "localSha256": "39c47f4615d67c1db2cbb495cac0303646b0b3e348d3ad53d702c7b1a78c88bd"
+    },
+    {
+      "source": "https://64.media.tumblr.com/45b2dd59640a4b63ec5bc5dbca0f5e76/tumblr_inline_nxj0hdt9CD1sx9rfn_540.png",
+      "sha256": "4558dcfee62138a8ae182f9b3e49e88534594e89d6d94a9f75c86084d5679d2d",
+      "status": "local",
+      "local": "/media/writing/14c6c44477ec77e3.webp",
+      "bytes": 11660,
+      "localSha256": "a24e2a4b63861a6e77f059a493ce5609a6e83f54883cfb8c423e0f8536a05f30"
+    },
+    {
+      "source": "https://64.media.tumblr.com/49b5fda1cf7a293de18308d45fb44505/tumblr_inline_o1jkezkTbv1sx9rfn_540.png",
+      "sha256": "b204cc1e0007e6d7d41991763cd13f80dd01fc0816920e3879fe022bae901c46",
+      "status": "local",
+      "local": "/media/writing/7f38900a1f2955b6.webp",
+      "bytes": 9896,
+      "localSha256": "0c5b5e546e02041c3d6c50d2ca53d7f4c31e426e8cc75bfd821abedd3fddcea0"
+    },
+    {
+      "source": "https://64.media.tumblr.com/4d3d8fe5640755a826395c0ccc84061f/tumblr_inline_nzc2ua2Bwa1sx9rfn_540.png",
+      "sha256": "49ee3c392779560517bb198adf5fb3e9b6d28cbdac284acc6065a7272547298d",
+      "status": "local",
+      "local": "/media/writing/1102cd135fd2dea8.webp",
+      "bytes": 4030,
+      "localSha256": "d41c4b05f3c8f55650753ca07f6cf724eec1535c1531aaef84783b1ffee2e1ba"
+    },
+    {
+      "source": "https://64.media.tumblr.com/75a365595929ba42d40285597ec67b83/tumblr_inline_o6axnrPKRu1sx9rfn_540.png",
+      "sha256": "8157a495b02e5bf8fc77241faeab8d7e0307a9db6931649f6db16584507bddd5",
+      "status": "local",
+      "local": "/media/writing/2d06b3739cdc2375.webp",
+      "bytes": 9096,
+      "localSha256": "c1301c8a08595505c94d3692da02b06a02e7e56318b49622c78a173e5d68e3c2"
+    },
+    {
+      "source": "https://64.media.tumblr.com/89823a5bca3c2061bb7a7037c28ade54/tumblr_inline_o01u9eFPjO1sx9rfn_540.png",
+      "sha256": "7a247ee1f905dbdb32ea6207b889aa9098a312998925c76b145e42c4ff183703",
+      "status": "local",
+      "local": "/media/writing/fa05a5b1d17e5fed.webp",
+      "bytes": 8426,
+      "localSha256": "a83b9fb3ef8d0b1369ddc0521cb165a1cbd2f5efcf7f56df37647af59c51b867"
+    },
+    {
+      "source": "https://64.media.tumblr.com/90303fecdd9f44f8cfb9a32ab4a4a530/tumblr_inline_o1jkfet8wC1sx9rfn_540.png",
+      "sha256": "d0a071da89cabbadf4c4bd96431251d24f93fb871dee38b3b1e437acc72995bd",
+      "status": "local",
+      "local": "/media/writing/cb16585a477f2670.webp",
+      "bytes": 14798,
+      "localSha256": "dd383d3c17d7e70c74b2f76d3ab9cfe9ee848431215e218386114aa438fa6928"
+    },
+    {
+      "source": "https://64.media.tumblr.com/a2f33d165f8b108b0cdc13f34f51b5fc/tumblr_inline_o1jkfpyXbl1sx9rfn_540.png",
+      "sha256": "9ecf0edb05652c6f9e80aa87458c77a88442a6d6eea2bbbd166a88c8e61da31a",
+      "status": "local",
+      "local": "/media/writing/e06b2d605f4067c6.webp",
+      "bytes": 16178,
+      "localSha256": "8e4b65c7254e4ca553070ca3c94a289aba3de13e078b732d05f301a90afcb301"
+    },
+    {
+      "source": "https://64.media.tumblr.com/a80707bb1599ad873a9788c5515ccb2e/tumblr_inline_nzqnnlX9rE1sx9rfn_540.png",
+      "sha256": "e465a6c85c12ee85869a9abc01ebe800c8984947f3a7769931550e81019a6c16",
+      "status": "local",
+      "local": "/media/writing/dce61d4dd2a503cf.webp",
+      "bytes": 13796,
+      "localSha256": "0dafb034f86272b398e6e0f81584ce5cf2398c276fa5fc2830c62177880656e5"
+    },
+    {
+      "source": "https://64.media.tumblr.com/ad8530e7441ed9db705ad2b3801a7a9c/tumblr_inline_ny94gs6wbE1sx9rfn_540.png",
+      "sha256": "2c136b101f1268eec702248a73439461905865cdd27706ad2403035861fc0660",
+      "status": "local",
+      "local": "/media/writing/f2d13b9d636aba08.webp",
+      "bytes": 4954,
+      "localSha256": "d81035339c7c18f4597a3091d90a4f7cfef7d5890a0877db65151cf538108b53"
+    },
+    {
+      "source": "https://64.media.tumblr.com/b24fe111a70a3a14cd8782c040711f70/tumblr_inline_o6pzanefk61sx9rfn_540.png",
+      "sha256": "f351f7e94758e14cf22a9cef1eb628194cceea9e441ba3d1dd3afb157de829d2",
+      "status": "local",
+      "local": "/media/writing/34411a03aeadc415.webp",
+      "bytes": 7872,
+      "localSha256": "1c97338dbd763c862f81efd9ac982ef5ca656ec33fb03740c090c5016a21623f"
+    },
+    {
+      "source": "https://64.media.tumblr.com/bb49494b9199b1623bb683152c931e62/tumblr_inline_nzqohtCLpH1sx9rfn_540.png",
+      "sha256": "eafee907ad25362152d8febdcce7a0cd34e36a9ec208007d0c65920af4b38b1a",
+      "status": "local",
+      "local": "/media/writing/a4015033321dece7.webp",
+      "bytes": 13250,
+      "localSha256": "56cb82f5d8dc17f68611755d8a7cbc8a0deeb4a609fdffb1913a7272aea2c4f6"
+    },
+    {
+      "source": "https://64.media.tumblr.com/bddca35f9dd1ae0efe4a0a402eeefb41/tumblr_inline_o6pz67UWRx1sx9rfn_540.png",
+      "sha256": "41d31713a144312c939ebf1972191d5783689a8ccac12b7c0004ae4e6f771517",
+      "status": "local",
+      "local": "/media/writing/ed5d1938fd4b4b43.webp",
+      "bytes": 7200,
+      "localSha256": "7489a6a2a0358dc8fd89d1142263efa4171ed4cd22b866e44c560298b122f466"
+    },
+    {
+      "source": "https://64.media.tumblr.com/c0c5e45f25ec0188c132474aef92aba8/tumblr_nswlt6zPkH1rasnq9o1_500.gif",
+      "sha256": "26f0969ddf240dc9635b07b961a09f078d297b0905945c6f0e99dcd3ed873582",
+      "status": "local",
+      "local": "/media/writing/eac4f23b2a637d38.gif",
+      "bytes": 135680,
+      "localSha256": "26f0969ddf240dc9635b07b961a09f078d297b0905945c6f0e99dcd3ed873582"
+    },
+    {
+      "source": "https://64.media.tumblr.com/cad2d71bd8c204dd27b85e6671c75134/tumblr_inline_nx5w39aIVC1sx9rfn_540.jpg",
+      "sha256": "59c7249a896be8990f7eadd8df291d6ce62d42afbd4b3b5ae0cf7247512fbd8d",
+      "status": "local",
+      "local": "/media/writing/07358a9e46797247.webp",
+      "bytes": 108640,
+      "localSha256": "fdc89b650ad32cb739d92b11b65f22cbdab600f44f0823eb688abd089cc10a82"
+    },
+    {
+      "source": "https://64.media.tumblr.com/cd42bc9757ccd917f809e33e39730610/tumblr_inline_o6awz0lkT31sx9rfn_540.png",
+      "sha256": "27e3ca0eb0a8ca8e80a14f5db07a6a43cf5ed081ba6be7bfade2434f6b4002cd",
+      "status": "local",
+      "local": "/media/writing/3527f527ec08bb89.webp",
+      "bytes": 15616,
+      "localSha256": "8ecdc7eee846bc5865c89f3901f5eb0eb408ab9fad7f7fad43fc450bad9c7800"
+    },
+    {
+      "source": "https://64.media.tumblr.com/db25e05f179bfa5234450dfd3a1bfc27/tumblr_inline_o01u954L0t1sx9rfn_540.png",
+      "sha256": "5c683eebfa01b7bfea0dc34b799f9fb7d6929a5595efe5161adbe7162b2bc316",
+      "status": "local",
+      "local": "/media/writing/5af121abe1ae3e1a.webp",
+      "bytes": 10354,
+      "localSha256": "aacac744b9df12d9e1a2ce5cf110a315202b04b5f85ab420047bf87a065bdaee"
+    },
+    {
+      "source": "https://64.media.tumblr.com/def5fd068ea21eeeee3b60b9c662db99/tumblr_inline_o1jkfxxvyy1sx9rfn_540.png",
+      "sha256": "795e2f5ac843f12834401deb52a310f7de2d7b28e91ae5872536ea29a814f58a",
+      "status": "local",
+      "local": "/media/writing/a9565d267f4987ec.webp",
+      "bytes": 30950,
+      "localSha256": "b2f3131392cb99ca29ddc1196cf86f63e6cb364dfd335b835d978fb6d2ddd313"
+    },
+    {
+      "source": "https://64.media.tumblr.com/e20b2280bb03d59c0f6505de177c2d7a/tumblr_inline_o14oamDLyY1sx9rfn_540.png",
+      "sha256": "fd2db9def844aabe87f328ea3b2931c1c340f89df6e92cd3924216054fbc6d8e",
+      "status": "local",
+      "local": "/media/writing/980676a7113c3a79.webp",
+      "bytes": 5206,
+      "localSha256": "aec7a0dc01c09ebdc6fb36d38e5e12c06d75f117531f8bb5638fc1c050205bd5"
+    },
+    {
+      "source": "https://64.media.tumblr.com/e6885684fc8aa17b76db6a45720ad48f/tumblr_inline_o6pzmvgToo1sx9rfn_540.png",
+      "sha256": "ab6438515403c3e138e60088b321bf055845e02a1f4da109a1fd94904538b4d3",
+      "status": "local",
+      "local": "/media/writing/6e54554d0080b187.webp",
+      "bytes": 4880,
+      "localSha256": "77f998978381da6083c5f52c19a9964516c1d9b2d1f52468238500b0fa992ed5"
+    },
+    {
+      "source": "https://64.media.tumblr.com/f48722858483003ef1d946e4ac3fe512/tumblr_inline_o14oav9CrH1sx9rfn_540.png",
+      "sha256": "65457b9f7cb5e7f33cd428553979801d987e88363008a0e043c15b54689781dd",
+      "status": "local",
+      "local": "/media/writing/5f5d3da7859507b8.webp",
+      "bytes": 5592,
+      "localSha256": "16f4e7d4ad5c3543ef84b047b51d4247452c3a9411615d758938bd843687c21f"
+    },
+    {
+      "source": "https://64.media.tumblr.com/f695c905910cea8998e1d4222f5bd0c1/tumblr_inline_o3os2xNl1p1sx9rfn_540.png",
+      "sha256": "acc7cf66a7f9b833cd2867728ed14d57dab6cbedef9f606f92cbb0f530b06655",
+      "status": "local",
+      "local": "/media/writing/f12ac5213a77d960.webp",
+      "bytes": 7478,
+      "localSha256": "6620d485412422065543f11c69ba12cd1250b7b72bf8f3d171f14cc5859ad9d5"
+    },
+    {
+      "source": "https://64.media.tumblr.com/fb4e7f95e13a187a2846d7b1ed2815f3/tumblr_inline_nxj0fpOYPk1sx9rfn_540.png",
+      "sha256": "90a36405fb004263ae7c53ba82150f3845a22e3c3437d86f550fe402498a07b6",
+      "status": "local",
+      "local": "/media/writing/50765d5c96e0f686.webp",
+      "bytes": 36368,
+      "localSha256": "c307abd1bbecd885038842c13c54c1313fd052c421f04c1859c17fe0e56699ac"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/arouse/arouse_GPTs_2023-11-10_11-26-52.png",
+      "sha256": "ada77b1a58ef8e04bd6e849a3f5df723dee3dec541a29c4d3d1d3bd40885a788",
+      "status": "local",
+      "local": "/media/writing/378c872587e03f75.webp",
+      "bytes": 81142,
+      "localSha256": "3078c094d4e9552077f6439c857a92fc74d4aebd8bb3dab486b0e018eca8f629"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/arouse/arouse_ui.webm",
+      "sha256": "87cc18a99a576b29128028b4d997123585a9d2d1e7ae58a67527234a690c1f03",
+      "status": "local",
+      "local": "/media/writing/02f4c366272dfd67.webm",
+      "bytes": 1356665,
+      "localSha256": "87cc18a99a576b29128028b4d997123585a9d2d1e7ae58a67527234a690c1f03"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/arouse/arpagon__A_book_open_visually_engaging_image_symbolizing_a_know_3c6e39df-50ef-415c-acec-15011458d1cd.png",
+      "sha256": "b0bc369080ba8595dec3b382b3bf0afe9fb36951ceb9be07162ce9bdf2b390d4",
+      "status": "local",
+      "local": "/media/writing/23c2b38da2f46916.webp",
+      "bytes": 86734,
+      "localSha256": "5987b9c9370a302507808c663fa97296e8cc47daca2b1a420581e9abc707057d"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/arouse/arpagon__Walled_Gardendiagram_outline_an_illustration_on_black__076ec9e3-8c68-40e4-a0e6-28cb74b59331.png",
+      "sha256": "ad31141d70bc7feb9933f953553a43501892ec9817397c2886056d1dfeba4349",
+      "status": "local",
+      "local": "/media/writing/b95a7d4d6b7ce67c.webp",
+      "bytes": 98938,
+      "localSha256": "619f2118b76b1871c40bbf1a3dfbaedfd54f90e1d2ccb6abe376681b4e1ebd7e"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/arouse/arpagon__conceptual_image_illustrating_the_balance_between_tech_05b15754-560f-4706-bf3c-8cc93b875476.png",
+      "sha256": "421cc333ce27fe6a245149ce787a50d7a29f2e08ddfbb1bfa6039f0160f148f2",
+      "status": "local",
+      "local": "/media/writing/b8863eb73f5722ff.webp",
+      "bytes": 156370,
+      "localSha256": "3c4d41a7905a24e1fc5105463617ad3ec8cb6f9bb7ed108814af0bc576f13931"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/arouse/arpagon__visualization_of_a_tech_journey_shown_as_a_path_basic__bd98d0df-3aad-4fd3-8153-9e1b8fde7e5d.png",
+      "sha256": "ded71fb3ac48891f8c2e7ea74f0567452fc9e91aa95d421a70989dacbd659f3d",
+      "status": "local",
+      "local": "/media/writing/d28bc85fee2a00a1.webp",
+      "bytes": 68468,
+      "localSha256": "55933b3bbe1e38edbf30779a39426f3cf3ae9bc78051613f6efb7d4150498c87"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/vocal-resonance/arpagon__AI-powered_voice_assistant_in_action_high_tech_perform_00fac5f6-579c-4c69-9927-bb8edf071815.png",
+      "sha256": "d24d3f328757f09e709613559c1fcf02209a7cb5ad70f79dabe4f3804a6ed278",
+      "status": "local",
+      "local": "/media/writing/2b6c083ac18e5da1.webp",
+      "bytes": 94374,
+      "localSha256": "f706b2ccc03d151df23f70a8b9f56da711e600cbad50c9cdaadec5e7a429da1e"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/vocal-resonance/arpagon__Black_c1c8fda8-6189-4ecd-b765-b290199613b9.png",
+      "sha256": "0d4bcdc0c5a2c1e91212c52175ea8066155925f24b6b52c389f21343d578647a",
+      "status": "local",
+      "local": "/media/writing/9234587eaab2697e.webp",
+      "bytes": 145814,
+      "localSha256": "1e6296892c765fa8c4e441b9515a36e90264537db1831b67dc740717381e9ed0"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/vocal-resonance/arpagon__team_at_Artisan_Labs_working_on_voice_technology_proje_3dcb92a5-32a2-4a5f-a5c2-3b5bd1b2158e.png",
+      "sha256": "34574120129427da1967953aa9da9817471594af644845c4cd479b34236a9402",
+      "status": "local",
+      "local": "/media/writing/ebcbae6d45ed5199.webp",
+      "bytes": 85282,
+      "localSha256": "08bd13247d55cfa0af9b7a9a227d03cfb26f918c57e7920526f9377859ce1ca6"
+    },
+    {
+      "source": "https://blog.artisanlabs.io/assets/blog/vocal-resonance/arpagon__waveform_representing_voice._high_tech_performance_dia_80629d4f-a99e-47b2-926e-7d8548821f0b.png",
+      "sha256": "07a9b56a3b47eac6560cea9fa9474dbeb82090668f111d3ef81893bb5b3250ad",
+      "status": "local",
+      "local": "/media/writing/0801e2ec9f81e14f.webp",
+      "bytes": 50490,
+      "localSha256": "732e4fc04e47565d6d09c2b6af6d9f6ac7475902c4ea2c5f299666dfe933bc79"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg04-Z164fYiH_9S6oGf_swX94rD7DN9xHuNxNoFrz2eLLFE1-JyDlY3jBWayf6_p18HNlbjHYFYDBid3YjlmQTn9Btx8ioJCQx-6o_WaifMPFKH4dN4WnZiexpmHOYvjdNjspt3rwljtnK/s400/screenshot_01.png",
+      "sha256": "50b95c2b8003a42b12e0b3b40c0a2d21428a305c4ece7899f13f137f00be52bc",
+      "status": "local",
+      "local": "/media/writing/e7b7a53bd2fd62dd.webp",
+      "bytes": 7204,
+      "localSha256": "e85ae135b487f4653efd81a8a584ed178321d9a7d9f237b049b4a0d4b53ed900"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCmfenHP1X8gmDPoRDWFXfUSTBb6M4KQdRuXdXjfrfOXFJ_P1rOknH44lFLCHoFsR_aXhkaE-oFQzfH5tWwU-7qhr9vbKvHC9vXBeb4tySYeOcvsUdi-Hj2fcJG-NnW4RHA3nigs0ZwMqm/s400/screenshot_04.png",
+      "sha256": "f492137374967fd989b38327ee636b1091e12c6b0023915c139dfe6c9d6dd1f4",
+      "status": "local",
+      "local": "/media/writing/fe17d3af1670aba5.webp",
+      "bytes": 13306,
+      "localSha256": "40d1f74b915445feda10a41a1e6f9d94fbb292556e1b3832980d1ec1a6ac6660"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1jc1OIx6LzXK01jlbF7In751LZZGVSlA8fl7kcYSlarkv9iM3DGtp0v676WGqXJivuHrRNi_NUvGpXTe7E7ROFaBkvmDSozDz8lvkRlnj4hSD8y0qVtE_TYtiE5jB_g8CSXnmwGcerbAC/s400/screenshot_03.png",
+      "sha256": "e7c142d079b1cb1670969ed0aab7d231bc92f34d9e7c679a608a543c43c3bcb8",
+      "status": "local",
+      "local": "/media/writing/1ae901500e4fe8a2.webp",
+      "bytes": 4404,
+      "localSha256": "59a18a228e83b5970803911a39ee9026b6179ddc7ccaefaf6d21ea3e1439b4f2"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV7uO-laOMo5ezenWwXYpsgKf0WeX-PvWIcl_RDGptRzkwhdkj8irrVagxNKuQZrUfMdHP1eIB5KXNKLeeUurFhh5RBuTQId7msGoy18KhCUIOwNKaJDW8Ams3W1LweRwAlgiSNHqWCtZw/s320/medelllinasterik.png",
+      "sha256": "2bd30d1a346cefc8c5bd3c6280e58fac0dd84ffa70abaf0723debbc25dafe4ba",
+      "status": "local",
+      "local": "/media/writing/421bb728dd56faac.webp",
+      "bytes": 7940,
+      "localSha256": "e78ff17ff6bfe87c05974d1d49ac4809a38327c91e84df5873e98ec3fb0473a4"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsl1UfvIwS-XFVvgnNkgtZbE01BEHsz8AG6szV3Zb2ldAp05G_bnRw1cd_wzgq-BmqjMzrbbNOhICMJHWfzFF_K1MZblRaEFd6CaXe3v9O0CzRU4nFpZijUS5y_sPDVtClz3ZgBF5JryX5/s320/tono5.png",
+      "sha256": "d525fc5aca5bd85f9db78ab817b06c96354afecaf69a602050ee73af9fd16586",
+      "status": "local",
+      "local": "/media/writing/2ee79b016ee4eee4.webp",
+      "bytes": 8352,
+      "localSha256": "9f3575961eb324ffa4f3983c142948fd8197b5a286cee36f30dea32dcadf1a21"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzL3Ajm6Y49a6Rc0p2UcEhZ2rk10Q6F-oRCuN1h7wRr_hAUy6SVj71Td8X4yGN09XdNKZ2fQYYqw9ELxeBYAIiUbaZ0uY4fe6Y62DIzMw2ceBj95R0qGHBsDWxE8oN-tQK1KdP7XEyAb2g/s400/screenshot_02.png",
+      "sha256": "170828baf343e20f23897a644a9da3950ff7bab68a95cce592e1f99f89d93647",
+      "status": "local",
+      "local": "/media/writing/467cc8d40a7691a6.webp",
+      "bytes": 8518,
+      "localSha256": "1a38cc8d02175d36b9869a7850c36017a2fc532918b8914ea64c934018210f77"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCvfqWh1daVzqtE4qM7CFfoZOvj8mOq97QBa8JR8EEYl3j7vwpBUpeAnul-0uQ84UVvi4m7XtyVtjjqFYn8eWbUDXNL1FoNJGTPPsK0FceDpLFS5wETwcLQw_-5XnZDNgW6xwOvLHwT085/s200/GXW_black_silver.jpg",
+      "sha256": "bd7893de5e404ae553da3dce9b665cae35f6b8c1627370d460654055a21ab0d9",
+      "status": "local",
+      "local": "/media/writing/cd536dab3bc67d6d.webp",
+      "bytes": 4978,
+      "localSha256": "fd1e20b54ca4ae898a3dd6133b9300be80f611f729a5102a231576661ab14340"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiweDfr7yCQ2bWf2iEQ7qqzGkRyuW-r7pcUxvzM9yiX6f5Le4EWzHbXdwjUSwLgXTPZpU03vvBEhzro9y8FffQ_VGD2zhYZY25T_dGOHyNhRb0Oyzg54SYQJ9oHoRhOwJYVeN9NMW3G2tZs/s320/Pantallazo-dtmf2.png",
+      "sha256": "b97f970b6b375f3d13d9c7f3ea22fd393c50f70dd3abe29a90f85bb596c7e695",
+      "status": "local",
+      "local": "/media/writing/235bb1a5cf9dcf49.webp",
+      "bytes": 8312,
+      "localSha256": "6d986ff422f7d07c7be4982b8833cf23008a2fd033d92adba6625e01a6b471ff"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLqiW_0lI5IcOy9Co-v71VIiRR7ypzpJ2QpTm728EVsc8T3Z7FyO9rT7IL5XjSyYTt8oJIbRvxG5VEeaKCpbIevmtvqQMj9bi1xaioYCxSt7xXhK0cjuzaP-b4m__TBZBmanQbPIBBrgE8/s320/CrearExt.png",
+      "sha256": "57de75461fe6aeba56aae2bcf5de61de842837eebd8181c8f161393135978a64",
+      "status": "local",
+      "local": "/media/writing/bd4802672bc1c3e0.webp",
+      "bytes": 7968,
+      "localSha256": "f5b0e249a4704d7b53dfa8f765cb25b6ee963bf0dad9255fa412d58a0a45cac0"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrm4JIvDLUEg-nYp0LpcQuLe63DNpL_DseAgOLDjvd3TU-WF87Kljy5Jn-yf__md8GrZkMKOWdjGrBk4t9DpOEyDOSJ7oFsJPKjf6pNpnUWA2x-oWOzcSeCjEZnGuecY4odBRajLKzTUqj/s400/ucell.png",
+      "sha256": "6e91321a60c16bde865dd423fd620b7976b6ddbae59e087e1d66e2b9aed96467",
+      "status": "local",
+      "local": "/media/writing/07d4b28eb5b122c7.webp",
+      "bytes": 8556,
+      "localSha256": "ce2802047099930aa4ae5d52e1a84079baecb30a1e478084b00c9cea10dc02a5"
+    },
+    {
+      "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxzAboDhN6BfUJnwepBmtdvhy3kX2y1WC7uAntZC1vvz-0tJpjV-r8kQChlBsgxB-UZxXceEzDFHLiXD5cflug-yVYSqevTgiwkLju3C-axmDBek5_O1q4mbr21gOS6ZvOBR4PdnLZBfdv/s320/panel.png",
+      "sha256": "56173500a1c875855435ba6b465e4d54869a47c99fad6df4df53322585874dbd",
+      "status": "local",
+      "local": "/media/writing/4edac6f541cdee8f.webp",
+      "bytes": 16428,
+      "localSha256": "34582e76cfdc950a54efe60eaa2732a3afa8a05657313412888d2a9f730cdb4b"
+    }
+  ]
+}

@@ -11,7 +11,8 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/check-dist.mjs",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "test": "node --test scripts/test-privacy-patterns.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
