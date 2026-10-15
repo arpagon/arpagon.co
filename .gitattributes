@@ -1,0 +1,2 @@
+# Markdown hard line breaks and original whitespace in archived code are intentional.
+src/content/writing/*.md whitespace=-blank-at-eol

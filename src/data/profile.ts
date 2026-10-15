@@ -203,11 +203,11 @@ export const press = [
   { date: '2026-09', outlet: 'The Intelligent', title: 'Startup colombiana Emilia AI logra US$1,5 millones en ronda pre-seed', url: 'https://theintelligent.com.co/tecnologia/2026/startup-colombiana-emilia-ai-logra-15-millones-de-dolares-en-ronda-pre-seed-para' },
 ];
 
-// Writing published elsewhere; imported into /writing in a follow-up.
+// Imported series. Counts are pages in their original languages, not unique essays.
 export const archive = [
-  { period: '2023', title: 'ArtisanLabs Tech Blog', count: 5, lang: 'EN/ES', url: 'https://blog.artisanlabs.io/' },
-  { period: '2015–2016', title: 'Arpagon Data Analysis (Tumblr)', count: 17, lang: 'EN', url: 'https://arpagondata.tumblr.com/' },
-  { period: '2008–2009', title: 'Medellín Asterisk (Blogger)', count: 17, lang: 'ES', url: 'https://medellinasterisk.blogspot.com/' },
+  { id: 'artisanlabs', period: '2023', title: 'ArtisanLabs Tech Blog', count: 5, lang: 'EN/ES', url: '/writing/#artisanlabs', originalUrl: 'https://blog.artisanlabs.io/' },
+  { id: 'data-analysis', period: '2015–2016', title: 'Arpagon Data Analysis', count: 17, lang: 'EN/ES', url: '/writing/#data-analysis', originalUrl: 'https://arpagondata.tumblr.com/' },
+  { id: 'medellin-asterisk', period: '2008–2009', title: 'Medellín Asterisk', count: 17, lang: 'ES', url: '/writing/#medellin-asterisk', originalUrl: 'https://medellinasterisk.blogspot.com/' },
 ];
 
 export const homePath = (l: Locale) => (l === 'en' ? '/' : `/${l}/`);

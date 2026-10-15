@@ -23,7 +23,7 @@ export function profileMarkdown(posts: { id: string; data: { title: string; date
     '',
     '## Writing',
     ...posts.map((p) => `- [${p.data.title}](https://arpagon.co/writing/${p.id}/) (${p.data.date.toISOString().slice(0, 10)}; markdown: https://arpagon.co/writing/${p.id}.md)`),
-    ...archive.map((a) => `- [${a.title}](${a.url}) (${a.period}, ${a.count} posts, ${a.lang})`),
+    ...archive.map((a) => `- [${a.title}](https://arpagon.co${a.url}) (${a.period}, ${a.count} pages, ${a.lang}; original: ${a.originalUrl})`),
     '',
     '## Elsewhere',
     ...profile.links.map((l) => `- [${l.label}](${l.url})`),

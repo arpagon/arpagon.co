@@ -1,0 +1,3 @@
+# Maintenance-only tooling. Pandoc 3.7.0.2 is also required on PATH.
+Pillow==12.1.1
+PyYAML==6.0.3

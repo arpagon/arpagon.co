@@ -1,6 +1,6 @@
 # arpagon.co v2 — implementation plan
 
-Status: in progress (PR `feat/astro-v2`). Replaces the 2022 Gatsby "Cara" template.
+Status: initial rebuild live (PR #1, `3ed38d3`). Replaced the 2022 Gatsby "Cara" template. Pi extensions are in PR #2; writing import is tracked in issue #3 and [its implementation plan](../2026-10-15/writing-import.md).
 
 ## Decisions
 - Stack: Astro 7, static output, Markdown content collections, tiny client scripts only (sky canvas, terminal mode, nav highlight).
@@ -11,7 +11,7 @@ Status: in progress (PR `feat/astro-v2`). Replaces the 2022 Gatsby "Cara" templa
 - Contact: info@arpagon.co.
 
 ## Phases
-1. **This PR** — Astro skeleton, home in 3 languages, projects, community, press, now, writing index, migrate `/blog/k8s-edge` (301 to `/writing/k8s-edge/`), agent files, keep `/.well-known/matrix/*` and its headers, post-build checks.
+1. **PR #1 (live)** — Astro skeleton, home in 3 languages, projects, community, press, now, writing index, migrate `/blog/k8s-edge` (301 to `/writing/k8s-edge/`), agent files, keep `/.well-known/matrix/*` and its headers, post-build checks.
 2. **Writing import** — bring in the archive (Medellín Asterisk 2008–09, Arpagon Data Analysis 2015–16, ArtisanLabs 2023) as dated posts with links to the originals; download images.
 3. **Media** — project videos/posters (bzz, pi-annotate, pi-animations; record a pi-rewind demo).
 4. **Polish** — per-route OG images, project detail pages, Lighthouse/CI checks (links, JSON, hreflang).
