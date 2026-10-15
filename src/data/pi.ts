@@ -1,6 +1,6 @@
-// Pi coding agent extensions authored and published (npm) by @arpagon.
+// Pi packages maintained and published (npm) by @arpagon.
 // Facts from each repo's README/package.json and the npm registry (checked 2026-10-15).
-// Forks of other people's extensions are intentionally not listed as own work.
+// Web-provider variants credit their upstream; upstream-only forks are not claimed as original work.
 
 export type Screen =
   | { kind: 'video'; webm: string; mp4: string; poster: string; alt: string; caption: string }
