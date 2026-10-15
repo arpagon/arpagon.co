@@ -1,0 +1,31 @@
+---
+import Base from './Base.astro';
+import { profile } from '../data/profile';
+interface Props { title: string; description?: string; lang: 'en' | 'es' | 'pt'; date?: Date; markdown?: string }
+const { title, description, lang, date, markdown } = Astro.props;
+---
+<Base lang={lang} title={title} description={description} type="article" markdown={markdown}>
+  <div class="post">
+    <p class="crumbs mono"><a href="/">arpagon.co</a> / <a href="/writing/">writing</a></p>
+    <article>
+      <h1>{title}</h1>
+      {date && <p class="meta"><time datetime={date.toISOString()}>{date.toISOString().slice(0, 10)}</time> · {profile.name}</p>}
+      <div class="prose"><slot /></div>
+    </article>
+  </div>
+</Base>
+<style is:global>
+  .post { max-width: 720px; margin: 0 auto; padding: 56px 22px 120px; }
+  .post .crumbs { font-size: 13px; color: var(--muted); } .post .crumbs a { color: var(--muted); text-decoration: none; }
+  .post h1 { color: var(--fg); font-size: 40px; line-height: 1.15; letter-spacing: -1px; margin: 32px 0 8px; }
+  .post .meta { color: var(--muted); font-size: 14px; margin: 0 0 40px; }
+  .prose { color: #c4c4c9; font-size: 17px; line-height: 1.75; }
+  .prose h1, .prose h2, .prose h3 { color: var(--fg); line-height: 1.25; margin: 2em 0 .6em; }
+  .prose h1 { font-size: 28px; } .prose h2 { font-size: 22px; } .prose h3 { font-size: 18px; }
+  .prose img { max-width: 100%; height: auto; background: #fff; border-radius: 6px; }
+  .prose a { color: var(--cream); }
+  .prose code { font: .9em var(--mono); background: #16161a; padding: .1em .35em; border-radius: 4px; }
+  .prose pre { background: #111114 !important; border: 1px solid #222; padding: 16px; border-radius: 8px; overflow: auto; }
+  .prose pre code { background: none; padding: 0; }
+  .prose blockquote { border-left: 2px solid var(--gold); margin: 0; padding-left: 16px; color: var(--text); }
+</style>

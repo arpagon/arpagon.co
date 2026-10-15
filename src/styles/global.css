@@ -1,0 +1,22 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/jetbrains-mono/latin-400.css';
+@import '@fontsource/jetbrains-mono/latin-700.css';
+
+:root {
+  --bg: #0b0b0d; --fg: #f2f2f2; --text: #a3a3a8; --muted: #6e6e76; --line: #1a1a1e;
+  --gold: #c9a24a; --cream: #e9d9ae;
+  --sans: 'Inter Variable', system-ui, sans-serif; --mono: 'JetBrains Mono', ui-monospace, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: var(--fg); text-decoration-color: #ffffff40; text-underline-offset: 3px; }
+a:hover { color: var(--gold); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+::selection { background: #c9a24a55; color: #fff; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 16px; z-index: 20; background: var(--bg); padding: 8px 12px; }
+.mono { font-family: var(--mono); }
+.note { font-size: 13px; color: var(--muted); }

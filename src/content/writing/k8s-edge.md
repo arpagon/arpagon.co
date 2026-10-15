@@ -1,6 +1,12 @@
-# Kubernetes Edege k3s + Kilo + Cilium
+---
+title: "Kubernetes at the edge: K3s + Kilo + Cilium"
+date: 2022-09-29
+lang: en
+description: "Notes on a multi-cloud edge Kubernetes setup: K3s, the Kilo WireGuard overlay and Cilium eBPF networking."
+originalPath: /blog/k8s-edge
+---
 
-<img src="/img/k3s-kilo-cilium-2022-09-29-1031.svg" alt="Image alt" />
+<img src="/img/k3s-kilo-cilium-2022-09-29-1031.svg" alt="Edge Kubernetes architecture: K3s nodes joined by a Kilo WireGuard mesh, with Cilium networking" />
 
 
 # Kilo

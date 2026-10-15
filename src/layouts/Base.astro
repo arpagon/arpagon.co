@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+import { profile, copy, LOCALES, homePath, type Locale } from '../data/profile';
+
+interface Props {
+  lang: Locale;
+  title?: string;
+  description?: string;
+  alternates?: boolean; // page exists in all locales (home)
+  type?: 'website' | 'article';
+  markdown?: string; // path to markdown alternate
+}
+const { lang, title, description, alternates = false, type = 'website', markdown } = Astro.props;
+const t = copy[lang];
+const fullTitle = title ? `${title} · ${profile.name}` : `${profile.name} — ${t.role}`;
+const desc = description ?? t.description;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogLocale = { en: 'en_US', es: 'es_CO', pt: 'pt_BR' }[lang];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  alternateName: profile.handle,
+  url: profile.url,
+  image: new URL(profile.photo, Astro.site).href,
+  jobTitle: 'Co-founder & CTO',
+  worksFor: { '@type': 'Organization', name: 'Emilia AI', url: 'https://emiliavision.com' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Medellín', addressCountry: 'CO' },
+  email: `mailto:${profile.email}`,
+  sameAs: profile.links.map((l) => l.url),
+};
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    {alternates && LOCALES.map((l) => (
+      <link rel="alternate" hreflang={copy[l].htmlLang} href={new URL(homePath(l), Astro.site)} />
+    ))}
+    {alternates && <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />}
+    {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
+    <link rel="alternate" type="application/rss+xml" title={`${profile.name} — Writing`} href="/rss.xml" />
+    <link rel="help" type="text/plain" href="/llms.txt" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta property="og:image:alt" content={`${profile.name} — ${t.role}`} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={profile.handle} />
+    <meta name="theme-color" content="#0b0b0d" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="me" href="https://mastodon.social/@arpagon" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
