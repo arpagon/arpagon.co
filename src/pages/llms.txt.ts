@@ -20,6 +20,8 @@ export const GET: APIRoute = async () => {
     '## Projects',
     ...projects.map((p) => `- [${p.name}](${p.url}): ${p.desc.en}`),
     '',
+    `- [Pi extensions](https://arpagon.co/pi/): pi-rewind, pi-animations, pi-context-zone, pi-worktree-tui-status, pi-web-providers-codex-cf, pi-web-providers-az-cf`,
+    '',
     '## Writing',
     ...posts.map((p) => `- [${p.data.title}](https://arpagon.co/writing/${p.id}.md): ${p.data.description}`),
     '',

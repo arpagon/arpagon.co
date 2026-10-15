@@ -6,7 +6,7 @@ const DIST = 'dist';
 const required = [
   '.well-known/matrix/server', '.well-known/matrix/client', '_headers', '_redirects',
   'index.html', 'es/index.html', 'pt/index.html', 'writing/index.html', 'writing/k8s-edge/index.html',
-  'llms.txt', 'index.md', 'resume.json', 'rss.xml', 'sitemap-index.xml', 'og.png',
+  'pi/index.html', 'llms.txt', 'index.md', 'resume.json', 'rss.xml', 'sitemap-index.xml', 'og.png',
 ];
 const banned = [
   /\+57[\s\d]{6,}/, /\b3\d{2}[\s-]?\d{3}[\s-]?\d{4}\b/, // phone numbers
