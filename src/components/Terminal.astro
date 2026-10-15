@@ -1,0 +1,81 @@
+---
+import { profile, copy, projects, community, type Locale } from '../data/profile';
+import { getCollection } from 'astro:content';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = copy[lang];
+const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+const iso = (d: Date) => d.toISOString().slice(0, 10);
+---
+<div id="tv" role="dialog" aria-modal="true" aria-label="Terminal" hidden>
+  <div class="tvin">
+    <div class="bar"><span>arpagon@medellin: ~</span><button type="button" class="exit">{t.exitTerminal}</button></div>
+<pre><span class="p">❯</span> whoami
+<span class="y">{profile.name}</span> ({profile.handle}) — {t.role}
+{t.tagline}
+
+<span class="p">❯</span> cat proof.txt
+{t.proof.map((x) => `- ${x}`).join('\n')}
+
+<span class="p">❯</span> ls projects/ --status</pre>
+    <table>
+      {projects.map((x) => (
+        <tr><td class={x.status === 'active' ? 'p' : 'm'}>{x.status === 'active' ? '●' : '○'}</td>
+          <td><a href={x.url}>{x.name}</a></td><td class="m">{x.period}</td><td>{x.desc[lang]}</td></tr>
+      ))}
+    </table>
+<pre><span class="p">❯</span> bzz --demo</pre>
+    <video muted loop playsinline preload="none" poster="" aria-label="bzz terminal client demo">
+      <source src="/media/bzz-demo.webm" type="video/webm" /><source src="/media/bzz-demo.mp4" type="video/mp4" />
+    </video>
+<pre><span class="p">❯</span> ls writing/ | sort -r
+{posts.map((p) => <><span class="m">{iso(p.data.date)}</span>  <a href={`/writing/${p.id}/`}>{p.data.title}</a>{'\n'}</>)}
+<span class="p">❯</span> cat community.txt
+{community.map((c) => `${c.date ? c.date + '  ' : ''}${c.text[lang]}`).join('\n')}
+
+<span class="p">❯</span> contact</pre>
+    <p><a href={`mailto:${profile.email}`}>{profile.email}</a>{profile.links.map((l) => <>{'  '}<a href={l.url}>{l.label}</a></>)}</p>
+<pre><span class="p">❯</span> <span class="cursor"></span></pre>
+  </div>
+</div>
+
+<style is:global>
+  #tv { position: fixed; inset: 0; z-index: 5; background: #0b0b0df2; overflow: auto; font: 15px/1.6 var(--mono); color: #c9d1d9; }
+  #tv[hidden] { display: none; }
+  .tvin { max-width: 880px; margin: 0 auto; padding: 48px 24px 120px; }
+  #tv pre { margin: 16px 0 0; white-space: pre-wrap; font: inherit; }
+  #tv .p { color: var(--gold); } #tv .y { color: var(--fg); font-weight: 700; } #tv .m { color: var(--muted); }
+  #tv a { color: var(--cream); }
+  #tv table { border-collapse: collapse; width: 100%; margin-top: 6px; }
+  #tv td { padding: 2px 12px 2px 0; vertical-align: top; }
+  #tv video { width: 100%; border: 1px solid #2a2a30; border-radius: 6px; margin-top: 10px; background: #000; }
+  #tv .bar { border: 1px solid #2a2a30; border-radius: 6px; padding: 6px 12px; display: flex; justify-content: space-between; font-size: 13px; background: #111114; }
+  #tv .exit { font: inherit; color: var(--cream); background: none; border: 0; cursor: pointer; text-decoration: underline; padding: 0; }
+  .cursor { display: inline-block; width: 9px; height: 18px; background: var(--gold); vertical-align: -3px; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+  body.term .wrap { filter: blur(2px); }
+</style>
+
+<script>
+  const tv = document.getElementById('tv')!;
+  const btn = document.querySelector<HTMLButtonElement>('.tbtn');
+  const video = tv.querySelector('video')!;
+  const set = (on: boolean) => {
+    tv.hidden = !on;
+    document.body.classList.toggle('term', on);
+    btn?.setAttribute('aria-expanded', String(on));
+    if (on) { video.play().catch(() => {}); tv.querySelector<HTMLElement>('.exit')?.focus(); }
+    else { video.pause(); btn?.focus(); }
+    history.replaceState(null, '', on ? '#terminal' : location.pathname);
+  };
+  btn?.addEventListener('click', () => set(tv.hidden));
+  tv.querySelector('.exit')?.addEventListener('click', () => set(false));
+  addEventListener('keydown', (ev) => {
+    const target = ev.target as HTMLElement;
+    if (target.closest('input, textarea, [contenteditable]')) return;
+    if (ev.key === 'Escape' && !tv.hidden) return set(false);
+    if ((ev.code === 'Backquote' || ev.key === '`' || ev.key === 't') && !ev.metaKey && !ev.ctrlKey && !ev.altKey) set(tv.hidden);
+  });
+  if (location.hash === '#terminal') set(true);
+</script>

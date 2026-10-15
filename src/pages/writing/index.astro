@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import Post from '../../layouts/Post.astro';
+import { archive } from '../../data/profile';
+const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+---
+<Post title="Writing" lang="en" description="Notes and essays by Sebastián Rojo, plus an archive of writing since 2008.">
+  <ul class="list">
+    {posts.map((p) => <li><a href={`/writing/${p.id}/`} lang={p.data.lang}>{p.data.title}</a><span>{p.data.date.toISOString().slice(0, 10)} · {p.data.lang.toUpperCase()}</span></li>)}
+  </ul>
+  <h2>Archive</h2>
+  <p>Earlier writing, still online at its original home. Being imported here.</p>
+  <ul class="list">
+    {archive.map((a) => <li><a href={a.url}>{a.title}</a><span>{a.period} · {a.count} posts · {a.lang}</span></li>)}
+  </ul>
+</Post>
+<style>
+  .list { list-style: none; padding: 0; }
+  .list li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); }
+  .list a { text-decoration: none; color: #ddd; }
+  .list span { color: var(--muted); white-space: nowrap; font-size: 14px; }
+</style>

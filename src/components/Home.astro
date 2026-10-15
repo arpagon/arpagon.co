@@ -1,0 +1,149 @@
+---
+import { getCollection } from 'astro:content';
+import Sky from './Sky.astro';
+import Terminal from './Terminal.astro';
+import { profile, copy, projects, community, press, archive, LOCALES, homePath, UPDATED, type Locale } from '../data/profile';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = copy[lang];
+const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+const year = (d: Date) => d.getUTCFullYear();
+const sections = ['about', 'projects', 'writing', 'community', 'now'] as const;
+---
+<a class="skip" href="#main">Skip to content</a>
+<Sky />
+<div class="wrap">
+  <header class="left">
+    <div>
+      <img class="me" src={profile.avatar} srcset={`${profile.avatar} 1x, ${profile.photo} 2x`} width="120" height="120" alt={profile.name} />
+      <h1>{profile.name}</h1>
+      <p class="role">{t.role}</p>
+      <p class="tag">{t.tagline}</p>
+      <nav aria-label="Sections">
+        {sections.map((s) => <a href={`#${s}`} data-nav={s}>{t.nav[s]}</a>)}
+      </nav>
+    </div>
+    <div>
+      <button class="tbtn" type="button" aria-controls="tv" aria-expanded="false">❯ {t.terminal} <kbd>t</kbd></button>
+      <p class="soc">
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
+        {profile.links.map((l) => <a href={l.url} rel="me">{l.label}</a>)}
+      </p>
+      <p class="langs" aria-label="Language">
+        {LOCALES.map((l) => <a href={homePath(l)} hreflang={copy[l].htmlLang} lang={copy[l].htmlLang} aria-current={l === lang ? 'page' : undefined}>{l.toUpperCase()}</a>)}
+      </p>
+    </div>
+  </header>
+
+  <main id="main" class="right">
+    {t.machineNote && <p class="note">{t.machineNote} <a href="/">English</a></p>}
+
+    <section id="about" aria-label={t.nav.about}>
+      {t.about.map((p) => <p>{p}</p>)}
+    </section>
+
+    <section id="projects" aria-labelledby="h-projects">
+      <h2 id="h-projects">{t.sections.projects}</h2>
+      {projects.map((x) => (
+        <article class="job">
+          <p class="when">{x.period}</p>
+          <div>
+            <h3><a href={x.url}>{x.name} <span aria-hidden="true">↗</span></a></h3>
+            <p class="sub">{x.role[lang]}</p>
+            <p>{x.desc[lang]}</p>
+            <ul class="chips">{x.tags.map((tag) => <li>{tag}</li>)}</ul>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section id="writing" aria-labelledby="h-writing">
+      <h2 id="h-writing">{t.sections.writing}</h2>
+      {posts.slice(0, 5).map((p) => (
+        <p class="row"><a href={`/writing/${p.id}/`} lang={p.data.lang}>{p.data.title}</a><span>{year(p.data.date)} · {p.data.lang.toUpperCase()}</span></p>
+      ))}
+      <h3 class="minor">{t.sections.archive}</h3>
+      {archive.map((a) => (
+        <p class="row"><a href={a.url}>{a.title}</a><span>{a.period} · {a.count} · {a.lang}</span></p>
+      ))}
+      <p><a class="more" href="/writing/">{t.allWriting} →</a></p>
+    </section>
+
+    <section id="community" aria-labelledby="h-community">
+      <h2 id="h-community">{t.sections.community}</h2>
+      {community.map((c) => <p class="row"><span class="txt">{c.text[lang]}</span><span>{c.date.slice(0, 7)}</span></p>)}
+      <h3 class="minor">{t.sections.press}</h3>
+      {press.map((p) => <p class="row"><a href={p.url}>{p.title}</a><span>{p.outlet} · {p.date}</span></p>)}
+    </section>
+
+    <section id="now" aria-labelledby="h-now">
+      <h2 id="h-now">{t.sections.now}</h2>
+      <ul class="now">{t.now.map((n) => <li>{n}</li>)}</ul>
+      <p class="note">{t.updated} <time datetime={UPDATED}>{UPDATED}</time></p>
+    </section>
+
+    <footer class="note">© {new Date().getUTCFullYear()} {profile.name} · <a href="/llms.txt">llms.txt</a> · <a href="/resume.json">resume.json</a> · <a href="/rss.xml">RSS</a></footer>
+  </main>
+</div>
+<Terminal lang={lang} />
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-nav]')];
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) {
+      links.forEach((a) => a.classList.toggle('on', a.dataset.nav === e.target.id));
+    }
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  links.forEach((a) => { const s = document.getElementById(a.dataset.nav!); if (s) io.observe(s); });
+</script>
+
+<style>
+  .wrap { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; padding: 0 48px; }
+  .left { position: sticky; top: 0; height: 100vh; padding: 88px 0 64px; display: flex; flex-direction: column; justify-content: space-between; }
+  .me { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 0 32px #c9a24a33; margin-bottom: 20px; }
+  h1 { font-size: 48px; line-height: 1.1; color: var(--fg); margin: 0; letter-spacing: -1px; }
+  .role { color: var(--fg); font-size: 20px; margin: 10px 0; }
+  .tag { max-width: 360px; }
+  nav { margin-top: 36px; }
+  nav a { display: flex; align-items: center; gap: 14px; color: var(--muted); text-decoration: none; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; padding: 8px 0; width: max-content; }
+  nav a::before { content: ''; width: 32px; height: 1px; background: #555; transition: width .2s, background .2s; }
+  nav a:hover, nav a.on { color: var(--fg); }
+  nav a:hover::before, nav a.on::before { width: 64px; background: var(--gold); }
+  .tbtn { display: inline-flex; gap: 10px; align-items: center; font: 13px var(--mono); color: #bbb; border: 1px solid #2a2a30; background: #111114; border-radius: 6px; padding: 6px 10px; margin-bottom: 18px; cursor: pointer; }
+  .tbtn kbd { color: var(--gold); border: 1px solid #3a3320; border-radius: 4px; padding: 0 6px; font: inherit; }
+  .tbtn:hover { border-color: var(--gold); color: #fff; }
+  .soc a { color: #888; margin-right: 16px; text-decoration: none; display: inline-block; }
+  .soc a:hover { color: var(--gold); }
+  .langs a { color: var(--muted); text-decoration: none; margin-right: 10px; }
+  .langs a[aria-current] { color: var(--gold); }
+  .right { padding: 88px 0 120px; }
+  section { scroll-margin-top: 80px; }
+  section + section { margin-top: 72px; }
+  h2 { color: var(--fg); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 16px; }
+  h3.minor { color: var(--muted); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin: 28px 0 8px; font-weight: 500; }
+  .job { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 18px; border-radius: 8px; margin: 0 -18px; background: #0b0b0dcc; transition: background .2s; }
+  .job:hover { background: #16161a; }
+  .job .when { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #777; margin: 4px 0 0; }
+  .job h3 { margin: 0; font-size: 16px; font-weight: 500; }
+  .job h3 a { text-decoration: none; }
+  .job .sub { margin: 0; font-size: 14px; color: var(--muted); }
+  .job p { margin: 6px 0 0; }
+  .chips { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips li { font-size: 12px; color: var(--gold); background: #c9a24a18; border-radius: 99px; padding: 2px 10px; }
+  .row { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); margin: 0; }
+  .row a { text-decoration: none; color: #ddd; } .row a:hover { color: var(--gold); }
+  .row .txt { color: #ddd; }
+  .row > span:last-child { color: var(--muted); white-space: nowrap; font-size: 14px; }
+  .more { color: var(--cream); text-decoration: none; font-size: 14px; }
+  .now { padding-left: 18px; } .now li { margin: 4px 0; }
+  footer { margin-top: 96px; } footer a { color: var(--muted); }
+  @media (max-width: 900px) {
+    .wrap { grid-template-columns: 1fr; gap: 0; padding: 0 22px; }
+    .left { position: static; height: auto; padding: 56px 0 24px; }
+    nav { display: none; }
+    h1 { font-size: 38px; }
+    .right { padding-top: 24px; }
+    .job { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
