@@ -32,7 +32,8 @@ export const copy: Record<Locale, {
   description: string;
   about: string[];
   proof: string[];
-  nav: { about: string; projects: string; writing: string; community: string; now: string };
+  nav: { about: string; projects: string; pi: string; writing: string; community: string; now: string };
+  pi: { title: string; blurb: string; cta: string };
   sections: { projects: string; writing: string; community: string; press: string; now: string; archive: string };
   allWriting: string;
   terminal: string;
@@ -53,15 +54,16 @@ export const copy: Record<Locale, {
       "Before that I was open-source maintainer at Vocode (YC W23), founded WunderComm and ArtisanLabs, was CTO at RisePal, and spent 13 years as CTO of Sapian building open-source real-time communications. I organize the Supabase meetups in Medellín, and I've been part of the city's Linux and free-software community since the Asterisk days.",
     ],
     proof: ['15+ years in open source', 'ex-maintainer at Vocode (YC W23)', '13 years CTO at Sapian', 'Medellín, Colombia'],
-    nav: { about: 'About', projects: 'Projects', writing: 'Writing', community: 'Community', now: 'Now' },
+    nav: { about: 'About', projects: 'Projects', pi: 'Pi', writing: 'Writing', community: 'Community', now: 'Now' },
     sections: { projects: 'Projects', writing: 'Writing', community: 'Community', press: 'Press', now: 'Now', archive: 'Archive' },
+    pi: { title: 'Pi extensions', blurb: 'Six extensions for the Pi coding agent, on npm: undo (pi-rewind), 26 terminal animations, context health, worktree awareness and minimal web providers.', cta: 'Explore the extensions' },
     allWriting: 'All writing',
     terminal: 'terminal mode',
     exitTerminal: '[esc] exit terminal',
     email: 'Email',
     now: [
       'Building Emilia AI: copilots for restaurant frontline teams.',
-      'Maintaining pi-rewind and bzz.',
+      'Maintaining pi-animations, pi-rewind and bzz.',
       'Rebuilding this site and bringing back 15 years of writing (Asterisk, data analysis, ArtisanLabs).',
     ],
     updated: 'Updated',
@@ -77,15 +79,16 @@ export const copy: Record<Locale, {
       'Antes fui maintainer open source en Vocode (YC W23), fundé WunderComm y ArtisanLabs, fui CTO de RisePal y pasé 13 años como CTO de Sapian construyendo comunicaciones en tiempo real open source. Organizo los meetups de Supabase en Medellín, y hago parte de la comunidad Linux y de software libre de la ciudad desde los tiempos de Asterisk.',
     ],
     proof: ['15+ años en open source', 'ex-maintainer en Vocode (YC W23)', '13 años CTO de Sapian', 'Medellín, Colombia'],
-    nav: { about: 'Sobre mí', projects: 'Proyectos', writing: 'Escritos', community: 'Comunidad', now: 'Ahora' },
+    nav: { about: 'Sobre mí', projects: 'Proyectos', pi: 'Pi', writing: 'Escritos', community: 'Comunidad', now: 'Ahora' },
     sections: { projects: 'Proyectos', writing: 'Escritos', community: 'Comunidad', press: 'Prensa', now: 'Ahora', archive: 'Archivo' },
+    pi: { title: 'Extensiones de Pi', blurb: 'Seis extensiones para el agente de código Pi, en npm: deshacer (pi-rewind), 26 animaciones de terminal, salud del contexto, conciencia de worktrees y proveedores web mínimos.', cta: 'Ver las extensiones' },
     allWriting: 'Todos los escritos',
     terminal: 'modo terminal',
     exitTerminal: '[esc] salir de la terminal',
     email: 'Correo',
     now: [
       'Construyendo Emilia AI: copilotos para equipos de primera línea en restaurantes.',
-      'Manteniendo pi-rewind y bzz.',
+      'Manteniendo pi-animations, pi-rewind y bzz.',
       'Reconstruyendo este sitio y recuperando 15 años de escritos (Asterisk, análisis de datos, ArtisanLabs).',
     ],
     updated: 'Actualizado',
@@ -101,15 +104,16 @@ export const copy: Record<Locale, {
       'Antes fui maintainer open source na Vocode (YC W23), fundei a WunderComm e a ArtisanLabs, fui CTO da RisePal e passei 13 anos como CTO da Sapian construindo comunicações em tempo real open source. Organizo os meetups de Supabase em Medellín e faço parte da comunidade Linux e de software livre da cidade desde a época do Asterisk.',
     ],
     proof: ['15+ anos em open source', 'ex-maintainer na Vocode (YC W23)', '13 anos CTO da Sapian', 'Medellín, Colômbia'],
-    nav: { about: 'Sobre', projects: 'Projetos', writing: 'Textos', community: 'Comunidade', now: 'Agora' },
+    nav: { about: 'Sobre', projects: 'Projetos', pi: 'Pi', writing: 'Textos', community: 'Comunidade', now: 'Agora' },
     sections: { projects: 'Projetos', writing: 'Textos', community: 'Comunidade', press: 'Imprensa', now: 'Agora', archive: 'Arquivo' },
+    pi: { title: 'Extensões do Pi', blurb: 'Seis extensões para o agente de código Pi, no npm: desfazer (pi-rewind), 26 animações de terminal, saúde do contexto, consciência de worktrees e provedores web mínimos.', cta: 'Ver as extensões' },
     allWriting: 'Todos os textos',
     terminal: 'modo terminal',
     exitTerminal: '[esc] sair do terminal',
     email: 'E-mail',
     now: [
       'Construindo a Emilia AI: copilotos para equipes da linha de frente em restaurantes.',
-      'Mantendo o pi-rewind e o bzz.',
+      'Mantendo o pi-animations, o pi-rewind e o bzz.',
       'Reconstruindo este site e recuperando 15 anos de textos (Asterisk, análise de dados, ArtisanLabs).',
     ],
     updated: 'Atualizado',
@@ -125,6 +129,7 @@ export type Project = {
   role: L10n;
   desc: L10n;
   tags: string[];
+  media?: { webm: string; mp4: string; poster: string; alt: string };
 };
 
 export const projects: Project[] = [
@@ -137,6 +142,17 @@ export const projects: Project[] = [
       pt: 'Copilotos de IA para equipes da linha de frente em restaurantes: câmeras, dados do PDV e humanos no circuito. Vídeo em tempo real, visão computacional, VLMs e conectividade na borda.',
     },
     tags: ['computer vision', 'VLM', 'GStreamer', 'edge', 'Kubernetes', 'AWS'],
+  },
+  {
+    name: 'pi-animations', status: 'active', period: '2026 →', url: 'https://github.com/arpagon/pi-animations',
+    role: { en: 'Author', es: 'Autor', pt: 'Autor' },
+    desc: {
+      en: "26 terminal animations for the Pi coding agent's thinking, working and tool indicators, from demoscene fire to Matrix rain, in ANSI true color. Install: pi install npm:pi-animations.",
+      es: '26 animaciones de terminal para los indicadores de pensando, trabajando y herramientas del agente Pi, desde fuego demoscene hasta lluvia de Matrix, en ANSI true color. Instalar: pi install npm:pi-animations.',
+      pt: '26 animações de terminal para os indicadores de pensando, trabalhando e ferramentas do agente Pi, do fogo demoscene à chuva do Matrix, em ANSI true color. Instalar: pi install npm:pi-animations.',
+    },
+    tags: ['AI agents', 'TypeScript', 'TUI', 'open source'],
+    media: { webm: '/media/pi-animations-demo.webm', mp4: '/media/pi-animations-demo.mp4', poster: '/media/pi-animations-poster.webp', alt: 'pi-animations: 26 terminal animations cycling inside the Pi coding agent' },
   },
   {
     name: 'pi-rewind', status: 'active', period: '2026 →', url: 'https://arpagon.github.io/pi-rewind/',
@@ -157,6 +173,7 @@ export const projects: Project[] = [
       pt: 'Um cliente de terminal para o Buzz pensado para humanos: navegação rápida pelo teclado, histórico local offline e autenticação nativa com Nostr.',
     },
     tags: ['Rust', 'TUI', 'Nostr'],
+    media: { webm: '/media/bzz-demo.webm', mp4: '/media/bzz-demo.mp4', poster: '/media/bzz-poster.webp', alt: 'bzz terminal client: communities, channels and messages' },
   },
   {
     name: 'Vocode (YC W23)', status: 'past', period: '2023–2024', url: 'https://github.com/vocodedev/vocode-core',

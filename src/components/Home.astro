@@ -9,7 +9,7 @@ const { lang } = Astro.props;
 const t = copy[lang];
 const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
 const year = (d: Date) => d.getUTCFullYear();
-const sections = ['about', 'projects', 'writing', 'community', 'now'] as const;
+const sections = ['about', 'projects', 'pi', 'writing', 'community', 'now'] as const;
 ---
 <a class="skip" href="#main">Skip to content</a>
 <Sky />
@@ -52,10 +52,24 @@ const sections = ['about', 'projects', 'writing', 'community', 'now'] as const;
             <h3><a href={x.url}>{x.name} <span aria-hidden="true">↗</span></a></h3>
             <p class="sub">{x.role[lang]}</p>
             <p>{x.desc[lang]}</p>
+            {x.media && (
+              <video class="demo" muted loop playsinline preload="none" poster={x.media.poster} aria-label={x.media.alt} data-autoplay>
+                <source src={x.media.webm} type="video/webm" /><source src={x.media.mp4} type="video/mp4" />
+              </video>
+            )}
             <ul class="chips">{x.tags.map((tag) => <li>{tag}</li>)}</ul>
           </div>
         </article>
       ))}
+    </section>
+
+    <section id="pi" aria-labelledby="h-pi">
+      <h2 id="h-pi">{t.pi.title}</h2>
+      <a class="pibox" href="/pi/">
+        <span class="mono pre">❯ pi install npm:pi-rewind</span>
+        <span>{t.pi.blurb}</span>
+        <span class="cta">{t.pi.cta} →</span>
+      </a>
     </section>
 
     <section id="writing" aria-labelledby="h-writing">
@@ -96,6 +110,17 @@ const sections = ['about', 'projects', 'writing', 'community', 'now'] as const;
     }
   }, { rootMargin: '-40% 0px -55% 0px' });
   links.forEach((a) => { const s = document.getElementById(a.dataset.nav!); if (s) io.observe(s); });
+  // Project demos: play muted while visible; with reduced motion, show poster + controls instead.
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const vids = [...document.querySelectorAll<HTMLVideoElement>('video[data-autoplay]')];
+  if (still) vids.forEach((v) => (v.controls = true));
+  else {
+    const vo = new IntersectionObserver((es) => es.forEach((e) => {
+      const v = e.target as HTMLVideoElement;
+      if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+    }), { threshold: 0.4 });
+    vids.forEach((v) => vo.observe(v));
+  }
 </script>
 
 <style>
@@ -129,12 +154,17 @@ const sections = ['about', 'projects', 'writing', 'community', 'now'] as const;
   .job h3 a { text-decoration: none; }
   .job .sub { margin: 0; font-size: 14px; color: var(--muted); }
   .job p { margin: 6px 0 0; }
+  .demo { display: block; width: 100%; margin-top: 12px; border: 1px solid #2a2a30; border-radius: 8px; background: #000; aspect-ratio: auto; }
   .chips { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
   .chips li { font-size: 12px; color: var(--gold); background: #c9a24a18; border-radius: 99px; padding: 2px 10px; }
   .row { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); margin: 0; }
   .row a { text-decoration: none; color: #ddd; } .row a:hover { color: var(--gold); }
   .row .txt { color: #ddd; }
   .row > span:last-child { color: var(--muted); white-space: nowrap; font-size: 14px; }
+  .pibox { display: grid; gap: 10px; padding: 20px; border: 1px solid #2a2a30; border-radius: 10px; background: #0e0e11cc; text-decoration: none; color: var(--text); transition: border-color .2s; }
+  .pibox:hover { border-color: var(--gold); color: var(--text); }
+  .pibox .pre { color: var(--gold); font-size: 13px; }
+  .pibox .cta { color: var(--cream); font-size: 14px; }
   .more { color: var(--cream); text-decoration: none; font-size: 14px; }
   .now { padding-left: 18px; } .now li { margin: 4px 0; }
   footer { margin-top: 96px; } footer a { color: var(--muted); }
