@@ -1,0 +1,21 @@
+---
+// Real 404: without this page, Cloudflare Pages served the home page with status 200 for any unknown URL.
+import '@fontsource/instrument-serif/latin-400-italic.css';
+import '../styles/demos.css';
+import Base from '../layouts/Base.astro';
+---
+<Base lang="en" title="Not found" description="This page does not exist." noindex>
+  <div class="dm">
+    <header class="dm-top mono"><a href="/">arpagon.co</a> / 404</header>
+    <main id="main" class="dm-main">
+      <section class="dm-hero">
+        <p class="dm-kicker mono">❯ 404</p>
+        <h1>Nothing <em>here.</em></h1>
+        <p class="dm-lede">This page doesn't exist, or it moved. · Esta página no existe. · Esta página não existe.</p>
+        <p class="dm-ctas mono">
+          <a class="dm-link" href="/">Home</a><a class="dm-link" href="/demos/">Demos</a><a class="dm-link" href="/pi/">Pi</a><a class="dm-link" href="/writing/">Writing</a>
+        </p>
+      </section>
+    </main>
+  </div>
+</Base>

@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { profile, copy, projects, UPDATED } from '../data/profile';
+import { demos } from '../data/demos';
 // https://llmstxt.org/
 export const GET: APIRoute = async () => {
   const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
@@ -21,6 +22,7 @@ export const GET: APIRoute = async () => {
     ...projects.map((p) => `- [${p.name}](${p.url}): ${p.desc.en}`),
     '',
     `- [Pi extensions](https://arpagon.co/pi/): pi-rewind, pi-animations, pi-context-zone, pi-worktree-tui-status, pi-web-providers-codex-cf, pi-web-providers-az-cf`,
+    `- [Demos](https://arpagon.co/demos/): ${demos.length} demo videos with public descriptions; Emilia product demos (real customer deployments) are private and shared on request`,
     '',
     '## Writing',
     ...posts.map((p) => `- [${p.data.title}](https://arpagon.co/writing/${p.id}.md): ${p.data.description}`),

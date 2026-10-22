@@ -10,6 +10,10 @@ export default defineConfig({
     routing: { prefixDefaultLocale: false },
   },
   integrations: [
-    sitemap({ i18n: { defaultLocale: 'en', locales: { en: 'en', es: 'es', pt: 'pt-BR' } } }),
+    sitemap({
+      i18n: { defaultLocale: 'en', locales: { en: 'en', es: 'es', pt: 'pt-BR' } },
+      // Access form and private library are utility pages (noindex).
+      filter: (page) => !/\/demos\/(acceso|privado)\/$/.test(page),
+    }),
   ],
 });

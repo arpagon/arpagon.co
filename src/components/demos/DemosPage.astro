@@ -1,0 +1,53 @@
+---
+import Shell from './Shell.astro';
+import DemoCard from './DemoCard.astro';
+import { categories, demos, demosCopy, demosPath, GROUPS } from '../../data/demos';
+import type { Locale } from '../../data/profile';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = demosCopy[lang];
+const count = (visibility: string) => demos.filter((d) => d.visibility === visibility).length;
+---
+<Shell lang={lang} page="" title={t.title} description={t.description}>
+  <section class="dm-hero">
+    <p class="dm-kicker mono">{t.kicker}</p>
+    <h1>{t.h1} <em>{t.h1em}</em></h1>
+    <p class="dm-lede">{t.lede}</p>
+    <p class="dm-stats mono">{t.stats(demos.length, count('publico'), count('privado'))}</p>
+    <p class="dm-ctas"><a class="dm-btn" href={demosPath(lang, 'acceso/')}>{t.request}</a><a class="dm-link" href={demosPath(lang, 'privado/')}>{t.haveAccess}</a></p>
+  </section>
+
+  {GROUPS.map((group) => (
+    <section class="dm-group" id={group.id} aria-labelledby={`h-${group.id}`}>
+      <header>
+        <h2 id={`h-${group.id}`}>{t.groups[group.id].title}</h2>
+        <p>{t.groups[group.id].blurb}</p>
+      </header>
+      {group.categories.map((category) => {
+        const items = demos.filter((d) => d.category === category);
+        return items.length > 0 && (
+          <div class="dm-cat" id={category}>
+            <h3 class="mono">{categories[category][lang]}</h3>
+            <div class="dm-grid">{items.map((demo) => <DemoCard demo={demo} lang={lang} />)}</div>
+          </div>
+        );
+      })}
+    </section>
+  ))}
+</Shell>
+
+<script>
+  // Only one demo plays at a time; pause when the tab is hidden.
+  const videos = [...document.querySelectorAll<HTMLVideoElement>('.dm-card video')];
+  videos.forEach((video) => video.addEventListener('play', () => videos.forEach((other) => other !== video && other.pause())));
+  document.addEventListener('visibilitychange', () => document.hidden && videos.forEach((video) => video.pause()));
+  // Cards with several videos: switch between them.
+  document.querySelectorAll<HTMLElement>('.dm-card').forEach((card) => {
+    const parts = [...card.querySelectorAll<HTMLVideoElement>('video[data-part]')];
+    card.querySelectorAll<HTMLButtonElement>('[data-show]').forEach((button) => button.addEventListener('click', () => {
+      parts.forEach((video) => { const on = video.dataset.part === button.dataset.show; video.hidden = !on; if (!on) video.pause(); });
+      card.querySelectorAll('[data-show]').forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+    }));
+  });
+</script>

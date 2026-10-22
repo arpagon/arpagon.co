@@ -1,0 +1,91 @@
+---
+// Private library shell. The page itself is static and contains only public text; the private
+// layer (customer, private notes) and the videos come from the vault Worker with the visitor's
+// session cookie. Without a valid session the visitor is sent to the access form.
+import Shell from './Shell.astro';
+import { categories, demos, demosCopy, demosPath } from '../../data/demos';
+import type { Locale } from '../../data/profile';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = demosCopy[lang];
+const lib = t.library;
+const publicText = Object.fromEntries(demos.filter((d) => d.visibility === 'privado').map((d) => [d.id, {
+  ...d.i18n[lang], category: categories[d.category][lang], duration: d.duration,
+}]));
+const strings = { role: t.role, empty: lib.empty, note: lib.note, shared: lib.shared('{email}', '{until}') };
+---
+<Shell lang={lang} page="privado/" title={lib.title} noindex>
+  <section class="dm-narrow" style="max-width: 1180px" data-private data-access-url={`${demosPath(lang, 'acceso/')}?estado=sesion`}>
+    <p class="dm-kicker mono">❯ demos / {lib.note.toLowerCase()}</p>
+    <h1>{lib.h1}</h1>
+    <div class="dm-libbar">
+      <p class="dm-lede" data-shared>{lib.loading}</p>
+      <form method="post" action="/demos/salir"><input type="hidden" name="lang" value={lang} /><button class="dm-btn" type="submit">{lib.signOut}</button></form>
+    </div>
+    <div class="dm-grid" data-grid></div>
+  </section>
+  <script type="application/json" id="dm-public" set:html={JSON.stringify({ text: publicText, strings })} />
+</Shell>
+
+<script>
+  type Item = { id: string; client: string | null; private_description: string | null };
+  const root = document.querySelector<HTMLElement>('[data-private]')!;
+  const grid = root.querySelector<HTMLElement>('[data-grid]')!;
+  const shared = root.querySelector<HTMLElement>('[data-shared]')!;
+  const { text, strings } = JSON.parse(document.getElementById('dm-public')!.textContent!);
+
+  const el = <K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, content?: string) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (content) node.textContent = content;
+    return node;
+  };
+
+  function card(item: Item, viewer: string) {
+    const pub = text[item.id] || { title: item.id, description: '', stack: [], role: '', category: '', duration: '' };
+    const article = el('article', 'dm-card');
+    article.id = item.id;
+    const media = el('div', 'dm-media');
+    const video = el('video');
+    video.controls = true;
+    video.preload = 'none';
+    video.playsInline = true;
+    video.setAttribute('controlslist', 'nodownload');
+    video.disablePictureInPicture = true;
+    video.src = `/demos/privado/v/${encodeURIComponent(item.id)}.mp4`;
+    video.width = 1920; // Emilia demo renders are 1080p; reserves the 16:9 box before loading
+    video.height = 1080;
+    video.setAttribute('aria-label', pub.title);
+    media.append(video, el('span', 'dm-wm', viewer));
+    media.lastElementChild!.setAttribute('aria-hidden', 'true');
+    const body = el('div', 'dm-body');
+    body.append(el('p', 'dm-meta mono', [pub.category, pub.duration].filter(Boolean).join(' · ')), el('h4', '', pub.title), el('p', '', pub.description));
+    if (item.client || item.private_description) {
+      const priv = el('div', 'dm-private');
+      if (item.client) priv.append(el('strong', '', item.client));
+      if (item.private_description) priv.append(el('p', '', item.private_description));
+      body.append(priv);
+    }
+    const role = el('p', 'dm-role');
+    role.append(el('span', '', strings.role), document.createTextNode(pub.role));
+    const chips = el('ul', 'dm-chips');
+    for (const tag of pub.stack) chips.append(el('li', '', tag));
+    body.append(role, chips);
+    article.append(media, body);
+    return article;
+  }
+
+  fetch('/demos/api/biblioteca', { credentials: 'same-origin', headers: { Accept: 'application/json' } })
+    .then(async (response) => {
+      if (response.status === 401) return location.replace(root.dataset.accessUrl!);
+      if (!response.ok) throw new Error(String(response.status));
+      const data = await response.json() as { viewer: string; expires: string; items: Item[] };
+      shared.textContent = strings.shared.replace('{email}', data.viewer).replace('{until}', data.expires);
+      if (!data.items.length) grid.append(el('p', '', strings.empty));
+      for (const item of data.items) grid.append(card(item, data.viewer));
+      const videos = [...grid.querySelectorAll('video')];
+      videos.forEach((video) => video.addEventListener('play', () => videos.forEach((other) => other !== video && other.pause())));
+    })
+    .catch(() => { shared.textContent = 'The library could not be loaded. Please try again later or write to info@arpagon.co.'; });
+</script>

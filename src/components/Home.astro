@@ -3,13 +3,15 @@ import { getCollection } from 'astro:content';
 import Sky from './Sky.astro';
 import Terminal from './Terminal.astro';
 import { profile, copy, projects, community, press, archive, LOCALES, homePath, UPDATED, type Locale } from '../data/profile';
+import { demos, demosCopy, demosPath } from '../data/demos';
 
 interface Props { lang: Locale }
 const { lang } = Astro.props;
 const t = copy[lang];
 const posts = (await getCollection('writing', (p) => !p.data.draft)).sort((a, b) => +b.data.date - +a.data.date);
 const year = (d: Date) => d.getUTCFullYear();
-const sections = ['about', 'projects', 'pi', 'writing', 'community', 'now'] as const;
+const demoCount = (v: string) => demos.filter((d) => d.visibility === v).length;
+const sections = ['about', 'projects', 'demos', 'pi', 'writing', 'community', 'now'] as const;
 ---
 <a class="skip" href="#main">Skip to content</a>
 <Sky />
@@ -61,6 +63,15 @@ const sections = ['about', 'projects', 'pi', 'writing', 'community', 'now'] as c
           </div>
         </article>
       ))}
+    </section>
+
+    <section id="demos" aria-labelledby="h-demos">
+      <h2 id="h-demos">{t.demos.title}</h2>
+      <a class="pibox" href={demosPath(lang)}>
+        <span class="mono pre">❯ {demosCopy[lang].stats(demos.length, demoCount('publico'), demoCount('privado'))}</span>
+        <span>{t.demos.blurb}</span>
+        <span class="cta">{t.demos.cta} →</span>
+      </a>
     </section>
 
     <section id="pi" aria-labelledby="h-pi">

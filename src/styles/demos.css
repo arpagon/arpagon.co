@@ -1,0 +1,78 @@
+/* /demos pages: same visual language as /pi (grid background, mono labels, Instrument Serif italics). */
+.dm { --serif: 'Instrument Serif', Georgia, serif; min-height: 100vh;
+  background-image: linear-gradient(#ffffff06 1px, transparent 1px), linear-gradient(90deg, #ffffff06 1px, transparent 1px); background-size: 24px 24px; }
+.dm-top { max-width: 1180px; margin: 0 auto; padding: 28px 32px; font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: baseline; }
+.dm-top a { color: var(--muted); text-decoration: none; } .dm-top a:hover { color: var(--gold); }
+.dm-langs { margin-left: auto; display: flex; gap: 10px; }
+.dm-langs a[aria-current] { color: var(--gold); }
+.dm-main { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+.dm-foot { max-width: 1180px; margin: 0 auto; padding: 56px 32px 80px; font-size: 13px; color: var(--muted); }
+.dm-foot a { color: var(--muted); }
+
+.dm-hero { max-width: 860px; margin: 0 auto; padding: 64px 0 40px; text-align: center; }
+.dm-kicker { color: var(--gold); font-size: 13px; letter-spacing: 1px; margin: 0; }
+.dm h1 { font: 400 clamp(40px, 6vw, 64px)/1.08 var(--serif); font-style: italic; color: var(--fg); margin: 12px 0 20px; letter-spacing: -.5px; }
+.dm h1 em { color: var(--gold); }
+.dm-lede { font-size: 18px; max-width: 660px; margin: 0 auto; }
+.dm-stats { margin-top: 22px; font-size: 13px; color: var(--muted); }
+.dm-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; align-items: center; margin-top: 26px; }
+.dm-btn { font: 14px var(--mono); color: var(--gold); border: 1px solid var(--gold); border-radius: 6px; padding: 10px 16px; text-decoration: none; background: transparent; cursor: pointer; }
+.dm-btn:hover { background: #c9a24a18; color: var(--gold); }
+.dm-link { font-size: 14px; color: var(--cream); text-decoration: none; }
+
+.dm-group { padding: 56px 0 8px; border-top: 1px solid var(--line); margin-top: 40px; }
+.dm-group > header { max-width: 720px; margin-bottom: 8px; }
+.dm h2 { font: 400 clamp(30px, 4vw, 40px)/1.12 var(--serif); font-style: italic; color: var(--fg); margin: 0 0 10px; }
+.dm-group > header p { margin: 0; }
+.dm-cat { margin-top: 40px; }
+.dm-cat > h3 { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 0 0 16px; }
+.dm-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+
+.dm-card { display: flex; flex-direction: column; border: 1px solid #2a2a30; border-radius: 10px; background: #0e0e11cc; overflow: hidden; transition: border-color .2s; scroll-margin-top: 24px; }
+.dm-card:hover, .dm-card:target { border-color: #c9a24a66; }
+.dm-media { position: relative; background: #000; border-bottom: 1px solid #1c1c20; }
+.dm-media video { display: block; width: 100%; height: auto; max-height: 420px; background: #000; }
+.dm-parts { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; }
+.dm-parts button { font: 11px var(--mono); letter-spacing: .5px; color: var(--muted); background: #0b0b0dcc; border: 1px solid #2a2a30; border-radius: 99px; padding: 3px 10px; cursor: pointer; }
+.dm-parts button[aria-pressed='true'] { color: var(--gold); border-color: var(--gold); }
+.dm-lock, .dm-ext { aspect-ratio: 21 / 9; display: grid; place-content: center; gap: 10px; text-align: center; padding: 24px;
+  background: radial-gradient(ellipse at 50% 40%, #c9a24a14, transparent 60%), #0b0b0d; }
+.dm-lock .badge, .dm-ext .badge { font: 12px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
+.dm-lock p { margin: 0; font-size: 14px; max-width: 340px; }
+.dm-lock a, .dm-ext a { font: 13px var(--mono); color: var(--cream); text-decoration: none; }
+.dm-lock a:hover, .dm-ext a:hover { color: var(--gold); }
+.dm-body { padding: 18px 20px 20px; display: grid; gap: 8px; }
+.dm-meta { font-size: 12px; color: var(--muted); letter-spacing: .5px; margin: 0; }
+.dm-card h4 { font: 400 26px/1.15 var(--serif); font-style: italic; color: var(--fg); margin: 0; }
+.dm-card p { margin: 0; }
+.dm-role { font-size: 14px; color: var(--cream); }
+.dm-role span { color: var(--muted); font: 12px var(--mono); text-transform: uppercase; letter-spacing: 1px; margin-right: 6px; }
+.dm-chips { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.dm-chips li { font-size: 12px; color: var(--gold); background: #c9a24a18; border-radius: 99px; padding: 2px 10px; }
+.dm-links { font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.dm-links a { color: var(--cream); text-decoration: none; } .dm-links a:hover { color: var(--gold); }
+.dm-private { border-left: 2px solid var(--gold); padding-left: 12px; color: #d8cba3; display: grid; gap: 4px; }
+.dm-private strong { color: var(--fg); font-weight: 500; }
+
+/* Access form and private library */
+.dm-narrow { max-width: 680px; margin: 0 auto; padding: 48px 0 0; }
+.dm-narrow h1 { text-align: left; }
+.dm-narrow .dm-lede { margin: 0 0 28px; }
+.dm-form { display: grid; gap: 16px; border: 1px solid #2a2a30; border-radius: 10px; background: #0e0e11; padding: 24px; }
+.dm-form label { display: grid; gap: 6px; font: 12px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.dm-form input, .dm-form textarea { font: 15px var(--sans); color: var(--fg); background: var(--bg); border: 1px solid #2a2a30; border-radius: 6px; padding: 10px 12px; text-transform: none; letter-spacing: normal; }
+.dm-form textarea { min-height: 120px; resize: vertical; }
+.dm-form input:focus, .dm-form textarea:focus { border-color: var(--gold); outline: none; }
+.dm-alert { border: 1px solid #5a3a30; background: #2a1712; color: #f0b7a3; border-radius: 8px; padding: 12px 14px; margin: 0 0 18px; }
+.dm-ok { border: 1px solid #3a3320; background: #c9a24a12; color: var(--cream); border-radius: 10px; padding: 22px; }
+.dm-ok h2 { margin-top: 0; }
+.dm-libbar { display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; align-items: center; margin: 0 0 8px; }
+.dm-libbar form { margin: 0; }
+.dm-wm { position: absolute; right: 10px; top: 8px; font: 12px var(--mono); color: #e9d9ae8c; pointer-events: none; text-shadow: 0 0 3px #000; }
+[hidden] { display: none !important; }
+
+@media (max-width: 900px) {
+  .dm-top, .dm-main, .dm-foot { padding-left: 22px; padding-right: 22px; }
+  .dm-grid { grid-template-columns: 1fr; }
+  .dm-hero { padding-top: 40px; }
+}

@@ -1,0 +1,68 @@
+---
+// Request form. Posts to the vault Worker (/demos/api/solicitar), which redirects back here with
+// ?estado=<state>. Field values survive an error round-trip via sessionStorage (this tab only).
+import Shell from './Shell.astro';
+import { demosCopy, demosPath, TURNSTILE_SITE_KEY } from '../../data/demos';
+import type { Locale } from '../../data/profile';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = demosCopy[lang];
+const a = t.access;
+---
+<Shell lang={lang} page="acceso/" title={a.title} description={a.lede} noindex>
+  <section class="dm-narrow" data-access data-states={JSON.stringify(a.states)}>
+    <p class="dm-kicker mono">❯ demos / {a.title.toLowerCase()}</p>
+    <h1>{a.h1}</h1>
+    <p class="dm-lede">{a.lede}</p>
+    <p class="dm-alert" role="alert" data-alert hidden></p>
+    <div class="dm-ok" data-sent hidden>
+      <h2>{a.sentTitle}</h2>
+      <p>{a.states.enviado}</p>
+      <p><a class="dm-link" href={demosPath(lang)}>{a.back}</a></p>
+    </div>
+    <form class="dm-form" method="post" action="/demos/api/solicitar" data-form>
+      <input type="hidden" name="lang" value={lang} />
+      <label>{a.name}<input name="name" required maxlength="100" autocomplete="name" /></label>
+      <label>{a.email}<input name="email" type="email" required maxlength="254" autocomplete="email" /></label>
+      <label>{a.company}<input name="company" maxlength="120" autocomplete="organization" /></label>
+      <label>{a.reason}<textarea name="reason" required maxlength="600"></textarea></label>
+      <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark" data-language={lang === 'pt' ? 'pt-br' : lang}></div>
+      <p class="note">{a.privacy}</p>
+      <div><button class="dm-btn" type="submit">{a.submit}</button></div>
+    </form>
+    <p class="dm-foot-links"><a class="dm-link" href={demosPath(lang)}>{a.back}</a></p>
+  </section>
+</Shell>
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-access]')!;
+  const form = root.querySelector<HTMLFormElement>('[data-form]')!;
+  const alert = root.querySelector<HTMLElement>('[data-alert]')!;
+  const sent = root.querySelector<HTMLElement>('[data-sent]')!;
+  const states = JSON.parse(root.dataset.states!) as Record<string, string>;
+  const KEY = 'demos-access-form';
+  const fields = ['name', 'email', 'company', 'reason'];
+  const state = new URLSearchParams(location.search).get('estado');
+
+  if (state === 'enviado') {
+    sessionStorage.removeItem(KEY);
+    form.hidden = true;
+    sent.hidden = false;
+  } else {
+    if (state && states[state]) {
+      alert.textContent = states[state];
+      alert.hidden = false;
+    }
+    const saved = JSON.parse(sessionStorage.getItem(KEY) || '{}');
+    for (const name of fields) {
+      const input = form.elements.namedItem(name) as HTMLInputElement | null;
+      if (input && saved[name]) input.value = saved[name];
+    }
+  }
+  form.addEventListener('submit', () => {
+    const data = Object.fromEntries(fields.map((name) => [name, (form.elements.namedItem(name) as HTMLInputElement).value]));
+    sessionStorage.setItem(KEY, JSON.stringify(data));
+  });
+</script>
