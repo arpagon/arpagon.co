@@ -1190,8 +1190,8 @@
       "poster": "/media/demos/multilingual-voice.webp",
       "i18n": {
         "es": {
-          "title": "Voz multilingüe en tiempo real",
-          "description": "Interacción de voz multilingüe en tiempo real, construida en ArtisanLabs.",
+          "title": "Artisan English Tutor · voz multilingüe en tiempo real",
+          "description": "Tutor de inglés por voz en tiempo real de ArtisanLabs. En el demo practica vocabulario de Walt Whitman y cambia de idioma cuando se le pide.",
           "stack": [
             "IA conversacional de voz",
             "multilingüe"
@@ -1199,8 +1199,8 @@
           "role": "Autor (proyecto individual)"
         },
         "en": {
-          "title": "Real-time multilingual voice",
-          "description": "Real-time multilingual voice interaction, built at ArtisanLabs.",
+          "title": "Artisan English Tutor · real-time multilingual voice",
+          "description": "A real-time English voice tutor from ArtisanLabs. In the demo it practices Walt Whitman's vocabulary and switches language when asked.",
           "stack": [
             "conversational voice AI",
             "multilingual"
@@ -1208,8 +1208,8 @@
           "role": "Author (solo project)"
         },
         "pt": {
-          "title": "Voz multilíngue em tempo real",
-          "description": "Interação de voz multilíngue em tempo real, construída na ArtisanLabs.",
+          "title": "Artisan English Tutor · voz multilíngue em tempo real",
+          "description": "Um tutor de inglês por voz em tempo real da ArtisanLabs. Na demo, pratica o vocabulário de Walt Whitman e muda de idioma quando pedido.",
           "stack": [
             "IA conversacional de voz",
             "multilíngue"
@@ -1239,39 +1239,45 @@
       "poster": "/media/demos/supabase-voice-rag.webp",
       "i18n": {
         "es": {
-          "title": "RAG activado por voz · Supabase Hackathon",
-          "description": "Sistema RAG activado por voz, construido para el hackathon de Supabase.",
+          "title": "Artisan IT Architect · RAG por voz para el Supabase Hackathon",
+          "description": "Asistente de voz con RAG para conversar sobre la arquitectura de cualquier aplicación, construido para el hackathon de Supabase.",
           "stack": [
+            "LangChain",
             "Supabase",
-            "RAG",
-            "voz"
+            "Next.js",
+            "FastAPI",
+            "Vocode"
           ],
           "role": "Autor (proyecto individual)"
         },
         "en": {
-          "title": "Voice-activated RAG · Supabase Hackathon",
-          "description": "A voice-activated RAG system built for the Supabase hackathon.",
+          "title": "Artisan IT Architect · voice RAG for the Supabase Hackathon",
+          "description": "A voice assistant with RAG to discuss the architecture of any application, built for the Supabase hackathon.",
           "stack": [
+            "LangChain",
             "Supabase",
-            "RAG",
-            "voice"
+            "Next.js",
+            "FastAPI",
+            "Vocode"
           ],
           "role": "Author (solo project)"
         },
         "pt": {
-          "title": "RAG ativado por voz · Supabase Hackathon",
-          "description": "Um sistema RAG ativado por voz, construído para o hackathon da Supabase.",
+          "title": "Artisan IT Architect · RAG por voz para o Supabase Hackathon",
+          "description": "Um assistente de voz com RAG para conversar sobre a arquitetura de qualquer aplicação, construído para o hackathon da Supabase.",
           "stack": [
+            "LangChain",
             "Supabase",
-            "RAG",
-            "voz"
+            "Next.js",
+            "FastAPI",
+            "Vocode"
           ],
           "role": "Autor (projeto individual)"
         }
       }
     },
     {
-      "id": "yc-advice-bot",
+      "id": "coqui-tribute-bot",
       "category": "voz-conversacional",
       "visibility": "publico",
       "company": null,
@@ -1283,16 +1289,16 @@
       ],
       "videos": [
         {
-          "src": "https://arpagon.co/demos/media/yc-advice-bot.mp4",
+          "src": "https://arpagon.co/demos/media/coqui-tribute-bot.mp4",
           "width": 1148,
           "height": 646
         }
       ],
-      "poster": "/media/demos/yc-advice-bot.webp",
+      "poster": "/media/demos/coqui-tribute-bot.webp",
       "i18n": {
         "es": {
-          "title": "YC Startup Advice Bot",
-          "description": "Bot de voz que responde consejos para startups, construido con el framework open source Vocode y una voz de Coqui.",
+          "title": "Bot homenaje a Coqui",
+          "description": "Agente de voz en el framework open source Vocode que cuenta el cierre de Coqui, resume el mensaje de despedida de su equipo y lleva a la gente a Coqui TTS/XTTS. Sigue la demo YC Startup Advice Bot de Vocode.",
           "stack": [
             "Vocode",
             "Coqui TTS"
@@ -1300,8 +1306,8 @@
           "role": "Autor"
         },
         "en": {
-          "title": "YC Startup Advice Bot",
-          "description": "A voice bot that gives startup advice, built with the open-source Vocode framework and a Coqui voice.",
+          "title": "Coqui tribute bot",
+          "description": "A voice agent on the open-source Vocode framework that tells the story of Coqui's shutdown, summarizes its team's farewell and points people to Coqui TTS/XTTS. It follows Vocode's YC Startup Advice Bot demo.",
           "stack": [
             "Vocode",
             "Coqui TTS"
@@ -1309,8 +1315,8 @@
           "role": "Author"
         },
         "pt": {
-          "title": "YC Startup Advice Bot",
-          "description": "Um bot de voz que dá conselhos para startups, construído com o framework open source Vocode e uma voz do Coqui.",
+          "title": "Bot em homenagem ao Coqui",
+          "description": "Um agente de voz no framework open source Vocode que conta o fechamento do Coqui, resume a despedida da equipe e leva as pessoas ao Coqui TTS/XTTS. Segue a demo YC Startup Advice Bot da Vocode.",
           "stack": [
             "Vocode",
             "Coqui TTS"
@@ -1341,28 +1347,28 @@
       "i18n": {
         "es": {
           "title": "Velocidad de LLMs para IA conversacional",
-          "description": "Comparación de velocidad entre GPT-4o mini y GPT-3.5 para IA conversacional.",
+          "description": "Benchmark preliminar de tiempo al primer token y tokens por segundo para IA conversacional, comparando GPT-3.5 Turbo con GPT-4o mini el día de su lanzamiento.",
           "stack": [
             "GPT-4o mini",
-            "GPT-3.5"
+            "GPT-3.5 Turbo"
           ],
           "role": "Autor"
         },
         "en": {
           "title": "LLM speed for conversational AI",
-          "description": "A speed comparison between GPT-4o mini and GPT-3.5 for conversational AI.",
+          "description": "A preliminary benchmark of time to first token and tokens per second for conversational AI, comparing GPT-3.5 Turbo with GPT-4o mini on its release day.",
           "stack": [
             "GPT-4o mini",
-            "GPT-3.5"
+            "GPT-3.5 Turbo"
           ],
           "role": "Author"
         },
         "pt": {
           "title": "Velocidade de LLMs para IA conversacional",
-          "description": "Uma comparação de velocidade entre o GPT-4o mini e o GPT-3.5 para IA conversacional.",
+          "description": "Um benchmark preliminar de tempo até o primeiro token e tokens por segundo para IA conversacional, comparando o GPT-3.5 Turbo com o GPT-4o mini no dia do lançamento.",
           "stack": [
             "GPT-4o mini",
-            "GPT-3.5"
+            "GPT-3.5 Turbo"
           ],
           "role": "Autor"
         }
