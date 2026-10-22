@@ -1,0 +1,1540 @@
+{
+  "generated_from": "profile-updater/portfolio/biblioteca (approved 2026-10-21)",
+  "categories": {
+    "video-pos": {
+      "es": "Video + POS",
+      "en": "Video + POS",
+      "pt": "Vídeo + PDV"
+    },
+    "vision-multimodal": {
+      "es": "Visión multimodal y revisión humana",
+      "en": "Multimodal vision and human review",
+      "pt": "Visão multimodal e revisão humana"
+    },
+    "voz-audio": {
+      "es": "Voz y audio en el punto de venta",
+      "en": "Voice and audio at the point of sale",
+      "pt": "Voz e áudio no ponto de venda"
+    },
+    "operaciones": {
+      "es": "Eventos operativos",
+      "en": "Operational events",
+      "pt": "Eventos operacionais"
+    },
+    "configuracion": {
+      "es": "Configuración de producto",
+      "en": "Product configuration",
+      "pt": "Configuração de produto"
+    },
+    "voz-conversacional": {
+      "es": "IA conversacional de voz",
+      "en": "Conversational voice AI",
+      "pt": "IA conversacional de voz"
+    },
+    "ia-generativa": {
+      "es": "IA generativa",
+      "en": "Generative AI",
+      "pt": "IA generativa"
+    },
+    "edge-ai": {
+      "es": "IA en el borde",
+      "en": "Edge AI",
+      "pt": "IA na borda"
+    },
+    "agentes": {
+      "es": "Herramientas para agentes de código",
+      "en": "Tools for coding agents",
+      "pt": "Ferramentas para agentes de código"
+    },
+    "comunidad": {
+      "es": "Comunidad",
+      "en": "Community",
+      "pt": "Comunidade"
+    }
+  },
+  "demos": [
+    {
+      "id": "cashier-sentinel",
+      "category": "video-pos",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:49",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Sentinel de caja",
+          "description": "Prevención de pérdidas en el mostrador: una línea virtual sobre la cámara detecta los intercambios entre cliente y cajero, los agrupa en sesiones y los concilia con el POS. Los intercambios sin venta registrada quedan para revisión humana.",
+          "stack": [
+            "visión por computador",
+            "detección de cambios (SSIM)",
+            "agrupación de sesiones",
+            "conciliación con POS"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Cashier Sentinel",
+          "description": "Loss prevention at the counter: a virtual tripwire on the camera detects customer–cashier exchanges, groups them into sessions and reconciles them with the POS. Exchanges with no recorded sale go to human review.",
+          "stack": [
+            "computer vision",
+            "change detection (SSIM)",
+            "session clustering",
+            "POS reconciliation"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Sentinel de caixa",
+          "description": "Prevenção de perdas no balcão: uma linha virtual sobre a câmera detecta as trocas entre cliente e operador de caixa, agrupa-as em sessões e as concilia com o PDV. As trocas sem venda registrada vão para revisão humana.",
+          "stack": [
+            "visão computacional",
+            "detecção de mudanças (SSIM)",
+            "agrupamento de sessões",
+            "conciliação com o PDV"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "scale-to-pos",
+      "category": "video-pos",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:43",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Báscula vs. POS",
+          "description": "Buffet por peso: cada plato que pasa por la báscula se detecta y se empareja con su orden en el POS. Los platos sin venta asociada se destacan para revisión.",
+          "stack": [
+            "detección de eventos en báscula (SSIM)",
+            "clasificador de platos con IA",
+            "emparejamiento con POS"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Scale vs. POS",
+          "description": "Pay-by-weight buffet: every plate that goes on the scale is detected and matched to its POS order. Plates with no matching sale are flagged for review.",
+          "stack": [
+            "scale event detection (SSIM)",
+            "AI plate classifier",
+            "POS matching"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Balança vs. PDV",
+          "description": "Buffet por quilo: cada prato que passa pela balança é detectado e associado ao seu pedido no PDV. Os pratos sem venda associada são destacados para revisão.",
+          "stack": [
+            "detecção de eventos na balança (SSIM)",
+            "classificador de pratos com IA",
+            "associação com o PDV"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "multi-scale-sentinel",
+      "category": "video-pos",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:36",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Sentinel multibáscula",
+          "description": "Buffet por peso con dos básculas observadas desde una sola cámara. Cada plato se concilia con el POS.",
+          "stack": [
+            "SSIM multi-ROI",
+            "clasificador de platos con IA",
+            "emparejamiento con POS"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Multi-scale Sentinel",
+          "description": "Pay-by-weight buffet with two scales watched by a single camera. Every plate is reconciled with the POS.",
+          "stack": [
+            "multi-ROI SSIM",
+            "AI plate classifier",
+            "POS matching"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Sentinel multibalança",
+          "description": "Buffet por quilo com duas balanças observadas por uma única câmera. Cada prato é conciliado com o PDV.",
+          "stack": [
+            "SSIM multi-ROI",
+            "classificador de pratos com IA",
+            "associação com o PDV"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "cup-tracking",
+      "category": "video-pos",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:39",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Vasos vs. ventas",
+          "description": "Los vasos de marca se rastrean en video y se emparejan con los recibos fiscales capturados desde la impresora. Las anomalías se marcan en ambos sentidos: vasos sin venta y ventas sin vaso.",
+          "stack": [
+            "RF-DETR Nano entrenado a medida",
+            "ByteTrack",
+            "captura de recibos de impresora"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Cups vs. sales",
+          "description": "Branded cups are tracked on video and matched to fiscal receipts captured from the printer. Anomalies are flagged both ways: cups without a sale and sales without a cup.",
+          "stack": [
+            "custom-trained RF-DETR Nano",
+            "ByteTrack",
+            "printer receipt capture"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Copos vs. vendas",
+          "description": "Os copos da marca são rastreados em vídeo e associados aos cupons fiscais capturados da impressora. As anomalias são marcadas nos dois sentidos: copos sem venda e vendas sem copo.",
+          "stack": [
+            "RF-DETR Nano treinado sob medida",
+            "ByteTrack",
+            "captura de cupons da impressora"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "rodizio",
+      "category": "video-pos",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:47",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Sentinel Rodizio",
+          "description": "Aseguramiento de ingresos en un restaurante de tarifa fija por persona: las personas sentadas en cada mesa se cuentan periódicamente y se comparan con las entradas cobradas. Las diferencias son evidencia para revisar, no acusaciones.",
+          "stack": [
+            "conteo periódico de personas",
+            "captura de cuentas impresas",
+            "línea de tiempo aumentada"
+          ],
+          "role": "Diseñé la arquitectura y desarrollé la prueba de concepto."
+        },
+        "en": {
+          "title": "Sentinel Rodizio",
+          "description": "Revenue assurance for a fixed-price-per-person restaurant: people seated at each table are counted periodically and compared with the admissions charged. Differences are evidence to review, not accusations.",
+          "stack": [
+            "periodic people counting",
+            "printed check capture",
+            "augmented timeline"
+          ],
+          "role": "I designed the architecture and built the proof of concept."
+        },
+        "pt": {
+          "title": "Sentinel Rodízio",
+          "description": "Garantia de receita em um restaurante de preço fixo por pessoa: as pessoas sentadas em cada mesa são contadas periodicamente e comparadas com os rodízios cobrados. As diferenças são evidências para revisar, não acusações.",
+          "stack": [
+            "contagem periódica de pessoas",
+            "captura de contas impressas",
+            "linha do tempo aumentada"
+          ],
+          "role": "Projetei a arquitetura e desenvolvi a prova de conceito."
+        }
+      }
+    },
+    {
+      "id": "traffic-conversion",
+      "category": "video-pos",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:45",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Tráfico y conversión",
+          "description": "Embudo de una tienda física: interacciones de interés observadas por varias cámaras frente a las ventas registradas. Cada venta se abre con su evidencia visual y su recibo fiscal.",
+          "stack": [
+            "detección de interacciones multicámara",
+            "recibos fiscales de impresora",
+            "vínculo venta–evidencia"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Traffic and conversion",
+          "description": "A physical store's funnel: interactions of interest seen by several cameras against recorded sales. Every sale opens with its visual evidence and its fiscal receipt.",
+          "stack": [
+            "multi-camera interaction detection",
+            "printer fiscal receipts",
+            "sale–evidence linking"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Tráfego e conversão",
+          "description": "O funil de uma loja física: interações de interesse observadas por várias câmeras frente às vendas registradas. Cada venda abre com sua evidência visual e seu cupom fiscal.",
+          "stack": [
+            "detecção de interações multicâmera",
+            "cupons fiscais da impressora",
+            "vínculo venda–evidência"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "trash-analysis",
+      "category": "vision-multimodal",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:45",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Análisis del área de residuos",
+          "description": "Los eventos detectados por una línea virtual se puntúan con segmentación de vocabulario abierto para encontrar bandejas. Una cola de revisión humana convierte cada decisión en etiquetas de entrenamiento.",
+          "stack": [
+            "línea virtual",
+            "SAM 3 (segmentación de vocabulario abierto)",
+            "revisión humana en el loop"
+          ],
+          "role": "Diseñé la arquitectura y desarrollé la prueba de concepto."
+        },
+        "en": {
+          "title": "Waste area analysis",
+          "description": "Events detected by a virtual tripwire are scored with open-vocabulary segmentation to find trays. A human review queue turns every decision into training labels.",
+          "stack": [
+            "virtual tripwire",
+            "SAM 3 (open-vocabulary segmentation)",
+            "human in the loop"
+          ],
+          "role": "I designed the architecture and built the proof of concept."
+        },
+        "pt": {
+          "title": "Análise da área de resíduos",
+          "description": "Os eventos detectados por uma linha virtual são pontuados com segmentação de vocabulário aberto para encontrar bandejas. Uma fila de revisão humana transforma cada decisão em rótulos de treinamento.",
+          "stack": [
+            "linha virtual",
+            "SAM 3 (segmentação de vocabulário aberto)",
+            "humano no circuito"
+          ],
+          "role": "Projetei a arquitetura e desenvolvi a prova de conceito."
+        }
+      }
+    },
+    {
+      "id": "pizza-events",
+      "category": "vision-multimodal",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:42",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Eventos de pizza",
+          "description": "Revisión de producción en una pizzería: cada pizza detectada, análisis del sabor restringido al menú, ticket de cocina sintético y referencias visuales del menú.",
+          "stack": [
+            "YOLO-World",
+            "ByteTrack",
+            "Qwen3-VL"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Pizza events",
+          "description": "Production review at a pizzeria: every pizza detected, flavor analysis constrained to the menu, a synthetic kitchen ticket and visual menu references.",
+          "stack": [
+            "YOLO-World",
+            "ByteTrack",
+            "Qwen3-VL"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Eventos de pizza",
+          "description": "Revisão da produção em uma pizzaria: cada pizza detectada, análise do sabor restrita ao cardápio, ticket de cozinha sintético e referências visuais do cardápio.",
+          "stack": [
+            "YOLO-World",
+            "ByteTrack",
+            "Qwen3-VL"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "food-box-review",
+      "category": "vision-multimodal",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:36",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Revisión de cajas de delivery",
+          "description": "Cada caja de delivery se detecta y se describe (plato, empaque, nivel de confianza) y se resume en un ticket sintético para compararlo con lo pedido.",
+          "stack": [
+            "YOLO-World",
+            "ByteTrack",
+            "Qwen3-VL"
+          ],
+          "role": "Diseñé la arquitectura y desarrollé la prueba de concepto."
+        },
+        "en": {
+          "title": "Delivery box review",
+          "description": "Every delivery box is detected and described (dish, packaging, confidence) and summarized in a synthetic ticket to compare with what was ordered.",
+          "stack": [
+            "YOLO-World",
+            "ByteTrack",
+            "Qwen3-VL"
+          ],
+          "role": "I designed the architecture and built the proof of concept."
+        },
+        "pt": {
+          "title": "Revisão de caixas de delivery",
+          "description": "Cada caixa de delivery é detectada e descrita (prato, embalagem, nível de confiança) e resumida em um ticket sintético para comparar com o que foi pedido.",
+          "stack": [
+            "YOLO-World",
+            "ByteTrack",
+            "Qwen3-VL"
+          ],
+          "role": "Projetei a arquitetura e desenvolvi a prova de conceito."
+        }
+      }
+    },
+    {
+      "id": "expo-packing",
+      "category": "vision-multimodal",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:56",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Verificación de empaque",
+          "description": "Pedidos de delivery verificados línea por línea en el video del mesón de empaque, incluidos los kits que el cliente pidió o rechazó. Cada verificación queda con su marca de tiempo en el video.",
+          "stack": [
+            "SAM 3 (tracking con máscaras)",
+            "Qwen3-VL",
+            "checklist generado desde el ticket"
+          ],
+          "role": "Diseñé la arquitectura y desarrollé la prueba de concepto."
+        },
+        "en": {
+          "title": "Packing verification",
+          "description": "Delivery orders verified line by line on video of the packing bench, including the kits the customer asked for or declined. Every check is timestamped on the video.",
+          "stack": [
+            "SAM 3 (mask tracking)",
+            "Qwen3-VL",
+            "checklist generated from the ticket"
+          ],
+          "role": "I designed the architecture and built the proof of concept."
+        },
+        "pt": {
+          "title": "Verificação de embalagem",
+          "description": "Pedidos de delivery verificados item por item no vídeo da bancada de embalagem, incluindo os kits que o cliente pediu ou recusou. Cada verificação fica marcada com o tempo exato no vídeo.",
+          "stack": [
+            "SAM 3 (tracking com máscaras)",
+            "Qwen3-VL",
+            "checklist gerado a partir do ticket"
+          ],
+          "role": "Projetei a arquitetura e desenvolvi a prova de conceito."
+        }
+      }
+    },
+    {
+      "id": "order-readiness",
+      "category": "operaciones",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "2:19",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Pedido listo",
+          "description": "Los tickets de despacho se reimprimen con un código QR propio; una cámara en el pase lo detecta y registra el momento en que cada pedido queda listo para recoger.",
+          "stack": [
+            "captura de impresora",
+            "detector de QR con RF-DETR",
+            "tracking",
+            "decodificación múltiple"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Order ready",
+          "description": "Dispatch tickets are reprinted with our own QR code; a camera on the pass detects it and records the moment each order is ready for pickup.",
+          "stack": [
+            "printer capture",
+            "RF-DETR QR detector",
+            "tracking",
+            "multi-decoder"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Pedido pronto",
+          "description": "Os tickets de despacho são reimpressos com um QR code próprio; uma câmera no passe o detecta e registra o momento em que cada pedido fica pronto para retirada.",
+          "stack": [
+            "captura da impressora",
+            "detector de QR com RF-DETR",
+            "tracking",
+            "decodificação múltipla"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "stock-room-access",
+      "category": "operaciones",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:50",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Acceso a bodega",
+          "description": "Cada entrada a la bodega queda registrada con hora y tiempo de permanencia, a un click del momento exacto en el video.",
+          "stack": [
+            "detección de entrada a zonas",
+            "métricas de señal"
+          ],
+          "role": "Diseñé la arquitectura y desarrollé la prueba de concepto."
+        },
+        "en": {
+          "title": "Stock room access",
+          "description": "Every entry into the stock room is logged with time and dwell duration, one click away from the exact moment on video.",
+          "stack": [
+            "zone entry detection",
+            "signal metrics"
+          ],
+          "role": "I designed the architecture and built the proof of concept."
+        },
+        "pt": {
+          "title": "Acesso ao estoque",
+          "description": "Cada entrada no estoque é registrada com horário e tempo de permanência, a um clique do momento exato no vídeo.",
+          "stack": [
+            "detecção de entrada em zonas",
+            "métricas de sinal"
+          ],
+          "role": "Projetei a arquitetura e desenvolvi a prova de conceito."
+        }
+      }
+    },
+    {
+      "id": "served-dish-lifecycle",
+      "category": "operaciones",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:44",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Ciclo de vida del plato servido",
+          "description": "En un mostrador de servicio rápido, cada plato se sigue desde que sale de cocina, entra al pase, se llama y se recoge, con métricas de tiempos de servicio.",
+          "stack": [
+            "detección de platos",
+            "tracking"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Served dish lifecycle",
+          "description": "At a quick-service counter, every dish is followed from the moment it leaves the kitchen, enters the pass, is called and is picked up, with service-time metrics.",
+          "stack": [
+            "dish detection",
+            "tracking"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Ciclo de vida do prato servido",
+          "description": "Em um balcão de serviço rápido, cada prato é acompanhado desde que sai da cozinha, entra no passe, é chamado e é retirado, com métricas de tempo de serviço.",
+          "stack": [
+            "detecção de pratos",
+            "tracking"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "freezer-monitoring",
+      "category": "operaciones",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:39",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Monitoreo de congeladores",
+          "description": "Con la cámara que ya existe en la tienda, cada apertura y cierre del congelador queda registrada con su duración; los ciclos largos se destacan junto a una estimación de exposición térmica y consumo, con revisión en video.",
+          "stack": [
+            "detección de apertura/cierre sobre cámara existente",
+            "analítica de ciclos"
+          ],
+          "role": "Diseñé la arquitectura y desarrollé la prueba de concepto."
+        },
+        "en": {
+          "title": "Freezer monitoring",
+          "description": "Using the camera the store already has, every freezer opening and closing is logged with its duration; long cycles are highlighted together with an estimate of thermal exposure and energy use, with video review.",
+          "stack": [
+            "open/close detection on an existing camera",
+            "cycle analytics"
+          ],
+          "role": "I designed the architecture and built the proof of concept."
+        },
+        "pt": {
+          "title": "Monitoramento de freezers",
+          "description": "Com a câmera que a loja já tem, cada abertura e fechamento do freezer é registrado com sua duração; os ciclos longos são destacados junto com uma estimativa de exposição térmica e consumo, com revisão em vídeo.",
+          "stack": [
+            "detecção de abertura/fechamento em câmera existente",
+            "análise de ciclos"
+          ],
+          "role": "Projetei a arquitetura e desenvolvi a prova de conceito."
+        }
+      }
+    },
+    {
+      "id": "dish-standard-discovery",
+      "category": "configuracion",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:39",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Descubrimiento del estándar de un plato",
+          "description": "Una cola diversa de platos servidos donde el chef describe, en lenguaje natural, qué debe medirse en cada uno.",
+          "stack": [
+            "RF-DETR",
+            "ByteTrack",
+            "clustering con DINOv2"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Dish standard discovery",
+          "description": "A diverse queue of served dishes where the chef describes, in plain language, what should be measured in each one.",
+          "stack": [
+            "RF-DETR",
+            "ByteTrack",
+            "DINOv2 clustering"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Descoberta do padrão de um prato",
+          "description": "Uma fila diversa de pratos servidos em que o chef descreve, em linguagem natural, o que deve ser medido em cada um.",
+          "stack": [
+            "RF-DETR",
+            "ByteTrack",
+            "clustering com DINOv2"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "pizza-quality-config",
+      "category": "configuracion",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:31",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Configuración de calidad de pizza",
+          "description": "Revisión experta estructurada (horneado, ingredientes, burbujas, ajuste en la caja) que se guarda como JSON validado.",
+          "stack": [
+            "RF-DETR",
+            "ByteTrack",
+            "clustering con DINOv2"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Pizza quality configuration",
+          "description": "Structured expert review (bake, toppings, bubbles, fit in the box) saved as validated JSON.",
+          "stack": [
+            "RF-DETR",
+            "ByteTrack",
+            "DINOv2 clustering"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Configuração de qualidade de pizza",
+          "description": "Revisão especializada estruturada (forno, ingredientes, bolhas, encaixe na caixa) salva como JSON validado.",
+          "stack": [
+            "RF-DETR",
+            "ByteTrack",
+            "clustering com DINOv2"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "voice-workbench",
+      "category": "voz-audio",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:44",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Workbench de voz",
+          "description": "Micrófono del mostrador, dos cámaras y POS en un mismo reloj. Cada venta se segmenta en llegada, pedido, pago y cierre, con su transcripción.",
+          "stack": [
+            "VAD",
+            "ASR con Parakeet",
+            "corrección de deriva de reloj"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Voice workbench",
+          "description": "Counter microphone, two cameras and POS on one clock. Every sale is segmented into arrival, order, payment and close, with its transcript.",
+          "stack": [
+            "VAD",
+            "Parakeet ASR",
+            "clock-drift correction"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Workbench de voz",
+          "description": "Microfone do balcão, duas câmeras e PDV em um mesmo relógio. Cada venda é segmentada em chegada, pedido, pagamento e fechamento, com sua transcrição.",
+          "stack": [
+            "VAD",
+            "ASR com Parakeet",
+            "correção de deriva de relógio"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "ai-manager",
+      "category": "voz-audio",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:37",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Emilia AI Manager",
+          "description": "Replay sincronizado de cada venta con su registro en el POS y coaching de atención (ofrecer agua, explicar con amabilidad, sugerir un producto adicional) respaldado por la transcripción.",
+          "stack": [
+            "ASR",
+            "coaching con LLM",
+            "replay sincronizado"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Emilia AI Manager",
+          "description": "A synchronized replay of every sale with its POS record, and service coaching (offer water, explain kindly, suggest an add-on) backed by the transcript.",
+          "stack": [
+            "ASR",
+            "LLM coaching",
+            "synchronized replay"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Emilia AI Manager",
+          "description": "Replay sincronizado de cada venda com seu registro no PDV e coaching de atendimento (oferecer água, explicar com gentileza, sugerir um produto adicional) apoiado pela transcrição.",
+          "stack": [
+            "ASR",
+            "coaching com LLM",
+            "replay sincronizado"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "emilia-coach",
+      "category": "voz-audio",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:46",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Emilia Coach",
+          "description": "Scorecard diario de servicio por día y por operador, con análisis explicable de cada sesión y una vista analítica.",
+          "stack": [
+            "transcripciones ASR",
+            "evaluaciones con LLM",
+            "libSQL"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Emilia Coach",
+          "description": "A daily service scorecard by day and by operator, with an explainable analysis of every session and an analytics view.",
+          "stack": [
+            "ASR transcripts",
+            "LLM assessments",
+            "libSQL"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Emilia Coach",
+          "description": "Um scorecard diário de atendimento por dia e por operador, com análise explicável de cada sessão e uma visão analítica.",
+          "stack": [
+            "transcrições ASR",
+            "avaliações com LLM",
+            "libSQL"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "payment-sessions",
+      "category": "voz-audio",
+      "visibility": "privado",
+      "company": "Emilia",
+      "year": null,
+      "duration": "1:51",
+      "credit_url": null,
+      "original_urls": [],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Sentinel Audio · sesiones de pago",
+          "description": "Audio, caja y video en un mismo reloj: cada momento de pago se clasifica por medio (efectivo, pago instantáneo o tarjeta) y por la fuente que lo observó. Las diferencias se reportan de forma conservadora para revisión.",
+          "stack": [
+            "ASR",
+            "emparejamiento con POS y recibos",
+            "sincronización audio–video"
+          ],
+          "role": "Diseñé la arquitectura, desarrollé la prueba de concepto y la llevé a producción de punta a punta, con el equipo de Emilia."
+        },
+        "en": {
+          "title": "Sentinel Audio · payment sessions",
+          "description": "Audio, register and video on one clock: every payment moment is classified by method (cash, instant payment or card) and by the source that observed it. Differences are reported conservatively for review.",
+          "stack": [
+            "ASR",
+            "POS and receipt matching",
+            "audio–video sync"
+          ],
+          "role": "I designed the architecture, built the proof of concept and took it to production end to end, with the Emilia team."
+        },
+        "pt": {
+          "title": "Sentinel Audio · sessões de pagamento",
+          "description": "Áudio, caixa e vídeo em um mesmo relógio: cada momento de pagamento é classificado por meio (dinheiro, pagamento instantâneo ou cartão) e pela fonte que o observou. As diferenças são reportadas de forma conservadora para revisão.",
+          "stack": [
+            "ASR",
+            "associação com PDV e cupons",
+            "sincronização áudio–vídeo"
+          ],
+          "role": "Projetei a arquitetura, desenvolvi a prova de conceito e a levei à produção de ponta a ponta, com o time da Emilia."
+        }
+      }
+    },
+    {
+      "id": "jetson-nano-home",
+      "category": "edge-ai",
+      "visibility": "publico",
+      "company": null,
+      "year": "2023",
+      "duration": "0:06",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1724796724420751724"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/jetson-nano-home.mp4",
+          "width": 720,
+          "height": 960
+        }
+      ],
+      "poster": "/media/demos/jetson-nano-home.webp",
+      "i18n": {
+        "es": {
+          "title": "Mi \"AWS\" en casa",
+          "description": "Un NVIDIA Jetson Nano como infraestructura casera para experimentar con IA.",
+          "stack": [
+            "NVIDIA Jetson Nano"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "My \"AWS\" at home",
+          "description": "An NVIDIA Jetson Nano as home infrastructure for experimenting with AI.",
+          "stack": [
+            "NVIDIA Jetson Nano"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "Minha \"AWS\" em casa",
+          "description": "Um NVIDIA Jetson Nano como infraestrutura caseira para experimentar com IA.",
+          "stack": [
+            "NVIDIA Jetson Nano"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "stable-diffusion-profile",
+      "category": "ia-generativa",
+      "visibility": "publico",
+      "company": null,
+      "year": "2022",
+      "duration": "0:49",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1570980203471720451"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/stable-diffusion-profile.mp4",
+          "width": 714,
+          "height": 714
+        }
+      ],
+      "poster": "/media/demos/stable-diffusion-profile.webp",
+      "i18n": {
+        "es": {
+          "title": "Fotos de perfil con Stable Diffusion",
+          "description": "Experimento temprano, semanas después del lanzamiento de Stable Diffusion: retratos de perfil propios generados con el modelo.",
+          "stack": [
+            "Stable Diffusion"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "Profile photos with Stable Diffusion",
+          "description": "An early experiment, weeks after Stable Diffusion's release: my own profile portraits generated with the model.",
+          "stack": [
+            "Stable Diffusion"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "Fotos de perfil com Stable Diffusion",
+          "description": "Um experimento inicial, semanas depois do lançamento do Stable Diffusion: meus próprios retratos de perfil gerados com o modelo.",
+          "stack": [
+            "Stable Diffusion"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "hendrix-tribute",
+      "category": "ia-generativa",
+      "visibility": "enlace-externo",
+      "company": null,
+      "year": "2023",
+      "duration": "0:40",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1674478307381788673"
+      ],
+      "videos": [],
+      "poster": null,
+      "i18n": {
+        "es": {
+          "title": "Tributo a Jimi Hendrix",
+          "description": "Recorrido visual por la música de Jimi Hendrix, con imágenes de Midjourney V5.2, animación en Runway y edición en Kdenlive.",
+          "stack": [
+            "Midjourney",
+            "Runway",
+            "Kdenlive"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "A tribute to Jimi Hendrix",
+          "description": "A visual journey through Jimi Hendrix's music, with Midjourney V5.2 images, animation in Runway and editing in Kdenlive.",
+          "stack": [
+            "Midjourney",
+            "Runway",
+            "Kdenlive"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "Tributo a Jimi Hendrix",
+          "description": "Uma viagem visual pela música de Jimi Hendrix, com imagens do Midjourney V5.2, animação no Runway e edição no Kdenlive.",
+          "stack": [
+            "Midjourney",
+            "Runway",
+            "Kdenlive"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "voice-agent-restaurant",
+      "category": "voz-conversacional",
+      "visibility": "publico",
+      "company": null,
+      "year": "2023",
+      "duration": "3:01",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1718090043640754178",
+        "https://x.com/arpagon/status/1718090047084282068"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/voice-agent-restaurant.mp4",
+          "width": 1148,
+          "height": 646
+        },
+        {
+          "src": "https://arpagon.co/demos/media/voice-agent-restaurant-2.mp4",
+          "width": 1148,
+          "height": 646
+        }
+      ],
+      "poster": "/media/demos/voice-agent-restaurant.webp",
+      "i18n": {
+        "es": {
+          "title": "Agente de voz para servicio al cliente de un restaurante",
+          "description": "Agente conversacional de voz para un restaurante ficticio que recibe peticiones, quejas y reclamos, y entrega un número de seguimiento. Demo en inglés y en español.",
+          "stack": [
+            "IA conversacional de voz"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "A customer-service voice agent for a restaurant",
+          "description": "A conversational voice agent for a fictional restaurant that takes requests, complaints and claims and returns a tracking number. Demos in English and in Spanish.",
+          "stack": [
+            "conversational voice AI"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "Agente de voz para o atendimento ao cliente de um restaurante",
+          "description": "Um agente conversacional de voz para um restaurante fictício que recebe pedidos, queixas e reclamações e devolve um número de protocolo. Demos em inglês e em espanhol.",
+          "stack": [
+            "IA conversacional de voz"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "arouse",
+      "category": "voz-conversacional",
+      "visibility": "publico",
+      "company": null,
+      "year": "2023",
+      "duration": "0:24",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1724823723549610107"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/arouse.mp4",
+          "width": 1390,
+          "height": 706
+        }
+      ],
+      "poster": "/media/demos/arouse.webp",
+      "i18n": {
+        "es": {
+          "title": "Arouse",
+          "description": "Asistente con RAG para acompañar el desarrollo de carrera profesional.",
+          "stack": [
+            "RAG",
+            "LLM"
+          ],
+          "role": "Lideré el desarrollo como CTO de RisePal"
+        },
+        "en": {
+          "title": "Arouse",
+          "description": "A RAG assistant to support professional career development.",
+          "stack": [
+            "RAG",
+            "LLM"
+          ],
+          "role": "Led development as CTO of RisePal"
+        },
+        "pt": {
+          "title": "Arouse",
+          "description": "Um assistente com RAG para apoiar o desenvolvimento de carreira profissional.",
+          "stack": [
+            "RAG",
+            "LLM"
+          ],
+          "role": "Liderei o desenvolvimento como CTO da RisePal"
+        }
+      }
+    },
+    {
+      "id": "multilingual-voice",
+      "category": "voz-conversacional",
+      "visibility": "publico",
+      "company": null,
+      "year": "2023",
+      "duration": "2:17",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1727461553463562699"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/multilingual-voice.mp4",
+          "width": 1148,
+          "height": 646
+        }
+      ],
+      "poster": "/media/demos/multilingual-voice.webp",
+      "i18n": {
+        "es": {
+          "title": "Voz multilingüe en tiempo real",
+          "description": "Interacción de voz multilingüe en tiempo real, construida en ArtisanLabs.",
+          "stack": [
+            "IA conversacional de voz",
+            "multilingüe"
+          ],
+          "role": "Autor (proyecto individual)"
+        },
+        "en": {
+          "title": "Real-time multilingual voice",
+          "description": "Real-time multilingual voice interaction, built at ArtisanLabs.",
+          "stack": [
+            "conversational voice AI",
+            "multilingual"
+          ],
+          "role": "Author (solo project)"
+        },
+        "pt": {
+          "title": "Voz multilíngue em tempo real",
+          "description": "Interação de voz multilíngue em tempo real, construída na ArtisanLabs.",
+          "stack": [
+            "IA conversacional de voz",
+            "multilíngue"
+          ],
+          "role": "Autor (projeto individual)"
+        }
+      }
+    },
+    {
+      "id": "supabase-voice-rag",
+      "category": "voz-conversacional",
+      "visibility": "publico",
+      "company": null,
+      "year": "2023",
+      "duration": "3:17",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1736692489409413420"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/supabase-voice-rag.mp4",
+          "width": 1148,
+          "height": 646
+        }
+      ],
+      "poster": "/media/demos/supabase-voice-rag.webp",
+      "i18n": {
+        "es": {
+          "title": "RAG activado por voz · Supabase Hackathon",
+          "description": "Sistema RAG activado por voz, construido para el hackathon de Supabase.",
+          "stack": [
+            "Supabase",
+            "RAG",
+            "voz"
+          ],
+          "role": "Autor (proyecto individual)"
+        },
+        "en": {
+          "title": "Voice-activated RAG · Supabase Hackathon",
+          "description": "A voice-activated RAG system built for the Supabase hackathon.",
+          "stack": [
+            "Supabase",
+            "RAG",
+            "voice"
+          ],
+          "role": "Author (solo project)"
+        },
+        "pt": {
+          "title": "RAG ativado por voz · Supabase Hackathon",
+          "description": "Um sistema RAG ativado por voz, construído para o hackathon da Supabase.",
+          "stack": [
+            "Supabase",
+            "RAG",
+            "voz"
+          ],
+          "role": "Autor (projeto individual)"
+        }
+      }
+    },
+    {
+      "id": "yc-advice-bot",
+      "category": "voz-conversacional",
+      "visibility": "publico",
+      "company": null,
+      "year": "2024",
+      "duration": "2:31",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1758264979319345611"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/yc-advice-bot.mp4",
+          "width": 1148,
+          "height": 646
+        }
+      ],
+      "poster": "/media/demos/yc-advice-bot.webp",
+      "i18n": {
+        "es": {
+          "title": "YC Startup Advice Bot",
+          "description": "Bot de voz que responde consejos para startups, construido con el framework open source Vocode y una voz de Coqui.",
+          "stack": [
+            "Vocode",
+            "Coqui TTS"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "YC Startup Advice Bot",
+          "description": "A voice bot that gives startup advice, built with the open-source Vocode framework and a Coqui voice.",
+          "stack": [
+            "Vocode",
+            "Coqui TTS"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "YC Startup Advice Bot",
+          "description": "Um bot de voz que dá conselhos para startups, construído com o framework open source Vocode e uma voz do Coqui.",
+          "stack": [
+            "Vocode",
+            "Coqui TTS"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "llm-speed-benchmark",
+      "category": "voz-conversacional",
+      "visibility": "publico",
+      "company": null,
+      "year": "2024",
+      "duration": "0:21",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/1814083418096873656"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/llm-speed-benchmark.mp4",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "poster": "/media/demos/llm-speed-benchmark.webp",
+      "i18n": {
+        "es": {
+          "title": "Velocidad de LLMs para IA conversacional",
+          "description": "Comparación de velocidad entre GPT-4o mini y GPT-3.5 para IA conversacional.",
+          "stack": [
+            "GPT-4o mini",
+            "GPT-3.5"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "LLM speed for conversational AI",
+          "description": "A speed comparison between GPT-4o mini and GPT-3.5 for conversational AI.",
+          "stack": [
+            "GPT-4o mini",
+            "GPT-3.5"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "Velocidade de LLMs para IA conversacional",
+          "description": "Uma comparação de velocidade entre o GPT-4o mini e o GPT-3.5 para IA conversacional.",
+          "stack": [
+            "GPT-4o mini",
+            "GPT-3.5"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "visual-explainer-fork",
+      "category": "agentes",
+      "visibility": "publico",
+      "company": null,
+      "year": "2026",
+      "duration": "0:16",
+      "credit_url": "https://github.com/nicobailon/visual-explainer",
+      "original_urls": [
+        "https://x.com/arpagon/status/2029603857592959114"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/visual-explainer-fork.mp4",
+          "width": 2276,
+          "height": 1806
+        }
+      ],
+      "poster": "/media/demos/visual-explainer-fork.webp",
+      "i18n": {
+        "es": {
+          "title": "Fork de visual-explainer",
+          "description": "Fork mantenido del skill visual-explainer de Nico Bailon, que convierte salidas complejas de terminal en páginas HTML. Se sincroniza con el proyecto original y aplica preferencias declarativas que el agente interpreta con criterio, en lugar de parches mecánicos.",
+          "stack": [
+            "skills para agentes",
+            "HTML",
+            "sincronización con upstream"
+          ],
+          "role": "Autor del fork",
+          "credit": "Proyecto original de Nico Bailon"
+        },
+        "en": {
+          "title": "visual-explainer fork",
+          "description": "A maintained fork of Nico Bailon's visual-explainer skill, which turns complex terminal output into HTML pages. It syncs with the original project and applies declarative preferences that the agent interprets with judgment, instead of mechanical patches.",
+          "stack": [
+            "agent skills",
+            "HTML",
+            "upstream sync"
+          ],
+          "role": "Fork author",
+          "credit": "Original project by Nico Bailon"
+        },
+        "pt": {
+          "title": "Fork do visual-explainer",
+          "description": "Um fork mantido do skill visual-explainer de Nico Bailon, que transforma saídas complexas de terminal em páginas HTML. Ele se sincroniza com o projeto original e aplica preferências declarativas que o agente interpreta com critério, em vez de patches mecânicos.",
+          "stack": [
+            "skills para agentes",
+            "HTML",
+            "sincronização com o upstream"
+          ],
+          "role": "Autor do fork",
+          "credit": "Projeto original de Nico Bailon"
+        }
+      }
+    },
+    {
+      "id": "pi-animations",
+      "category": "agentes",
+      "visibility": "publico",
+      "company": null,
+      "year": "2026",
+      "duration": "1:22",
+      "credit_url": null,
+      "original_urls": [
+        "https://x.com/arpagon/status/2035117388908372284",
+        "https://x.com/arpagon/status/2063812661805019606"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/pi-animations.mp4",
+          "width": 2156,
+          "height": 880
+        },
+        {
+          "src": "https://arpagon.co/demos/media/pi-animations-2.mp4",
+          "width": 1032,
+          "height": 590
+        }
+      ],
+      "poster": "/media/pi-animations-poster.webp",
+      "i18n": {
+        "es": {
+          "title": "pi-animations",
+          "description": "Indicadores animados para el agente de código pi: 21 en el lanzamiento y, en la v0.1.4, cinco loaders Unicode nuevos.",
+          "stack": [
+            "TypeScript",
+            "extensiones de pi",
+            "TUI"
+          ],
+          "role": "Autor"
+        },
+        "en": {
+          "title": "pi-animations",
+          "description": "Animated indicators for the pi coding agent: 21 at launch and, in v0.1.4, five new Unicode loaders.",
+          "stack": [
+            "TypeScript",
+            "pi extensions",
+            "TUI"
+          ],
+          "role": "Author"
+        },
+        "pt": {
+          "title": "pi-animations",
+          "description": "Indicadores animados para o agente de código pi: 21 no lançamento e, na v0.1.4, cinco novos loaders Unicode.",
+          "stack": [
+            "TypeScript",
+            "extensões do pi",
+            "TUI"
+          ],
+          "role": "Autor"
+        }
+      }
+    },
+    {
+      "id": "pi-durable-explainer",
+      "category": "agentes",
+      "visibility": "publico",
+      "company": null,
+      "year": "2026",
+      "duration": "5:51",
+      "credit_url": "https://pi.dev",
+      "original_urls": [
+        "https://x.com/arpagon/status/2106366046605099447"
+      ],
+      "videos": [
+        {
+          "src": "https://arpagon.co/demos/media/pi-durable-explainer.mp4",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "poster": "/media/demos/pi-durable-explainer.webp",
+      "i18n": {
+        "es": {
+          "title": "Pi Durable, explicado",
+          "description": "Video explicativo de Pi Durable, un proyecto de Earendil (pi.dev). El proyecto no es mío: hice la explicación, producida con el propio agente pi, animaciones de manim y voz de Kokoro.",
+          "stack": [
+            "pi",
+            "manim",
+            "Kokoro TTS"
+          ],
+          "role": "Autor del video explicativo; Pi Durable es un proyecto de Earendil",
+          "credit": "Pi Durable es un proyecto de Earendil"
+        },
+        "en": {
+          "title": "Pi Durable, explained",
+          "description": "An explainer video about Pi Durable, a project by Earendil (pi.dev). The project isn't mine: I made the explainer, produced with the pi agent itself, manim animations and a Kokoro voice.",
+          "stack": [
+            "pi",
+            "manim",
+            "Kokoro TTS"
+          ],
+          "role": "Author of the explainer video; Pi Durable is an Earendil project",
+          "credit": "Pi Durable is a project by Earendil"
+        },
+        "pt": {
+          "title": "Pi Durable, explicado",
+          "description": "Um vídeo explicativo sobre o Pi Durable, um projeto da Earendil (pi.dev). O projeto não é meu: fiz a explicação, produzida com o próprio agente pi, animações do manim e voz do Kokoro.",
+          "stack": [
+            "pi",
+            "manim",
+            "Kokoro TTS"
+          ],
+          "role": "Autor do vídeo explicativo; o Pi Durable é um projeto da Earendil",
+          "credit": "O Pi Durable é um projeto da Earendil"
+        }
+      }
+    }
+  ]
+}

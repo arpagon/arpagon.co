@@ -1,0 +1,35 @@
+---
+// Shared frame for /demos pages: same look as /pi (grid background, mono breadcrumb, serif headings).
+import '@fontsource/instrument-serif/latin-400.css';
+import '@fontsource/instrument-serif/latin-400-italic.css';
+import '../../styles/demos.css';
+import Base from '../../layouts/Base.astro';
+import { copy, LOCALES, type Locale } from '../../data/profile';
+import { demosPath } from '../../data/demos';
+
+interface Props {
+  lang: Locale;
+  page: '' | 'acceso/' | 'privado/';
+  title: string;
+  description?: string;
+  noindex?: boolean;
+}
+const { lang, page, title, description, noindex = false } = Astro.props;
+const crumb = page ? page.replace('/', '') : '';
+const translations = noindex ? [] : LOCALES.map((l) => ({ lang: l, href: demosPath(l, page) }));
+---
+<Base lang={lang} title={title} description={description} translations={translations} noindex={noindex}>
+  <div class="dm">
+    <header class="dm-top mono">
+      <a href={lang === 'en' ? '/' : `/${lang}/`}>arpagon.co</a> / <a href={demosPath(lang)}>demos</a>{crumb && <> / <span>{crumb}</span></>}
+      <span class="dm-langs" aria-label="Language">
+        {LOCALES.map((l) => <a href={demosPath(l, page)} hreflang={copy[l].htmlLang} lang={copy[l].htmlLang} aria-current={l === lang ? 'page' : undefined}>{l.toUpperCase()}</a>)}
+      </span>
+    </header>
+    <main id="main" class="dm-main">
+      {copy[lang].machineNote && <p class="note">{copy[lang].machineNote} <a href={demosPath('en', page)}>English</a></p>}
+      <slot />
+    </main>
+    <footer class="dm-foot mono"><a href={lang === 'en' ? '/' : `/${lang}/`}>← arpagon.co</a> · <a href="mailto:info@arpagon.co">info@arpagon.co</a></footer>
+  </div>
+</Base>

@@ -1,4 +1,5 @@
 import { profile, copy, projects, community, press, archive, UPDATED } from '../data/profile';
+import { demos } from '../data/demos';
 
 /** Markdown profile used by /index.md and llms-full context. English, public facts only. */
 export function profileMarkdown(posts: { id: string; data: { title: string; date: Date } }[]) {
@@ -14,6 +15,10 @@ export function profileMarkdown(posts: { id: string; data: { title: string; date
     ...t.about.flatMap((p) => [p, '']),
     '## Projects',
     ...projects.map((p) => `- [${p.name}](${p.url}) (${p.period}, ${p.role.en}): ${p.desc.en}`),
+    '',
+    '## Demos',
+    `Videos at https://arpagon.co/demos/. Emilia product demos show real customer deployments: descriptions are public, videos are shared privately on request.`,
+    ...demos.map((d) => `- ${d.i18n.en.title}${d.company ? ` (${d.company})` : d.year ? ` (${d.year})` : ''}: ${d.i18n.en.description} Role: ${d.i18n.en.role}${d.visibility === 'privado' ? ' [private video]' : ''}`),
     '',
     '## Community',
     ...community.map((c) => `- ${c.date ? c.date + ': ' : ''}${c.text.en}`),

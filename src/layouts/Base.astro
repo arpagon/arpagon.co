@@ -12,8 +12,9 @@ interface Props {
   translations?: { lang: Locale; href: string }[];
   published?: Date;
   originalUrl?: string;
+  noindex?: boolean; // private/utility pages (demo access, private library)
 }
-const { lang, title, description, alternates = false, type = 'website', markdown, translations = [], published, originalUrl } = Astro.props;
+const { lang, title, description, alternates = false, type = 'website', markdown, translations = [], published, originalUrl, noindex = false } = Astro.props;
 const t = copy[lang];
 const fullTitle = title ? `${title} · ${profile.name}` : `${profile.name} — ${t.role}`;
 const desc = description ?? t.description;
@@ -40,6 +41,7 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={desc} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     {alternates && LOCALES.map((l) => (
       <link rel="alternate" hreflang={copy[l].htmlLang} href={new URL(homePath(l), Astro.site)} />

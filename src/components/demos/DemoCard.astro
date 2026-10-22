@@ -1,0 +1,52 @@
+---
+import { categories, demosCopy, demosPath, type Demo } from '../../data/demos';
+import type { Locale } from '../../data/profile';
+
+interface Props { demo: Demo; lang: Locale }
+const { demo, lang } = Astro.props;
+const t = demosCopy[lang];
+const text = demo.i18n[lang];
+const meta = [demo.company ?? demo.year, demo.duration, demo.videos.length > 1 ? `${demo.videos.length} ${t.videos}` : null].filter(Boolean).join(' · ');
+const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
+---
+<article class="dm-card" id={demo.id} data-category={categories[demo.category]?.[lang]}>
+  <div class="dm-media">
+    {demo.visibility === 'publico' && demo.videos.map((video, index) => (
+      <video controls playsinline preload="none" poster={index === 0 ? demo.poster ?? undefined : undefined} hidden={index > 0}
+        width={video.width} height={video.height} data-part={index} aria-label={`${text.title}${demo.videos.length > 1 ? ` (${index + 1}/${demo.videos.length})` : ''}`}>
+        <source src={video.src} type="video/mp4" />
+      </video>
+    ))}
+    {demo.videos.length > 1 && (
+      <div class="dm-parts mono" role="group" aria-label={t.videos}>
+        {demo.videos.map((_, index) => <button type="button" data-show={index} aria-pressed={index === 0 ? 'true' : 'false'}>{`${t.video} ${index + 1}`}</button>)}
+      </div>
+    )}
+    {demo.visibility === 'enlace-externo' && (
+      <div class="dm-ext">
+        <span class="badge">{t.watch}</span>
+        {demo.original_urls.map((url) => <a href={url}>{t.watchOn}</a>)}
+      </div>
+    )}
+    {demo.visibility === 'privado' && (
+      <div class="dm-lock">
+        <span class="badge">🔒 {t.privateBadge}</span>
+        <p>{t.privateBox}</p>
+        <a href={demosPath(lang, 'acceso/')}>{t.request}</a>
+      </div>
+    )}
+  </div>
+  <div class="dm-body">
+    <p class="dm-meta mono">{meta}</p>
+    <h4>{text.title}</h4>
+    <p>{text.description}</p>
+    <p class="dm-role"><span>{t.role}</span>{text.role}</p>
+    <ul class="dm-chips">{text.stack.map((tag) => <li>{tag}</li>)}</ul>
+    {(demo.credit_url || (demo.visibility === 'publico' && demo.original_urls.length > 0)) && (
+      <p class="dm-links mono">
+        {demo.credit_url && <a href={demo.credit_url}>{text.credit} ↗</a>}
+        {demo.visibility === 'publico' && demo.original_urls.map((url) => <a href={url}>{host(url)} ↗</a>)}
+      </p>
+    )}
+  </div>
+</article>

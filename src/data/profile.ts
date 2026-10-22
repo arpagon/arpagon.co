@@ -32,8 +32,9 @@ export const copy: Record<Locale, {
   description: string;
   about: string[];
   proof: string[];
-  nav: { about: string; projects: string; pi: string; writing: string; community: string; now: string };
+  nav: { about: string; projects: string; pi: string; demos: string; writing: string; community: string; now: string };
   pi: { title: string; blurb: string; cta: string };
+  demos: { title: string; blurb: string; cta: string };
   sections: { projects: string; writing: string; community: string; press: string; now: string; archive: string };
   allWriting: string;
   terminal: string;
@@ -54,9 +55,10 @@ export const copy: Record<Locale, {
       "Before that I was open-source maintainer at Vocode (YC W23), founded WunderComm and ArtisanLabs, was CTO at RisePal, and spent 13 years as CTO of Sapian building open-source real-time communications. I organize the Supabase meetups in Medellín, and I've been part of the city's Linux and free-software community since the Asterisk days.",
     ],
     proof: ['15+ years in open source', 'ex-maintainer at Vocode (YC W23)', '13 years CTO at Sapian', 'Medellín, Colombia'],
-    nav: { about: 'About', projects: 'Projects', pi: 'Pi', writing: 'Writing', community: 'Community', now: 'Now' },
+    nav: { about: 'About', projects: 'Projects', pi: 'Pi', demos: 'Demos', writing: 'Writing', community: 'Community', now: 'Now' },
     sections: { projects: 'Projects', writing: 'Writing', community: 'Community', press: 'Press', now: 'Now', archive: 'Archive' },
     pi: { title: 'Pi extensions', blurb: 'Six extensions for the Pi coding agent, on npm: undo (pi-rewind), 26 terminal animations, context health, worktree awareness and minimal web providers.', cta: 'Explore the extensions' },
+    demos: { title: 'Demos', blurb: 'Videos of what I build: computer vision and voice AI running at real restaurants with Emilia (private, shared on request), coding-agent tools and voice-AI experiments.', cta: 'Watch the demos' },
     allWriting: 'All writing',
     terminal: 'terminal mode',
     exitTerminal: '[esc] exit terminal',
@@ -79,9 +81,10 @@ export const copy: Record<Locale, {
       'Antes fui maintainer open source en Vocode (YC W23), fundé WunderComm y ArtisanLabs, fui CTO de RisePal y pasé 13 años como CTO de Sapian construyendo comunicaciones en tiempo real open source. Organizo los meetups de Supabase en Medellín, y hago parte de la comunidad Linux y de software libre de la ciudad desde los tiempos de Asterisk.',
     ],
     proof: ['15+ años en open source', 'ex-maintainer en Vocode (YC W23)', '13 años CTO de Sapian', 'Medellín, Colombia'],
-    nav: { about: 'Sobre mí', projects: 'Proyectos', pi: 'Pi', writing: 'Escritos', community: 'Comunidad', now: 'Ahora' },
+    nav: { about: 'Sobre mí', projects: 'Proyectos', pi: 'Pi', demos: 'Demos', writing: 'Escritos', community: 'Comunidad', now: 'Ahora' },
     sections: { projects: 'Proyectos', writing: 'Escritos', community: 'Comunidad', press: 'Prensa', now: 'Ahora', archive: 'Archivo' },
     pi: { title: 'Extensiones de Pi', blurb: 'Seis extensiones para el agente de código Pi, en npm: deshacer (pi-rewind), 26 animaciones de terminal, salud del contexto, conciencia de worktrees y proveedores web mínimos.', cta: 'Ver las extensiones' },
+    demos: { title: 'Demos', blurb: 'Videos de lo que construyo: visión por computador y voz con IA funcionando en restaurantes reales con Emilia (privados, a pedido), herramientas para agentes de código y experimentos de IA de voz.', cta: 'Ver los demos' },
     allWriting: 'Todos los escritos',
     terminal: 'modo terminal',
     exitTerminal: '[esc] salir de la terminal',
@@ -104,9 +107,10 @@ export const copy: Record<Locale, {
       'Antes fui maintainer open source na Vocode (YC W23), fundei a WunderComm e a ArtisanLabs, fui CTO da RisePal e passei 13 anos como CTO da Sapian construindo comunicações em tempo real open source. Organizo os meetups de Supabase em Medellín e faço parte da comunidade Linux e de software livre da cidade desde a época do Asterisk.',
     ],
     proof: ['15+ anos em open source', 'ex-maintainer na Vocode (YC W23)', '13 anos CTO da Sapian', 'Medellín, Colômbia'],
-    nav: { about: 'Sobre', projects: 'Projetos', pi: 'Pi', writing: 'Textos', community: 'Comunidade', now: 'Agora' },
+    nav: { about: 'Sobre', projects: 'Projetos', pi: 'Pi', demos: 'Demos', writing: 'Textos', community: 'Comunidade', now: 'Agora' },
     sections: { projects: 'Projetos', writing: 'Textos', community: 'Comunidade', press: 'Imprensa', now: 'Agora', archive: 'Arquivo' },
     pi: { title: 'Extensões do Pi', blurb: 'Seis extensões para o agente de código Pi, no npm: desfazer (pi-rewind), 26 animações de terminal, saúde do contexto, consciência de worktrees e provedores web mínimos.', cta: 'Ver as extensões' },
+    demos: { title: 'Demos', blurb: 'Vídeos do que eu construo: visão computacional e voz com IA rodando em restaurantes reais com a Emilia (privados, sob pedido), ferramentas para agentes de código e experimentos de IA de voz.', cta: 'Ver as demos' },
     allWriting: 'Todos os textos',
     terminal: 'modo terminal',
     exitTerminal: '[esc] sair do terminal',
