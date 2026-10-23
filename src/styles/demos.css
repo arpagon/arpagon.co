@@ -69,10 +69,18 @@
 .dm-libbar { display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; align-items: center; margin: 0 0 8px; }
 .dm-libbar form { margin: 0; }
 .dm-wm { position: absolute; right: 10px; top: 8px; font: 12px var(--mono); color: #e9d9ae8c; pointer-events: none; text-shadow: 0 0 3px #000; }
+/* Personal edited-edition session: no restricted media is present in the static HTML. */
+.dm-edited-bar { display: flex; gap: 24px; justify-content: space-between; align-items: flex-start; border: 1px solid #c9a24a66; border-radius: 10px; background: #c9a24a0b; padding: 22px; margin: 16px 0 36px; }
+.dm-edited-bar h2 { font-size: 28px; }
+.dm-edited-bar > a { flex-shrink: 0; }
+.dm-edited-note { font-size: 14px; margin: 10px 0; }
+.dm-edited-caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 10px 14px; font: 11px var(--mono); color: var(--muted); }
+.dm-edited-caption a { color: var(--cream); text-decoration: none; }
 [hidden] { display: none !important; }
 
 @media (max-width: 900px) {
   .dm-top, .dm-main, .dm-foot { padding-left: 22px; padding-right: 22px; }
   .dm-grid { grid-template-columns: 1fr; }
   .dm-hero { padding-top: 40px; }
+  .dm-edited-bar { flex-direction: column; gap: 14px; }
 }

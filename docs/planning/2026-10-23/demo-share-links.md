@@ -34,3 +34,11 @@ Edited editions remain restricted. They are not represented as guaranteed anonym
 ## Rollout
 
 Upload edited artifacts privately and prepare/test the backend without breaking existing routes. Open a site PR. Do not merge the PR or activate a visitor-facing production change without approval. Verify production public, edited and original access boundaries after the coordinated release.
+
+## Pre-release status
+
+- Twenty edited recordings uploaded unchanged to private storage; existing originals and public objects retained. No edited assets or private metadata added to Pages/Git.
+- Worker: 19 tests and real local workerd smoke pass, including original-flow regression, independent scopes/cookies, owner issuance, expiry/revocation and range/HEAD responses. Deployment dry run passes; production backend/routes not yet activated.
+- Browser: harmless fixtures verify 20 unlocked cards, URL cleanup, playback, viewer watermark, negative original access, cookie coexistence and sign-out/back behavior. EN/ES/PT and mobile layout verified.
+- Site: typecheck, privacy tests and build guards pass. Added typecheck dependencies and explicit boolean conversion for two existing terminal toggles to support the current DOM typings. One pre-existing Zod deprecation hint remains.
+- Coordinated release remains gated on PR approval. The static preview deliberately has no restricted-edition API or media access.

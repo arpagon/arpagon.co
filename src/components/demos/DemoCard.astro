@@ -9,7 +9,8 @@ const text = demo.i18n[lang];
 const meta = [demo.company ?? demo.year, demo.duration, demo.videos.length > 1 ? `${demo.videos.length} ${t.videos}` : null].filter(Boolean).join(' · ');
 const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 ---
-<article class="dm-card" id={demo.id} data-category={categories[demo.category]?.[lang]}>
+<article class="dm-card" id={demo.id} data-category={categories[demo.category]?.[lang]}
+  data-edited-card={demo.visibility === 'privado' ? demo.id : undefined} data-demo-company={demo.company ?? demo.year ?? ''}>
   <div class="dm-media">
     {demo.visibility === 'publico' && demo.videos.map((video, index) => (
       <video controls playsinline preload="none" poster={index === 0 ? demo.poster ?? undefined : undefined} hidden={index > 0}
@@ -37,7 +38,7 @@ const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
     )}
   </div>
   <div class="dm-body">
-    <p class="dm-meta mono">{meta}</p>
+    <p class="dm-meta mono" data-demo-meta>{meta}</p>
     <h4>{text.title}</h4>
     <p>{text.description}</p>
     <p class="dm-role"><span>{t.role}</span>{text.role}</p>

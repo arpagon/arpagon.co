@@ -69,13 +69,13 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     else { video.pause(); btn?.focus(); }
     history.replaceState(null, '', on ? '#terminal' : location.pathname);
   };
-  btn?.addEventListener('click', () => set(tv.hidden));
+  btn?.addEventListener('click', () => set(Boolean(tv.hidden)));
   tv.querySelector('.exit')?.addEventListener('click', () => set(false));
   addEventListener('keydown', (ev) => {
     const target = ev.target as HTMLElement;
     if (target.closest('input, textarea, [contenteditable]')) return;
     if (ev.key === 'Escape' && !tv.hidden) return set(false);
-    if ((ev.code === 'Backquote' || ev.key === '`' || ev.key === 't') && !ev.metaKey && !ev.ctrlKey && !ev.altKey) set(tv.hidden);
+    if ((ev.code === 'Backquote' || ev.key === '`' || ev.key === 't') && !ev.metaKey && !ev.ctrlKey && !ev.altKey) set(Boolean(tv.hidden));
   });
   if (location.hash === '#terminal') set(true);
 </script>
