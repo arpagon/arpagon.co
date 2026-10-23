@@ -49,7 +49,7 @@ export const demosCopy: Record<Locale, {
   en: {
     title: 'Demos', description: 'Demos by Sebastián Rojo: computer vision and voice AI at the point of sale (Emilia AI), coding-agent tools, conversational voice AI and generative AI experiments.',
     kicker: '❯ demos', h1: 'Things I built,', h1em: 'on video.',
-    lede: 'Public demos play right here. Demos of Emilia products running at real customers are private: their descriptions are public and the videos are shared personally, on request.',
+    lede: 'Public demos play right here. Emilia recordings remain restricted: personal viewing links open edited editions, while access to originals is approved separately.',
     stats: (all, open, priv) => `${all} demos · ${open} public videos · ${priv} private`,
     groups: {
       emilia: { title: 'Emilia AI · vision and voice at the point of sale', blurb: 'Products I designed at Emilia AI, from proof of concept to production. The videos show real customer deployments, so they are private.' },
@@ -79,7 +79,7 @@ export const demosCopy: Record<Locale, {
   es: {
     title: 'Demos', description: 'Demos de Sebastián Rojo: visión por computador y voz con IA en el punto de venta (Emilia AI), herramientas para agentes de código, IA conversacional de voz e IA generativa.',
     kicker: '❯ demos', h1: 'Lo que he construido,', h1em: 'en video.',
-    lede: 'Los demos públicos se ven aquí mismo. Los de productos de Emilia funcionando en clientes reales son privados: su descripción es pública y los videos se comparten de forma personal, a pedido.',
+    lede: 'Los demos públicos se ven aquí mismo. Las grabaciones de Emilia siguen siendo restringidas: los enlaces personales abren versiones editadas y el acceso a los originales se aprueba por separado.',
     stats: (all, open, priv) => `${all} demos · ${open} videos públicos · ${priv} privados`,
     groups: {
       emilia: { title: 'Emilia AI · visión y voz en el punto de venta', blurb: 'Productos que diseñé en Emilia AI, de la prueba de concepto a producción. Los videos muestran despliegues reales en clientes, por eso son privados.' },
@@ -109,7 +109,7 @@ export const demosCopy: Record<Locale, {
   pt: {
     title: 'Demos', description: 'Demos de Sebastián Rojo: visão computacional e voz com IA no ponto de venda (Emilia AI), ferramentas para agentes de código, IA conversacional de voz e IA generativa.',
     kicker: '❯ demos', h1: 'O que eu construí,', h1em: 'em vídeo.',
-    lede: 'As demos públicas tocam aqui mesmo. As de produtos da Emilia rodando em clientes reais são privadas: a descrição é pública e os vídeos são compartilhados de forma pessoal, sob pedido.',
+    lede: 'As demos públicas tocam aqui mesmo. As gravações da Emilia continuam restritas: links pessoais abrem versões editadas, enquanto o acesso aos originais é aprovado separadamente.',
     stats: (all, open, priv) => `${all} demos · ${open} vídeos públicos · ${priv} privados`,
     groups: {
       emilia: { title: 'Emilia AI · visão e voz no ponto de venda', blurb: 'Produtos que projetei na Emilia AI, da prova de conceito à produção. Os vídeos mostram implantações reais em clientes, por isso são privados.' },

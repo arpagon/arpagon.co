@@ -22,7 +22,7 @@ export const GET: APIRoute = async () => {
     ...projects.map((p) => `- [${p.name}](${p.url}): ${p.desc.en}`),
     '',
     `- [Pi extensions](https://arpagon.co/pi/): pi-rewind, pi-animations, pi-context-zone, pi-worktree-tui-status, pi-web-providers-codex-cf, pi-web-providers-az-cf`,
-    `- [Demos](https://arpagon.co/demos/): ${demos.length} demo videos with public descriptions; Emilia product demos (real customer deployments) are private and shared on request`,
+    `- [Demos](https://arpagon.co/demos/): ${demos.length} demo cards with public descriptions; edited Emilia editions require a personal viewing link, while original recordings require separate approval`,
     '',
     '## Writing',
     ...posts.map((p) => `- [${p.data.title}](https://arpagon.co/writing/${p.id}.md): ${p.data.description}`),
