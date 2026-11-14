@@ -1,0 +1,111 @@
+{
+  "roboflow": {
+    "snapshot": "2026-11-10 to 2026-11-12",
+    "effort": "low",
+    "models": [
+      {
+        "name": "GPT-5.5",
+        "release": "2026-04-23"
+      },
+      {
+        "name": "GPT-5.6 Sol",
+        "release": "2026-07-09"
+      },
+      {
+        "name": "GPT-6 Astra",
+        "release": "2026-09-03"
+      }
+    ],
+    "tasks": [
+      {
+        "name": "Visual reasoning",
+        "metric": "Accuracy (%)",
+        "v": [
+          70.6,
+          66,
+          87.2
+        ],
+        "d": [
+          -4.6,
+          21.2
+        ]
+      },
+      {
+        "name": "OCR",
+        "metric": "Accuracy (%)",
+        "v": [
+          58.4,
+          63.6,
+          77.8
+        ],
+        "d": [
+          5.2,
+          14.2
+        ]
+      },
+      {
+        "name": "Object detection",
+        "metric": "mAP@50 (%)",
+        "v": [
+          43.6,
+          68.4,
+          82.1
+        ],
+        "d": [
+          24.8,
+          13.7
+        ]
+      },
+      {
+        "name": "Counting",
+        "metric": "Accuracy (%)",
+        "v": [
+          68,
+          74.3,
+          80.2
+        ],
+        "d": [
+          6.3,
+          5.9
+        ]
+      },
+      {
+        "name": "Identification",
+        "metric": "Accuracy (%)",
+        "v": [
+          89.6,
+          89.6,
+          89.6
+        ],
+        "d": [
+          0,
+          0
+        ]
+      }
+    ],
+    "source": "https://playground.roboflow.com/evals",
+    "caveats": [
+      "Same stated evaluation protocol; identical dated data freeze not established.",
+      "OCR is a preliminary single run; reasoning is a three-run mean.",
+      "Release dates are not evaluation dates."
+    ]
+  },
+  "starzero": {
+    "snapshot": "2026-11-13",
+    "source": "https://starzero.ai/video-understanding-leaderboard/",
+    "input": "~1 fps",
+    "points": [
+      {
+        "model": "GPT-5.6 Sol",
+        "score": 58.9,
+        "ci95": 5.2
+      },
+      {
+        "model": "GPT-6 Astra",
+        "score": 76.7,
+        "ci95": 6.2
+      }
+    ],
+    "retrieved": "2026-11-14"
+  }
+}
