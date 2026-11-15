@@ -6,8 +6,6 @@ description: "GPT-6 Astra ended a long stretch in which a Gemini was the vision 
 cover: /media/writing/astra-vision-jump/leadership.png
 ---
 
-*I wrote this on October 10, 2026 and published it on November 14, with an update at the end. The body uses only results published by October 10.*
-
 GPT-6 Astra feels like a substantial jump in vision and video understanding. In my use, object recognition got better, but the bigger change was how well it understood what the visual information means.
 
 That stands out because, for most of the last two years, the vision model to beat was usually a Gemini.
