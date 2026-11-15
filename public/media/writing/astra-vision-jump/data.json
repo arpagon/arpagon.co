@@ -1,111 +1,370 @@
 {
-  "roboflow": {
-    "snapshot": "2026-11-10 to 2026-11-12",
-    "effort": "low",
-    "models": [
-      {
-        "name": "GPT-5.5",
-        "release": "2026-04-23"
-      },
-      {
-        "name": "GPT-5.6 Sol",
-        "release": "2026-07-09"
-      },
-      {
-        "name": "GPT-6 Astra",
-        "release": "2026-09-03"
-      }
-    ],
-    "tasks": [
-      {
-        "name": "Visual reasoning",
-        "metric": "Accuracy (%)",
-        "v": [
-          70.6,
-          66,
-          87.2
-        ],
-        "d": [
-          -4.6,
-          21.2
-        ]
-      },
-      {
-        "name": "OCR",
-        "metric": "Accuracy (%)",
-        "v": [
-          58.4,
-          63.6,
-          77.8
-        ],
-        "d": [
-          5.2,
-          14.2
-        ]
-      },
-      {
-        "name": "Object detection",
-        "metric": "mAP@50 (%)",
-        "v": [
-          43.6,
-          68.4,
-          82.1
-        ],
-        "d": [
-          24.8,
-          13.7
-        ]
-      },
-      {
-        "name": "Counting",
-        "metric": "Accuracy (%)",
-        "v": [
-          68,
-          74.3,
-          80.2
-        ],
-        "d": [
-          6.3,
-          5.9
-        ]
-      },
-      {
-        "name": "Identification",
-        "metric": "Accuracy (%)",
-        "v": [
-          89.6,
-          89.6,
-          89.6
-        ],
-        "d": [
-          0,
-          0
-        ]
-      }
-    ],
-    "source": "https://playground.roboflow.com/evals",
-    "caveats": [
-      "Same stated evaluation protocol; identical dated data freeze not established.",
-      "OCR is a preliminary single run; reasoning is a three-run mean.",
-      "Release dates are not evaluation dates."
-    ]
-  },
-  "starzero": {
-    "snapshot": "2026-11-13",
-    "source": "https://starzero.ai/video-understanding-leaderboard/",
-    "input": "~1 fps",
-    "points": [
+  "body_as_of": "2026-10-10",
+  "update": "2026-11-14",
+  "leadership_claims": [
+    {
+      "benchmark": "LMArena Vision",
+      "date": "2024-12-19",
+      "leader": "Gemini 2.0 Flash Thinking",
+      "source": "https://x.com/arena/status/1869793847548817563"
+    },
+    {
+      "benchmark": "LMArena Vision",
+      "date": "2025-05-06",
+      "leader": "Gemini 2.5 Pro",
+      "source": "https://x.com/arena/status/1919774743038984449"
+    },
+    {
+      "benchmark": "LMArena Vision",
+      "date": "2025-06-05",
+      "leader": "Gemini 2.5 Pro",
+      "source": "https://x.com/arena/status/1930658527158165841"
+    },
+    {
+      "benchmark": "LMArena Vision",
+      "date": "2025-11-18",
+      "leader": "Gemini 3 Pro",
+      "source": "https://x.com/arena/status/1990813759938703570"
+    },
+    {
+      "benchmark": "LMArena Vision",
+      "date": "2025-12-31",
+      "leader": "Gemini 3 Pro",
+      "source": "https://x.com/arena/status/2006502793692230071"
+    },
+    {
+      "benchmark": "LMArena Vision",
+      "date": "2026-04-20",
+      "leader": "Claude Opus 4.7",
+      "source": "https://x.com/arena/status/2046224760657658239"
+    },
+    {
+      "benchmark": "MMMU-Pro (Artificial Analysis)",
+      "date": "2025-11-18",
+      "leader": "Gemini 3 Pro",
+      "source": "https://x.com/ArtificialAnlys/status/1990813106478715098"
+    },
+    {
+      "benchmark": "MMMU-Pro (Artificial Analysis)",
+      "date": "2025-12-17",
+      "leader": "Gemini 3 Pro",
+      "source": "https://x.com/ArtificialAnlys/status/2001335953290670301"
+    },
+    {
+      "benchmark": "MMMU / MMMU-Pro (vendor tables)",
+      "date": "2025-03-25",
+      "leader": "Gemini 2.5 Pro",
+      "source": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/"
+    },
+    {
+      "benchmark": "MMMU / MMMU-Pro (vendor tables)",
+      "date": "2025-06-17",
+      "leader": "o3",
+      "source": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf"
+    },
+    {
+      "benchmark": "MMMU / MMMU-Pro (vendor tables)",
+      "date": "2025-11-18",
+      "leader": "Gemini 3 Pro",
+      "source": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf"
+    },
+    {
+      "benchmark": "MMMU / MMMU-Pro (vendor tables)",
+      "date": "2026-04-23",
+      "leader": "GPT-5.5",
+      "source": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    {
+      "benchmark": "Roboflow Vision Evals",
+      "date": "2026-09-02",
+      "leader": "Qwen3.8 Max (detection)",
+      "source": "https://x.com/skalskip92/status/2095235297730568258"
+    },
+    {
+      "benchmark": "Roboflow Vision Evals",
+      "date": "2026-09-03",
+      "leader": "Gemini 3.8 Flash (reasoning)",
+      "source": "https://x.com/skalskip92/status/2095577965283148091"
+    },
+    {
+      "benchmark": "Roboflow Vision Evals",
+      "date": "2026-09-05",
+      "leader": "GPT-6 Astra (detection)",
+      "source": "https://x.com/skalskip92/status/2096317264463012261"
+    },
+    {
+      "benchmark": "Roboflow Vision Evals",
+      "date": "2026-09-17",
+      "leader": "GPT-6 Astra (overall)",
+      "source": "https://roboflow.com/blog/gpt-6-astra-for-segmentation"
+    }
+  ],
+  "roboflow_detection_september": {
+    "metric": "mAP@50 (%)",
+    "posted": "2026-09-18 to 2026-09-29",
+    "rows": [
       {
         "model": "GPT-5.6 Sol",
+        "low": 68.4,
+        "high": null,
+        "source": "https://x.com/skalskip92/status/2101020137579073915"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "low": 74.65,
+        "high": 76.4,
+        "source": "https://x.com/skalskip92/status/2105062495903994041"
+      },
+      {
+        "model": "Qwen3.8 Max",
+        "low": 76.7,
+        "high": 78.4,
+        "source": "https://x.com/skalskip92/status/2102437059726028942"
+      },
+      {
+        "model": "GPT-6.1 Sol",
+        "low": 80.84,
+        "high": 81.64,
+        "source": "https://x.com/skalskip92/status/2105062495903994041"
+      },
+      {
+        "model": "GPT-6 Astra",
+        "low": 82.07,
+        "high": 83.56,
+        "source": "https://x.com/skalskip92/status/2105062495903994041"
+      }
+    ]
+  },
+  "update_roboflow_current_suite": {
+    "snapshot": "2026-11-12",
+    "effort": "low",
+    "source": "https://playground.roboflow.com/evals",
+    "overall": [
+      {
+        "model": "Gemini 2.5 Pro",
+        "release": "2025-06-17",
+        "score": 57.6
+      },
+      {
+        "model": "GPT-5.5",
+        "release": "2026-04-23",
+        "score": 66
+      },
+      {
+        "model": "Gemini 3.5 Flash",
+        "release": "2026-05-19",
+        "score": 81.8
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release": "2026-07-09",
+        "score": 72.4
+      },
+      {
+        "model": "GPT-6 Astra",
+        "release": "2026-09-03",
+        "score": 83.4
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "release": "2026-09-30",
+        "score": 87.5
+      },
+      {
+        "model": "GPT-6.1 Terra",
+        "release": "2026-10-26",
+        "score": 85.8
+      },
+      {
+        "model": "Claude Fable 5.2",
+        "release": "2026-11-09",
+        "score": 86.5
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "release": "2026-11-10",
+        "score": 89.4
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "release": "2026-11-12",
+        "score": 87.3
+      }
+    ],
+    "detection_map50": [
+      {
+        "model": "Gemini 2.5 Pro",
+        "release": "2025-06-17",
+        "score": 33.7
+      },
+      {
+        "model": "Qwen3 VL 235B A22B Instruct",
+        "release": "2025-09-23",
+        "score": 52.1
+      },
+      {
+        "model": "Gemini 3 Flash",
+        "release": "2025-12-17",
+        "score": 38.6
+      },
+      {
+        "model": "Gemini 3.1 Pro",
+        "release": "2026-02-19",
+        "score": 67.4
+      },
+      {
+        "model": "GPT-5.5",
+        "release": "2026-04-23",
+        "score": 43.6
+      },
+      {
+        "model": "Gemini 3.5 Flash",
+        "release": "2026-05-19",
+        "score": 70.6
+      },
+      {
+        "model": "Claude Fable 5",
+        "release": "2026-06-09",
+        "score": 56.4
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release": "2026-07-09",
+        "score": 68.4
+      },
+      {
+        "model": "Gemini 3.6 Flash",
+        "release": "2026-07-21",
+        "score": 57.1
+      },
+      {
+        "model": "Qwen3.8 Max",
+        "release": "2026-08-03",
+        "score": 76.7
+      },
+      {
+        "model": "Gemini 3.7 Flash",
+        "release": "2026-08-13",
+        "score": 70.5
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "release": "2026-09-02",
+        "score": 68.1
+      },
+      {
+        "model": "GPT-6 Astra",
+        "release": "2026-09-03",
+        "score": 82.1
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "release": "2026-09-22",
+        "score": 74.5
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "release": "2026-09-30",
+        "score": 82.5
+      },
+      {
+        "model": "GPT-6.1 Terra",
+        "release": "2026-10-26",
+        "score": 84.7
+      },
+      {
+        "model": "Claude Fable 5.2",
+        "release": "2026-11-09",
+        "score": 81.6
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "release": "2026-11-10",
+        "score": 84.5
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "release": "2026-11-12",
+        "score": 81
+      }
+    ]
+  },
+  "update_starzero": {
+    "snapshot": "2026-11-13",
+    "source": "https://starzero.ai/video-understanding-leaderboard/",
+    "points": [
+      {
+        "model": "Gemini 3 Flash",
+        "release": "2025-12-17",
+        "score": 50.3,
+        "ci95": 4.3
+      },
+      {
+        "model": "Gemini 3.1 Pro",
+        "release": "2026-02-19",
+        "score": 61.5,
+        "ci95": 12.2
+      },
+      {
+        "model": "Gemini 3.5 Flash",
+        "release": "2026-05-19",
+        "score": 65.4,
+        "ci95": 10.4
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release": "2026-07-09",
         "score": 58.9,
         "ci95": 5.2
       },
       {
+        "model": "Gemini 3.6 Flash",
+        "release": "2026-07-21",
+        "score": 67.2,
+        "ci95": 6.2
+      },
+      {
+        "model": "Gemini 3.7 Flash",
+        "release": "2026-08-13",
+        "score": 69.1,
+        "ci95": 4.2
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "release": "2026-09-02",
+        "score": 76.1,
+        "ci95": 6.9
+      },
+      {
         "model": "GPT-6 Astra",
+        "release": "2026-09-03",
         "score": 76.7,
         "ci95": 6.2
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "release": "2026-09-22",
+        "score": 77.7,
+        "ci95": 4
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "release": "2026-09-30",
+        "score": 81.1,
+        "ci95": 1.9
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "release": "2026-11-10",
+        "score": 77.9,
+        "ci95": 5.8
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "release": "2026-11-12",
+        "score": 83.8,
+        "ci95": 2
       }
-    ],
-    "retrieved": "2026-11-14"
+    ]
   }
 }
