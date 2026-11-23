@@ -9,13 +9,19 @@ interface Props { lang: Locale }
 const { lang } = Astro.props;
 const t = demosCopy[lang];
 const a = t.access;
+const owner = {
+  en: { button: 'Owner sign-in with Google', error: 'Could not sign in. Use the authorized Google account and try again.' },
+  es: { button: 'Entrar como propietario con Google', error: 'No se pudo iniciar sesión. Usa la cuenta de Google autorizada e inténtalo de nuevo.' },
+  pt: { button: 'Entrar como proprietário com o Google', error: 'Não foi possível entrar. Use a conta do Google autorizada e tente novamente.' },
+}[lang];
 ---
 <Shell lang={lang} page="acceso/" title={a.title} description={a.lede} noindex>
-  <section class="dm-narrow" data-access data-states={JSON.stringify(a.states)}>
+  <section class="dm-narrow" data-access data-states={JSON.stringify({ ...a.states, owner: owner.error })}>
     <p class="dm-kicker mono">❯ demos / {a.title.toLowerCase()}</p>
     <h1>{a.h1}</h1>
     <p class="dm-lede">{a.lede}</p>
     <p class="dm-alert" role="alert" data-alert hidden></p>
+    <p data-owner-login hidden><a class="dm-link" href={`/demos/api/owner/login?lang=${lang}`}>{owner.button}</a></p>
     <div class="dm-ok" data-sent hidden>
       <h2>{a.sentTitle}</h2>
       <p>{a.states.enviado}</p>
@@ -42,6 +48,10 @@ const a = t.access;
   const alert = root.querySelector<HTMLElement>('[data-alert]')!;
   const sent = root.querySelector<HTMLElement>('[data-sent]')!;
   const states = JSON.parse(root.dataset.states!) as Record<string, string>;
+  const ownerLogin = root.querySelector<HTMLElement>('[data-owner-login]')!;
+  fetch('/demos/api/owner/status', { cache: 'no-store' })
+    .then((response) => { if (response.status === 204) ownerLogin.hidden = false; })
+    .catch(() => {});
   const KEY = 'demos-access-form';
   const fields = ['name', 'email', 'company', 'reason'];
   const state = new URLSearchParams(location.search).get('estado');
