@@ -8,7 +8,7 @@ const DIST = 'dist';
 const required = [
   '.well-known/matrix/server', '.well-known/matrix/client', '_headers', '_redirects',
   'index.html', 'es/index.html', 'pt/index.html', 'writing/index.html', 'writing/k8s-edge/index.html',
-  'pi/index.html', 'demos/index.html', 'es/demos/index.html', 'pt/demos/index.html',
+  'pi/index.html', 'cal/index.html', 'demos/index.html', 'es/demos/index.html', 'pt/demos/index.html',
   'demos/acceso/index.html', 'demos/privado/index.html', '404.html', 'llms.txt', 'index.md', 'resume.json', 'rss.xml', 'sitemap-index.xml', 'og.png',
 ];
 const banned = [...privacyPatterns];
