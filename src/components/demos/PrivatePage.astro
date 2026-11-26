@@ -88,4 +88,9 @@ const strings = { role: t.role, empty: lib.empty, note: lib.note, shared: lib.sh
       videos.forEach((video) => video.addEventListener('play', () => videos.forEach((other) => other !== video && other.pause())));
     })
     .catch(() => { shared.textContent = 'The library could not be loaded. Please try again later or write to info@arpagon.co.'; });
+
+  // Revalidate after back/forward restoration, including after either edition signs out.
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) { grid.replaceChildren(); shared.textContent = ''; location.reload(); }
+  });
 </script>

@@ -19,6 +19,19 @@ const crumb = page ? page.replace('/', '') : '';
 const translations = noindex ? [] : LOCALES.map((l) => ({ lang: l, href: demosPath(l, page) }));
 ---
 <Base lang={lang} title={title} description={description} translations={translations} noindex={noindex}>
+  {page === '' && <Fragment slot="head-start">
+    <meta name="referrer" content="no-referrer" />
+    <script is:inline>
+      // Defense in depth for static previews/misconfigured routing: never keep a bearer
+      // query in the document URL. Production redeems it in the Worker before any HTML.
+      const demoEntry = new URL(location.href);
+      if (demoEntry.searchParams.has('token')) {
+        demoEntry.searchParams.delete('token');
+        demoEntry.searchParams.set('compartido', 'expirado');
+        history.replaceState(null, '', demoEntry.pathname + demoEntry.search + demoEntry.hash);
+      }
+    </script>
+  </Fragment>}
   <div class="dm">
     <header class="dm-top mono">
       <a href={lang === 'en' ? '/' : `/${lang}/`}>arpagon.co</a> / <a href={demosPath(lang)}>demos</a>{crumb && <> / <span>{crumb}</span></>}

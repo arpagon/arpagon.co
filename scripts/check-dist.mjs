@@ -30,6 +30,22 @@ for (const d of demoData.demos) {
   if (d.visibility !== 'publico' && (d.videos.length || d.poster)) { console.error(`demo ${d.id}: non-public card ships media`); failed = true; }
   for (const v of d.videos) if (!v.src.startsWith('https://arpagon.co/demos/media/')) { console.error(`demo ${d.id}: unexpected video host`); failed = true; }
 }
+for (const prefix of ['', 'es/', 'pt/']) {
+  const page = `${prefix}demos/index.html`;
+  const html = readFileSync(join(DIST, page), 'utf8');
+  const privateCards = demoData.demos.filter((demo) => demo.visibility === 'privado');
+  if ((html.match(/data-edited-card="/g) || []).length !== privateCards.length || !html.includes('data-edited-session')) {
+    console.error(`${page}: missing edited-edition progressive-enhancement hooks`); failed = true;
+  }
+  if (!html.includes('name="referrer" content="no-referrer"') || !html.includes("searchParams.delete('token')")) {
+    console.error(`${page}: missing sensitive-query/referrer fallback`); failed = true;
+  }
+  for (const demo of privateCards) {
+    if (html.includes(`/demos/editado/v/${demo.id}.mp4`) || html.includes(`/demos/privado/v/${demo.id}.mp4`)) {
+      console.error(`${page}: restricted card ships a concrete media URL`); failed = true;
+    }
+  }
+}
 for (const page of ['demos/acceso/index.html', 'demos/privado/index.html']) {
   if (!readFileSync(join(DIST, page), 'utf8').includes('noindex')) { console.error(`${page} must be noindex`); failed = true; }
 }
