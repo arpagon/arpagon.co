@@ -31,6 +31,7 @@ export const GET: APIRoute = async () => {
     `- [RSS](https://arpagon.co/rss.xml)`,
     ...profile.links.map((l) => `- [${l.label}](${l.url})`),
     `- Contact: ${profile.email}`,
+    `- [Book a call](https://arpagon.co/cal/): booking calendar (Cal.com embed)`,
     '',
   ].join('\n');
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
